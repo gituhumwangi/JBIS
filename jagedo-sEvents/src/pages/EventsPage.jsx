@@ -255,12 +255,6 @@ const EventsPage = () => {
           >
             Register Now
           </Link>
-          <Link
-            to="/contact"
-            className="inline-block px-6 py-3 border border-blue-600 text-blue-600 font-medium rounded-full hover:bg-blue-50 transition"
-          >
-            Contact Us
-          </Link>
         </section>
       </main>
 

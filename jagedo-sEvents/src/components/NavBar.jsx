@@ -9,10 +9,10 @@ const NavBar = () => {
 
   return (
     <nav className="bg-white drop-shadow-sm pt-1">
-      <div className="flex justify-between items-center px-6 py-4 md:px-12">
+      <div className="flex justify-between items-center px-6 py-4 md:px-12 ">
         {/* Left: Logo */}
         <a href="/">
-          <img src={Japageologo} alt="Logo" className="w-22 h-12 rounded-lg object-contain" />
+          <img src={Japageologo} alt="Logo" className="w-22 h-12 rounded-lg object-contain w-60 h-auto" />
         </a>
 
         {/* Hamburger menu button (Mobile only) */}
@@ -25,7 +25,7 @@ const NavBar = () => {
         {/* Center nav links (Desktop only) */}
         <ul className="hidden md:flex space-x-8 text-gray-700">
           <li><a href="/events" className="hover:text-blue-500">Events</a></li>
-          <li><a href="/projects" className="hover:text-blue-500">Projects</a></li>
+          {/* <li><a href="/projects" className="hover:text-blue-500">Projects</a></li> */}
           <li><Link to="/sponsors" className="hover:text-blue-500">Sponsors</Link></li>
           <li><a href="/faqs" className="hover:text-blue-500">FAQs</a></li>
         </ul>
@@ -43,7 +43,7 @@ const NavBar = () => {
         <div className="md:hidden px-6 pb-4">
           <ul className="flex flex-col space-y-4 text-gray-700">
             <li><a href="/events" className="hover:text-blue-500">Events</a></li>
-            <li><a href="/projects" className="hover:text-blue-500">Projects</a></li>
+            {/* <li><a href="/projects" className="hover:text-blue-500">Projects</a></li> */}
             <li><Link to="/sponsors" className="hover:text-blue-500">Sponsors</Link></li>
             <li><a href="/faqs" className="hover:text-blue-500">FAQs</a></li>
             <li>

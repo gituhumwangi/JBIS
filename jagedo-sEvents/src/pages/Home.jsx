@@ -4,6 +4,7 @@ import Button from '../components/Button';
 import JaGedoHeroSection from "../assets/JaGedoHeroSection.jpg";
 import Card1 from '../assets/Event1.jpg';
 import Card2 from '../assets/Event2.jpg';
+import Card3 from '../assets/Event3.jpg';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
@@ -21,8 +22,11 @@ const Home = () => {
             backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url(${JaGedoHeroSection})`,
           }}
         >
-          <h1 className="text-white text-3xl md:text-4xl font-bold font-manrope">Join JaGedo</h1>
-          <p className="text-white text-base max-w-xl">Join us for exciting events and projects that bring our community together.</p>
+          <h1 className="text-white text-3xl md:text-4xl font-bold font-manrope">JBIS: JaGedo Builder Innovation Summary</h1>
+          <h2 className="text-white text-2xl md:text-4xl font-bold font-manrope">Constructing the Future</h2>
+          <p className="text-white text-base max-w-xl">
+            Discover vibrant events, dynamic projects, and opportunities to collaborate with change-makers in our community. Be part of something bigger — be part of JaGedo.
+          </p>
           <Button className="bg-blue-700 hover:bg-blue-600 text-white font-bold px-6 py-2 mt-2">
             <Link to="/registration">Register Now</Link>
           </Button>
@@ -33,15 +37,19 @@ const Home = () => {
       <div className="px-4 md:px-20 lg:px-40 py-10">
         <h2 className="text-gray-900 text-3xl md:text-4xl font-bold text-center md:text-left mb-6">Upcoming Events</h2>
         <div className="flex overflow-x-auto space-x-4 scrollbar-hide">
-          {[Card1, Card2, Card1].map((img, i) => (
+          {[Card1, Card2, Card3].map((img, i) => (
             <Link to="events" key={i} className="flex flex-col gap-4 rounded-lg min-w-[15rem] flex-shrink-0 hover:shadow-lg transition bg-white p-2">
               <div
                 className="w-full aspect-video bg-cover bg-center rounded-xl"
                 style={{ backgroundImage: `url(${img})` }}
               />
               <div>
-                <p className="text-gray-900 font-medium text-base">Community Workshop on Sustainable Solutions</p>
-                <p className="text-gray-500 text-sm">Learn about sustainable practices and contribute to community projects.</p>
+                <p className="text-gray-900 font-medium text-base">
+                  Community Workshop: Building Together
+                </p>
+                <p className="text-gray-500 text-sm">
+                  Join us for hands-on workshops where innovation meets impact. Connect, create, and contribute to community-led projects.
+                </p>
               </div>
             </Link>
           ))}
@@ -67,27 +75,24 @@ const Home = () => {
 
           {/* Text Section */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left order-1 lg:order-2">
-            <h2 className="text-gray-900 text-3xl md:text-4xl font-bold mb-4">Empowering Each Other to Succeed</h2>
+            <h2 className="text-gray-900 text-3xl md:text-4xl font-bold mb-4">Creating Moments that Matter</h2>
             <p className="text-gray-500 mb-6">
-              Every project we've undertaken has been a collaborative effort. Together, we've not only constructed buildings but also built enduring connections that define our success story.
+              At JaGedo, we believe events are more than gatherings — they're platforms for empowerment, creativity, and connection. Our mission is to bring together people from all walks of life to learn, grow, and build a stronger future, one event at a time.
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-6 mb-6">
               <div>
                 <h3 className="text-3xl font-bold text-gray-900">33+</h3>
-                <p className="text-sm text-gray-500">Years of Experience</p>
+                <p className="text-sm text-gray-500">Years of Combined Experience</p>
               </div>
               <div>
                 <h3 className="text-3xl font-bold text-gray-900">125+</h3>
-                <p className="text-sm text-gray-500">Successful Projects</p>
+                <p className="text-sm text-gray-500">Events & Projects Hosted</p>
               </div>
               <div>
                 <h3 className="text-3xl font-bold text-gray-900">52+</h3>
-                <p className="text-sm text-gray-500">Happy Clients</p>
+                <p className="text-sm text-gray-500">Communities Reached</p>
               </div>
             </div>
-            <button className="w-full sm:w-auto px-6 py-2 bg-blue-700 hover:bg-blue-600 text-white rounded-lg transition duration-300">
-              Read More
-            </button>
           </div>
         </div>
       </section>
