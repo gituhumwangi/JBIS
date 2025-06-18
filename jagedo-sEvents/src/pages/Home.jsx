@@ -40,7 +40,7 @@ const Home = () => {
               Register for the Summit
             </button>
           </Link>
-          <Link to="/Sponser">
+          <Link to="/partner">
             <button className="bg-[#000072] hover:bg-yellow-600 text-white font-semibold py-2 px-6 rounded-full w-full md:w-auto transition duration-300 transform hover:scale-105">
               Partner with Us
             </button>

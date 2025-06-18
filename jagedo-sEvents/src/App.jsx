@@ -6,6 +6,7 @@ import SummitProgram from './pages/SummitProgram';
 import Footer from './components/Footer';
 import NavBar from "./components/NavBar";
 import Register from "./pages/Register"; 
+import Partner from "./pages/Partner";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
           }
         />
         <Route path="/register" element={<Register />} />
-        <Route path="/sponsers" element={<Register />} />
+        <Route path="/partner" element={<Partner />} />
       </Routes>
     </>
   );
