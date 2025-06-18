@@ -108,19 +108,19 @@ const FAQPage = () => {
         }
       ]
     },
-    {
-      category: 'COVID-19 & Safety',
-      questions: [
-        {
-          question: "What safety measures are in place?",
-          answer: "We follow all government health guidelines including temperature checks, hand sanitizing stations throughout the venue, enhanced cleaning protocols, and adequate ventilation systems. Masks are recommended in crowded areas."
-        },
-        {
-          question: "What if someone tests positive before the event?",
-          answer: "If you test positive for COVID-19 within 5 days of the event, we'll transfer your registration to our next event at no additional cost, or provide full access to virtual sessions and recordings."
-        }
-      ]
-    }
+    // {
+    //   category: 'COVID-19 & Safety',
+    //   questions: [
+    //     {
+    //       question: "What safety measures are in place?",
+    //       answer: "We follow all government health guidelines including temperature checks, hand sanitizing stations throughout the venue, enhanced cleaning protocols, and adequate ventilation systems. Masks are recommended in crowded areas."
+    //     },
+    //     {
+    //       question: "What if someone tests positive before the event?",
+    //       answer: "If you test positive for COVID-19 within 5 days of the event, we'll transfer your registration to our next event at no additional cost, or provide full access to virtual sessions and recordings."
+    //     }
+    //   ]
+    // }
   ];
 
   const filteredFAQs = faqData.map(category => ({
@@ -241,7 +241,7 @@ const FAQPage = () => {
           )}
 
           {/* Contact Section */}
-          <div className="mt-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-center text-white">
+          {/* <div className="mt-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-center text-white">
             <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
             <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
               Our support team is here to help! Get in touch and we'll respond within 24 hours.
@@ -266,7 +266,7 @@ const FAQPage = () => {
                 Call Us
               </a>
             </div>
-          </div>
+          </div> */}
         </div>
       </main>
 

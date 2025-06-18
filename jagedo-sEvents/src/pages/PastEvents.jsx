@@ -9,7 +9,7 @@ export default function PastEvents() {
 
   // Counter animation effect
   useEffect(() => {
-    const targets = { events: 50, participants: 15000, satisfaction: 98, prizes: 2000000 };
+    const targets = { events: 4, participants: 500, satisfaction: 98, prizes: 1000 };
     const duration = 2000;
     const steps = 60;
     const stepTime = duration / steps;
@@ -168,12 +168,12 @@ export default function PastEvents() {
             <NavBar/>
         </div>
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-slate-900 via-[rgb(0,0,122)] to-slate-900 text-white overflow-hidden">
+      <section className="relative bg-[rgb(0,0,122)] text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10"></div>
         
         {/* Animated background shapes */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-purple-500/20 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute top-20 left-10 w-32 h-32 bg-[rgb(0,0,122)] rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
@@ -196,7 +196,7 @@ export default function PastEvents() {
             </div>
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center hover:bg-white/15 transition-all duration-300 hover:scale-105">
               <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
-                {(counters.participants / 1000).toFixed(0)}K+
+                {(counters.participants).toFixed(0)}
               </div>
               <div className="text-gray-300 font-medium">Participants</div>
             </div>
@@ -208,7 +208,7 @@ export default function PastEvents() {
             </div>
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center hover:bg-white/15 transition-all duration-300 hover:scale-105">
               <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
-                ${(counters.prizes / 1000000).toFixed(1)}M+
+                ${(counters.prizes).toFixed(1)}
               </div>
               <div className="text-gray-300 font-medium">Prize Pool</div>
             </div>

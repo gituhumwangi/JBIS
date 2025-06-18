@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Japageologo from "../assets/Japageologo.webp";
 import Button from './Button';
 import { Link } from 'react-router-dom';
-import { Menu, X } from 'lucide-react'; // for hamburger and close icons
+import { Menu, Phone } from 'lucide-react'; // for hamburger and close icons
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,16 +24,19 @@ const NavBar = () => {
 
         {/* Center nav links (Desktop only) */}
         <ul className="hidden md:flex space-x-8 text-gray-700">
+          <li><Link to="/registration" className='hover:text-blue-500'>Register</Link></li>
+          <li><Link to="/sponsors" className="hover:text-blue-500">Sponsors</Link></li>
           <li><a href="/pastevents" className="hover:text-blue-500">Past Events</a></li>
           {/* <li><a href="/projects" className="hover:text-blue-500">Projects</a></li> */}
-          <li><Link to="/sponsors" className="hover:text-blue-500">Sponsors</Link></li>
+          {/* <li><Link to="/sponsors" className="hover:text-blue-500">Sponsors</Link></li> */}
           <li><a href="/faqs" className="hover:text-blue-500">FAQs</a></li>
         </ul>
 
         {/* Right-side button (Desktop only) */}
         <div className="md:space-x-4 sm:flex hidden">
-          <Button className="text-white font-bold">
-            <Link to="/registration">Register</Link>
+          <Button className="text-white font-bold w-30 md:w-35 lg:w-37">
+            <Phone className="inline mr-2" size={16} />
+            <Link to="/registration">Contact Us</Link>
           </Button>
         </div>
       </div>

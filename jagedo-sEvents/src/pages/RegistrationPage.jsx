@@ -311,7 +311,7 @@ const RegistrationPage = () => {
               </div> */}
 
               {/* Account Security */}
-              <div className="border-b border-gray-200 pb-6">
+              {/* <div className="border-b border-gray-200 pb-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                   <span className="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>
                   Account Security
@@ -356,7 +356,7 @@ const RegistrationPage = () => {
                     {errors.confirmPassword && <p className="text-red-500 text-xs mt-1">{errors.confirmPassword}</p>}
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Terms and Conditions */}
               <div className="pt-2">
@@ -389,7 +389,7 @@ const RegistrationPage = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full bg-gradient-to-r from-blue-600 to-blue-700 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-blue-800 focus:ring-4 focus:ring-blue-300 transition-all duration-200 transform hover:scale-[1.02] ${
+                  className={`w-full bg-gradient-to-r from-blue-900 to-blue-00 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-blue-800 focus:ring-4 focus:ring-blue-300 transition-all duration-200 transform hover:scale-[1.02] ${
                     isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
                   }`}
                 >

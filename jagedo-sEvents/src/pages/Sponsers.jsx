@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
+import Button from '../components/Button'
 
 const SponsorsPage = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
@@ -165,7 +166,7 @@ const SponsorsPage = () => {
 
 
         {/* Sponsorship Packages */}
-        <section id="packages" className="py-16 px-4 sm:px-6 lg:px-8">
+<section id="packages" className="py-16 px-4 sm:px-6 lg:px-8">
   <div className="max-w-7xl mx-auto">
     <div className="text-center mb-12">
       <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -204,12 +205,13 @@ const SponsorsPage = () => {
 
           {/* CTA Button */}
           <div className="p-6 pt-0 mt-auto">
-            <button
-              onClick={() => setSelectedPackage(tier)}
-              className={`w-full bg-gradient-to-r ${tier.color} text-white font-bold py-3 px-6 rounded-full hover:opacity-90 transition`}
+            <Link
+            to="/sponsersregistration"
+              // onClick={() => setSelectedPackage(tier)}
+              // className={`w-full bg-gradient-to-r ${tier.color} text-white font-bold py-3 px-6 rounded-full hover:opacity-90 transition`}
             >
-              Select Package
-            </button>
+              <Button className="w-30 md:w-40 lg:w-50 h-auto"> Select Package </Button>
+            </Link>
           </div>
         </div>
       ))}
