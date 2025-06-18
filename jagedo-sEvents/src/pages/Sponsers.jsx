@@ -3,7 +3,7 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
-const SponsorsPage = () => {
+const Sponsors= () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
 
   const sponsorshipTiers = [

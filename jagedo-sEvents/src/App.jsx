@@ -1,28 +1,34 @@
-import { useState } from 'react'
-import Home from './pages/Home'
-import './App.css'
-import RegistrationPage from './pages/RegistrationPage'
-import { Routes, Route } from 'react-router-dom'
-import EventsPage from './pages/EventsPage'
-import AgendaPage from './pages/AgendaPage'
-import FAQs from './pages/FAQs'
-import SponsorsPage from './pages/Sponsers'
+import { Routes, Route } from "react-router-dom";
+import AboutUs from './pages/AboutUs';
+import Home from './pages/Home';
+import Attend from './pages/Attend';
+import SummitProgram from './pages/SummitProgram';
+import Footer from './components/Footer';
+import NavBar from "./components/NavBar";
+import Register from "./pages/Register"; 
 
 function App() {
-
   return (
     <>
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/registration" element={<RegistrationPage />} />
-      <Route path="/events" element={<EventsPage />} />
-      <Route path="/agenda" element={<AgendaPage />} />
-      <Route path="/faqs" element={<FAQs />} /> 
-      <Route path="/sponsors" element={<SponsorsPage />} />
-      {/* Add more routes as needed */}
-    </Routes>
+      <NavBar />
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <div>
+              <Home />
+              <AboutUs />
+              <Attend />
+              <SummitProgram />
+              <Footer />
+            </div>
+          }
+        />
+        <Route path="/register" element={<Register />} />
+        <Route path="/sponsers" element={<Register />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
