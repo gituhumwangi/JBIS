@@ -3,6 +3,7 @@ import Event1 from '../assets/Event1.jpg';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
+import Button from '../components/Button';
 
 const EventsPage = () => {
   return (
@@ -48,9 +49,8 @@ const EventsPage = () => {
             <div className="mt-4">
               <Link
                 to="/register"
-                className="inline-block px-4 py-2 bg-blue-600 text-white text-sm font-medium rounded-full hover:bg-blue-700 transition"
               >
-                Register Now
+                <Button>Register Now</Button>
               </Link>
             </div>
           </div>
@@ -251,9 +251,8 @@ const EventsPage = () => {
           </p>
           <Link
             to="/register"
-            className="inline-block px-6 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700 transition mr-4"
           >
-            Register Now
+            <Button>Register Now</Button>
           </Link>
         </section>
       </main>

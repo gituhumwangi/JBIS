@@ -2,10 +2,14 @@ import React, { useState } from 'react';
 import NavBar from '../components/NavBar';
 import Button from '../components/Button';
 import Footer from '../components/Footer';
+// import Button from '../components/Button';
+import { Link } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
 const RegistrationPage = () => {
   const [formData, setFormData] = useState({
-    name: '',
+    FirstName: '',
+    LastName: '',
     email: '',
     phone: '',
     company: '',
@@ -44,7 +48,8 @@ const RegistrationPage = () => {
   const validateForm = () => {
     const newErrors = {};
 
-    if (!formData.name.trim()) newErrors.name = 'Full name is required';
+    if (!formData.FirstName.trim()) newErrors.FirstName = 'FirstName is required';
+    if(!formData.LastName.trim()) newErrors.LastName = 'LastName is required';
     if (!formData.email.trim()) newErrors.email = 'Email is required';
     if (!formData.phone.trim()) newErrors.phone = 'Phone number is required';
     if (formData.password.length < 6) newErrors.password = 'Password must be at least 6 characters';
@@ -131,21 +136,40 @@ const RegistrationPage = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                   <div className="sm:col-span-2">
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
+                      First Name *
                     </label>
                     <input
                       type="text"
-                      name="name"
-                      id="name"
+                      name="FirstName"
+                      id="FirstName"
                       required
                       onChange={handleChange}
-                      value={formData.name}
+                      value={formData.FirstName}
                       className={`w-full border rounded-lg shadow-sm px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition ${
-                        errors.name ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                        errors.FirstName ? 'border-red-300 bg-red-50' : 'border-gray-300'
                       }`}
-                      placeholder="Enter your full name"
+                      placeholder="Enter your First Name"
                     />
-                    {errors.name && <p className="text-red-500 text-xs mt-1">{errors.name}</p>}
+                    {errors.FirstName && <p className="text-red-500 text-xs mt-1">{errors.FirstName}</p>}
+                  </div>
+
+                  <div className="sm:col-span-2">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                      Last Name *
+                    </label>
+                    <input
+                      type="text"
+                      name="LastName"
+                      id="LastName"
+                      required
+                      onChange={handleChange}
+                      value={formData.LastName}
+                      className={`w-full border rounded-lg shadow-sm px-4 py-3 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition ${
+                        errors.LastName ? 'border-red-300 bg-red-50' : 'border-gray-300'
+                      }`}
+                      placeholder="Enter your Last Name"
+                    />
+                    {errors.LastName && <p className="text-red-500 text-xs mt-1">{errors.LastName}</p>}
                   </div>
 
                   <div>
@@ -189,7 +213,7 @@ const RegistrationPage = () => {
               </div>
 
               {/* Professional Information */}
-              <div className="border-b border-gray-200 pb-6">
+              {/* <div className="border-b border-gray-200 pb-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                   <span className="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>
                   Professional Information
@@ -264,7 +288,6 @@ const RegistrationPage = () => {
                   </div>
                 </div>
 
-                {/* Interests */}
                 <div className="mt-6">
                   <label className="block text-sm font-medium text-gray-700 mb-3">
                     Areas of Interest (Select all that apply)
@@ -285,12 +308,12 @@ const RegistrationPage = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Account Security */}
               <div className="border-b border-gray-200 pb-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                  <span className="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-bold mr-3">3</span>
+                  <span className="w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>
                   Account Security
                 </h3>
                 

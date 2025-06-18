@@ -12,7 +12,7 @@ const NavBar = () => {
       <div className="flex justify-between items-center px-6 py-4 md:px-12 ">
         {/* Left: Logo */}
         <a href="/">
-          <img src={Japageologo} alt="Logo" className="w-22 h-12 rounded-lg object-contain w-60 h-auto" />
+          <img src={Japageologo} alt="Logo" className="w-40 md:w-60 lg:w-80 rounded-lg object-contain h-auto" />
         </a>
 
         {/* Hamburger menu button (Mobile only) */}
@@ -24,15 +24,15 @@ const NavBar = () => {
 
         {/* Center nav links (Desktop only) */}
         <ul className="hidden md:flex space-x-8 text-gray-700">
-          <li><a href="/events" className="hover:text-blue-500">Events</a></li>
+          <li><a href="/pastevents" className="hover:text-blue-500">Past Events</a></li>
           {/* <li><a href="/projects" className="hover:text-blue-500">Projects</a></li> */}
           <li><Link to="/sponsors" className="hover:text-blue-500">Sponsors</Link></li>
           <li><a href="/faqs" className="hover:text-blue-500">FAQs</a></li>
         </ul>
 
         {/* Right-side button (Desktop only) */}
-        <div className="hidden md:block">
-          <Button className="bg-blue-700 hover:bg-blue-600 text-white font-bold">
+        <div className="md:space-x-4 sm:flex hidden">
+          <Button className="text-white font-bold">
             <Link to="/registration">Register</Link>
           </Button>
         </div>
@@ -42,10 +42,10 @@ const NavBar = () => {
       {isOpen && (
         <div className="md:hidden px-6 pb-4">
           <ul className="flex flex-col space-y-4 text-gray-700">
-            <li><a href="/events" className="hover:text-blue-500">Events</a></li>
+            <li><a href="/pastevents" className="hover:text-blue-500 text-lg">PastEvents</a></li>
             {/* <li><a href="/projects" className="hover:text-blue-500">Projects</a></li> */}
-            <li><Link to="/sponsors" className="hover:text-blue-500">Sponsors</Link></li>
-            <li><a href="/faqs" className="hover:text-blue-500">FAQs</a></li>
+            <li><Link to="/sponsors" className="hover:text-blue-500 text-lg">Sponsors</Link></li>
+            <li><a href="/faqs" className="hover:text-blue-500 text-lg">FAQs</a></li>
             <li>
               <Button className="bg-blue-700 hover:bg-blue-600 text-white font-bold w-full">
                 <Link to="/registration">Register</Link>

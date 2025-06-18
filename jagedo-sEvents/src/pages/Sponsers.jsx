@@ -7,26 +7,7 @@ const SponsorsPage = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
 
   const sponsorshipTiers = [
-    {
-      title: "Title Sponsor",
-      price: "KES 500,000",
-      color: "from-yellow-400 to-yellow-600",
-      textColor: "text-yellow-900",
-      bgColor: "bg-yellow-50",
-      borderColor: "border-yellow-200",
-      features: [
-        "Event naming rights (JaGedo Summit powered by [Your Company])",
-        "Logo on all marketing materials and communications",
-        "Opening keynote speaking opportunity (20 minutes)",
-        "Premium exhibition booth (6x6 meters)",
-        "10 complimentary registrations",
-        "VIP networking dinner hosting rights",
-        "Post-event attendee contact list",
-        "Year-round partnership recognition",
-        "Custom branded registration area",
-        "Exclusive mobile app splash screen"
-      ]
-    },
+    
     {
       title: "Platinum Sponsor",
       price: "KES 300,000",
@@ -82,7 +63,27 @@ const SponsorsPage = () => {
         "Social media mentions",
         "Certificate of sponsorship recognition"
       ]
-    }
+    },
+    {
+      title: "Bronze Sponsor",
+      price: "KES 50,000",
+      color: "from-yellow-400 to-yellow-600",
+      textColor: "text-yellow-900",
+      bgColor: "bg-yellow-50",
+      borderColor: "border-yellow-200",
+      features: [
+        "Event naming rights (JaGedo Summit powered by [Your Company])",
+        "Logo on all marketing materials and communications",
+        "Opening keynote speaking opportunity (20 minutes)",
+        "Premium exhibition booth (6x6 meters)",
+        "10 complimentary registrations",
+        "VIP networking dinner hosting rights",
+        "Post-event attendee contact list",
+        "Year-round partnership recognition",
+        "Custom branded registration area",
+        "Exclusive mobile app splash screen"
+      ]
+    },
   ];
 
   const currentSponsors = [
@@ -124,38 +125,7 @@ const SponsorsPage = () => {
     }
   ];
 
-  const sponsorshipBenefits = [
-    {
-      icon: "🎯",
-      title: "Targeted Audience",
-      description: "Reach 500+ construction professionals, decision-makers, and industry leaders"
-    },
-    {
-      icon: "🤝",
-      title: "Quality Networking",
-      description: "Connect with potential clients, partners, and suppliers in structured environments"
-    },
-    {
-      icon: "📈",
-      title: "Brand Visibility",
-      description: "Showcase your brand across multiple touchpoints before, during, and after the event"
-    },
-    {
-      icon: "🏆",
-      title: "Industry Leadership",
-      description: "Position your company as a thought leader and industry innovator"
-    },
-    {
-      icon: "📊",
-      title: "Lead Generation",
-      description: "Generate high-quality leads through exhibition booths and speaking opportunities"
-    },
-    {
-      icon: "🌍",
-      title: "Market Expansion",
-      description: "Access new markets and expand your presence in East Africa's construction sector"
-    }
-  ];
+  
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
@@ -167,7 +137,7 @@ const SponsorsPage = () => {
       {/* Main Content */}
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-16 px-4 sm:px-6 lg:px-8">
+        {/* <section className="bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
               Partner With Us
@@ -191,114 +161,92 @@ const SponsorsPage = () => {
               </a>
             </div>
           </div>
-        </section>
+        </section> */}
 
-        {/* Why Sponsor Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Why Sponsor the JaGedo Summit?
-              </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Connect with Kenya's construction industry leaders and position your brand at the forefront of innovation.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {sponsorshipBenefits.map((benefit, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition">
-                  <div className="text-4xl mb-4">{benefit.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Sponsorship Packages */}
         <section id="packages" className="py-16 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Sponsorship Packages
-              </h2>
-              <p className="text-lg text-gray-600">
-                Choose the package that best fits your marketing objectives and budget.
-              </p>
-            </div>
+  <div className="max-w-7xl mx-auto">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        Sponsorship Packages
+      </h2>
+      <p className="text-lg text-gray-600">
+        Choose the package that best fits your marketing objectives and budget.
+      </p>
+    </div>
 
-            <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8">
-              {sponsorshipTiers.map((tier, index) => (
-                <div
-                  key={index}
-                  className={`relative bg-white rounded-2xl shadow-lg border-2 ${tier.borderColor} overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105`}
-                >
-                  {/* Header */}
-                  <div className={`bg-gradient-to-r ${tier.color} px-6 py-8 text-center text-white`}>
-                    <h3 className="text-2xl font-bold mb-2">{tier.title}</h3>
-                    <div className="text-3xl font-extrabold">{tier.price}</div>
-                  </div>
-
-                  {/* Features */}
-                  <div className="p-6">
-                    <ul className="space-y-3">
-                      {tier.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start">
-                          <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                          </svg>
-                          <span className="text-gray-700 text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  {/* CTA Button */}
-                  <div className="p-6 pt-0">
-                    <button
-                      onClick={() => setSelectedPackage(tier)}
-                      className={`w-full bg-gradient-to-r ${tier.color} text-white font-bold py-3 px-6 rounded-full hover:opacity-90 transition`}
-                    >
-                      Select Package
-                    </button>
-                  </div>
-                </div>
-              ))}
-            </div>
+    <div className="grid lg:grid-cols-2 xl:grid-cols-4 gap-8">
+      {sponsorshipTiers.map((tier, index) => (
+        <div
+          key={index}
+          className={`relative bg-white rounded-2xl shadow-lg border-2 ${tier.borderColor} overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:scale-105 flex flex-col`}
+        >
+          {/* Header */}
+          <div className={`bg-gradient-to-r ${tier.color} px-6 py-8 text-center text-white`}>
+            <h3 className="text-2xl font-bold mb-2">{tier.title}</h3>
+            <div className="text-3xl font-extrabold">{tier.price}</div>
           </div>
-        </section>
 
-        {/* Current Sponsors */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Our 2024 Sponsors
-              </h2>
-              <p className="text-lg text-gray-600">
-                Thank you to our amazing sponsors who make this event possible.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {currentSponsors.map((sponsor, index) => (
-                <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center hover:shadow-md transition">
-                  <div className="text-6xl mb-4">{sponsor.logo}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{sponsor.name}</h3>
-                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full mb-3">
-                    {sponsor.tier}
-                  </span>
-                  <p className="text-gray-600 text-sm">{sponsor.description}</p>
-                </div>
+          {/* Features */}
+          <div className="p-6 flex-grow">
+            <ul className="space-y-3">
+              {tier.features.map((feature, featureIndex) => (
+                <li key={featureIndex} className="flex items-start">
+                  <svg className="h-5 w-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span className="text-gray-700 text-sm">{feature}</span>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
-        </section>
+
+          {/* CTA Button */}
+          <div className="p-6 pt-0 mt-auto">
+            <button
+              onClick={() => setSelectedPackage(tier)}
+              className={`w-full bg-gradient-to-r ${tier.color} text-white font-bold py-3 px-6 rounded-full hover:opacity-90 transition`}
+            >
+              Select Package
+            </button>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+{/* Current Sponsors */}
+<section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        Our 2024 Sponsors
+      </h2>
+      <p className="text-lg text-gray-600">
+        Thank you to our amazing sponsors who make this event possible.
+      </p>
+    </div>
+
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {currentSponsors.map((sponsor, index) => (
+        <div key={index} className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center hover:shadow-md transition">
+          <div className="text-6xl mb-4">{sponsor.logo}</div>
+          <h3 className="text-xl font-semibold text-gray-900 mb-2">{sponsor.name}</h3>
+          <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full mb-3">
+            {sponsor.tier}
+          </span>
+          <p className="text-gray-600 text-sm">{sponsor.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
         {/* Custom Sponsorship */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8">
+        {/* <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Need a Custom Package?
@@ -355,10 +303,10 @@ const SponsorsPage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Contact Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+        {/* <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6">Ready to Partner With Us?</h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -393,7 +341,8 @@ const SponsorsPage = () => {
               Response time: Within 24 hours | Available: Monday - Friday, 8 AM - 6 PM EAT
             </p>
           </div>
-        </section>
+        </section>}
+      </main> */}
       </main>
 
       {/* Footer */}
