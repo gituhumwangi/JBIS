@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import NavBar from '../components/NavBar';
 import Button from '../components/Button';
 import JaGedoHeroSection from "../assets/JaGedoHeroSection2.jpg";
-// import Card1 from '../assets/Event1.jpg';
+import Card1 from '../assets/Event1.jpeg';
 // import Card2 from '../assets/Event2.jpg';
 // import Card3 from '../assets/Event3.jpg';
 import Footer from '../components/Footer';
@@ -169,9 +169,9 @@ const Home = () => {
       {/* Hero Section */}
       <div className="px-4 md:px-20 lg:px-40 py-8 text-white">
   <div
-    className="min-h-[500px] rounded-3xl bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-center p-8 md:p-16 gap-6 shadow-xl"
+    className="min-h-[500px] disabled:opacity-50 rounded-3xl bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-center p-8 md:p-16 gap-6 shadow-xl"
     style={{
-      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6)), url(${JaGedoHeroSection})`,
+      backgroundImage: `linear-gradient(rgba(0, 0.9, 0.9, 0.9), rgba(0, 0, 0, 0.6)), url(${Card1})`,
     }}
   >
     <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-manrope leading-tight">

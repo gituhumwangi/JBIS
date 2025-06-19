@@ -46,7 +46,7 @@ export default function PastEvents() {
       projects: 75,
       prizePool: "100K",
       type: "Hackathon",
-      image: {Event1}
+      image: Event1
     },
     {
       id: 2,
@@ -58,7 +58,7 @@ export default function PastEvents() {
       sessions: 12,
       completion: "95%",
       type: "Workshop",
-      image: {Event2}
+      image: Event2
     },
     {
       id: 3,
@@ -70,7 +70,7 @@ export default function PastEvents() {
       investors: 50,
       deals: "5M+",
       type: "Summit",
-      image: {Event3}
+      image: Event3
     },
     {
       id: 4,
@@ -82,7 +82,7 @@ export default function PastEvents() {
       speakers: 25,
       satisfaction: "97%",
       type: "Conference",
-      image: {Event3}
+      image: Event3
     }
   ];
 
@@ -248,7 +248,7 @@ export default function PastEvents() {
                 key={event.id}
                 className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group hover:-translate-y-2"
               >
-                <div className={`h-48 ${event.image} relative overflow-hidden`}>
+                <div className={'h-48 bg-cover bg-center relative overflow-hidden'} style={{ backgroundImage: `url(${event.image})`}}>
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                   <div className="absolute top-4 left-4">
                     <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
