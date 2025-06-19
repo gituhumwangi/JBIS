@@ -389,7 +389,7 @@ const RegistrationPage = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full bg-gradient-to-r from-blue-900 to-blue-00 text-white font-bold py-4 px-6 rounded-xl hover:from-blue-700 hover:to-blue-800 focus:ring-4 focus:ring-blue-300 transition-all duration-200 transform hover:scale-[1.02] ${
+                  className={`w-full bg-gradient-to-r from-blue-900 to-blue-900 text-white font-bold py-4 px-6 rounded-xl hover:transition duration-900 hover:text-black hover:from-[#FFD700] hover:to-[#FFD700] focus:ring-4 focus:ring-blue-300 transition-all transform hover:scale-[1.02] ${
                     isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
                   }`}
                 >

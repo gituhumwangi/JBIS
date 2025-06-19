@@ -32,7 +32,7 @@ const SponsorsPage = () => {
     {
       title: "Gold Sponsor",
       price: "KES 150,000",
-      color: "from-yellow-500 to-yellow-700",
+      color: "from-yellow-500 to-yellow-800",
       textColor: "text-yellow-900",
       bgColor: "bg-yellow-50",
       borderColor: "border-yellow-300",
@@ -68,7 +68,7 @@ const SponsorsPage = () => {
     {
       title: "Bronze Sponsor",
       price: "KES 50,000",
-      color: "from-yellow-400 to-yellow-600",
+      color: "from-yellow-300 to-yellow-600",
       textColor: "text-yellow-900",
       bgColor: "bg-yellow-50",
       borderColor: "border-yellow-200",
@@ -208,9 +208,9 @@ const SponsorsPage = () => {
             <Link
             to="/sponsersregistration"
               // onClick={() => setSelectedPackage(tier)}
-              // className={`w-full bg-gradient-to-r ${tier.color} text-white font-bold py-3 px-6 rounded-full hover:opacity-90 transition`}
+              className={`items-center flex justify-center`}
             >
-              <Button className="w-30 md:w-40 lg:w-50 h-auto"> Select Package </Button>
+              <Button className="w-30 md:w-30 lg:w-38 items-center  h-auto text-white"> Select Package </Button>
             </Link>
           </div>
         </div>
@@ -220,7 +220,7 @@ const SponsorsPage = () => {
 </section>
 
 {/* Current Sponsors */}
-<section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+{/* <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
   <div className="max-w-6xl mx-auto">
     <div className="text-center mb-12">
       <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -244,7 +244,7 @@ const SponsorsPage = () => {
       ))}
     </div>
   </div>
-</section>
+</section> */}
 
 
         {/* Custom Sponsorship */}

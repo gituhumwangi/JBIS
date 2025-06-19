@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import NavBar from '../components/NavBar';
 import Button from '../components/Button';
-import JaGedoHeroSection from "../assets/JaGedoHeroSection.jpg";
-import Card1 from '../assets/Event1.jpg';
-import Card2 from '../assets/Event2.jpg';
-import Card3 from '../assets/Event3.jpg';
+import JaGedoHeroSection from "../assets/JaGedoHeroSection2.jpg";
+// import Card1 from '../assets/Event1.jpg';
+// import Card2 from '../assets/Event2.jpg';
+// import Card3 from '../assets/Event3.jpg';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Clock, MapPin, Calendar } from 'lucide-react';
+import AboutImage1 from '../assets/AboutImage1.jpg';
+import AboutImage2 from '../assets/AboutImage2.jpg';
 
 const sponsorshipBenefits = [
     {
@@ -41,6 +43,10 @@ const sponsorshipBenefits = [
       description: "Access new markets and expand your presence in East Africa's construction sector"
     }
 ];
+
+const partners = [
+    "TechCorp", "InnovateLab", "CloudVentures", "StartupHub", "DevTools Pro", "FutureVC", "BlockchainPro", "AIFoundry"
+  ];
 
 const whoShouldAttend = [
   {
@@ -161,74 +167,95 @@ const Home = () => {
       <NavBar />
 
       {/* Hero Section */}
-      <div className="px-4 md:px-20 lg:px-40 py-8 bg-[rgb(0,0,122)] text-white">
+      <div className="px-4 md:px-20 lg:px-40 py-8 text-white">
   <div
-    className="min-h-[480px] rounded-xl bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-center p-6 gap-4"
-    // style={{
-    //   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url(${JaGedoHeroSection})`,
-    // }}
+    className="min-h-[500px] rounded-3xl bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-center p-8 md:p-16 gap-6 shadow-xl"
+    style={{
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.6)), url(${JaGedoHeroSection})`,
+    }}
   >
-    <h1 className="text-white leading-tight text-4xl md:text-6xl font-extrabold font-manrope m-1">
-      JBIS: JaGedo Builder Innovation Summary
+    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-manrope leading-tight">
+      JBIS: JaGedo Builder Innovation Summit
     </h1>
-    <h2 className="text-white text-2xl md:text-4xl font-bold font-manrope m-1">
+
+    <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-semibold font-manrope">
       Theme: Future-Proofing Construction Through Innovation
     </h2>
-   <p className="text-gray-100 text-base mb-6 sm:text-xl max-w-xl ">
-  <span className="inline-block text-blue-400 mr-2 align-middle">
-    <MapPin />
-  </span>
-  <strong>Venue:</strong> WestPark Towers 12th floor, Westlands <br />
 
-  <span className="inline-block text-green-400 mr-2 align-middle">
-    <Calendar />
-  </span>
-  <strong>Date:</strong> July 27, 2025 <br />
+    <p className="text-gray-100 text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
+      <span className="inline-block text-blue-400 mr-2 align-middle">
+        <MapPin />
+      </span>
+      <strong>Venue:</strong> WestPark Towers 12th Floor, Westlands <br />
 
-  <span className="inline-block text-yellow-400 mr-2 align-middle">
-    <Clock />
-  </span>
-  <strong>Time:</strong> 9:00 AM – 5:00 PM <br />
+      <span className="inline-block text-green-400 mr-2 align-middle">
+        <Calendar />
+      </span>
+      <strong>Date:</strong> October 17, 2025 <br />
 
-  Join us as we bring together industry leaders, innovators, and visionaries to redefine the future of construction.
-</p>
+      <span className="inline-block text-yellow-400 mr-2 align-middle">
+        <Clock />
+      </span>
+      <strong>Time:</strong> 9:00 AM – 5:00 PM <br />
 
-    <Button className="w-100 md:w-40 text-white font-bold px-6 py-2 mt-2 shadow-lg focus:ring-3 bg-blue-500">
+      <span className="block mt-4">
+        Join us as we bring together industry leaders, innovators, and visionaries to redefine the future of construction.
+      </span>
+    </p>
+    <div className="">
+    <Button className="w-full sm:w-30 md:w-35 lg:w-38 text-white font-bold px-6 py-3 mt-4 shadow-lg transition">
       <Link to="/registration">Register Now</Link>
     </Button>
+
+    {/* <Button className="w-full sm:w-30 md:w-38 lg:w-45 text-white font-bold px-6 py-3 mt-4 shadow-lg transition ">
+      <Link to="/sponsersregistration">Partner with us</Link>
+    </Button> */}
+    </div>
   </div>
 </div>
 
 
-      {/* About Us Section */}
-<section className="px-4 md:px-20 lg:px-40 py-8">
-  <h1 className="text-gray-900 leading-tight text-base md:text-4xl font-extrabold font-manrope mb-6 pb-4 text-center">
-    What is JaGedo Builder Innovation Summit
+
+   {/* About Us Section */}
+<section className="px-6 md:px-20 lg:px-36 py-10 bg-white">
+  <h1 className="text-center text-2xl md:text-4xl font-extrabold text-gray-900 font-manrope mb-12">
+    What is JaGedo Builder Innovation Summit?
   </h1>
 
-  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
     {/* Image Section */}
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-center order-2 lg:order-1">
-      <img
-        className="rounded-xl w-full h-auto object-cover"
-        src="https://pagedone.io/asset/uploads/1717741205.png"
-        alt="event"
-      />
-      <img
-        className="rounded-xl w-full h-auto object-cover"
-        src="https://pagedone.io/asset/uploads/1717741215.png"
-        alt="event"
-      />
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 order-2 lg:order-1">
+      {[AboutImage1, AboutImage2].map((img, index) => (
+        <div
+          key={index}
+          className="relative group overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-transform duration-500 hover:scale-105"
+        >
+          <img
+            src={img}
+            // alt={`Event ${index + 1}`}
+            className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center rounded-3xl">
+            {/* <p className="text-white text-lg font-semibold">Event {index + 1}</p> */}
+          </div>
+        </div>
+      ))}
     </div>
 
     {/* Text Section */}
-    <div className="flex flex-col items-center lg:items-start text-center lg:text-left order-1 lg:order-2">
-      <h2 className="text-gray-900 text-3xl md:text-4xl font-bold mb-4">
-        What is JBIS?
+    <div className="order-1 lg:order-2 flex flex-col items-center lg:items-start text-center lg:text-left">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+        What is <span className="text-indigo-600">JBIS?</span>
       </h2>
-      <p className="text-gray-500 mb-6">
-        The <strong>JaGedo Builder Innovation Summit (JBIS)</strong> is an annual flagship event that brings together construction professionals, technology innovators, and industry leaders to collaborate, learn, and showcase groundbreaking ideas. It’s a space where innovation meets execution — empowering builders to lead the future of infrastructure and smart construction.
+      <p className="text-gray-600 text-base leading-relaxed max-w-xl">
+        The <span className="font-semibold text-gray-800">JaGedo Builder Innovation Summit (JBIS)</span> is our annual flagship event that unites construction professionals, tech innovators, and industry leaders. It's more than a summit—it's a platform where innovation meets execution.
       </p>
+      <p className="text-gray-600 text-base leading-relaxed mt-4 max-w-xl">
+        Attendees collaborate, learn, and showcase groundbreaking ideas that redefine infrastructure and smart construction—empowering builders to shape the future of the built world.
+      </p>
+    </div>
+  </div>
+</section>
 
       
 
@@ -246,12 +273,49 @@ const Home = () => {
           <p className="text-sm text-gray-500">Event Theme</p>
         </div>
       </div> */}
-    </div>
-  </div>
-</section>
 
-<section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto py-20">
+  {/* <section className="bg-gray-50 py-16 px-6 md:px-20">
+  <h2 className="text-center text-2xl md:text-4xl font-bold text-gray-800 mb-10">
+    Proudly Sponsored By
+  </h2>
+
+  <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8 items-center justify-items-center">
+    <img src={Sponsor1} alt="Sponsor 1" className="h-12 grayscale hover:grayscale-0 transition duration-300" />
+    <img src={Sponsor2} alt="Sponsor 2" className="h-12 grayscale hover:grayscale-0 transition duration-300" />
+    <img src={Sponsor3} alt="Sponsor 3" className="h-12 grayscale hover:grayscale-0 transition duration-300" />
+    <img src={Sponsor4} alt="Sponsor 4" className="h-12 grayscale hover:grayscale-0 transition duration-300" />
+  </div>
+</section> */}
+
+{/* Partners */}
+      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Trusted Partners
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              We collaborate with industry leaders to deliver exceptional experiences
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mt-4"></div>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
+            {partners.map((partner, index) => (
+              <div 
+                key={index}
+                className="bg-white hover:bg-purple-50 border-2 border-gray-200 hover:border-purple-200 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md"
+              >
+                <div className="text-gray-700 font-bold text-sm">{partner}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+<section className="py-5 px-4 sm:px-4 lg:px-5 bg-white my-2">
+        <div className="max-w-6xl mx-auto py-10">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
               Why Sponsor the JaGedo Summit?
@@ -285,7 +349,7 @@ const Home = () => {
             <Link 
               to="/sponsors" 
             >
-              <Button className="px-1 w-30 md:w-50 h-auto">Become a Sponser</Button>
+              <Button className="px-1 w-30 md:w-45 h-auto text-white">Become a Sponser</Button>
               <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
@@ -331,6 +395,42 @@ const Home = () => {
           </div>
         </div>
       </section> */}
+
+      <section className="py-6 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">
+              Who Should Attend?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              JBIS brings together diverse professionals from across the construction and technology ecosystem.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {whoShouldAttend.map((attendee, index) => (
+              <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow">
+                <div className="flex items-start space-x-4">
+                  <div className="text-4xl flex-shrink-0">{attendee.icon}</div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{attendee.title}</h3>
+                    <p className="text-gray-600 mb-4">{attendee.description}</p>
+                    <div className="space-y-2">
+                      {attendee.highlights.map((highlight, idx) => (
+                        <div key={idx} className="flex items-center text-sm text-gray-700">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
+                          {highlight}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
 
       {/* Program Schedule Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
@@ -381,7 +481,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      {/* <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -414,7 +514,9 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
+
+      
 
 
       {/* Sponsorship Section */}

@@ -37,20 +37,9 @@ const FAQPage = () => {
       questions: [
         {
           question: "How much does it cost to attend?",
-          answer: "Registration fees vary by type: Attendee (KES 5,000), Student (KES 2,000), Vendor/Exhibitor (KES 15,000). Early bird discounts of 20% are available until August 15, 2024. Group discounts are available for 5+ registrations from the same organization."
+          answer: "Registration is free"
         },
-        {
-          question: "What payment methods do you accept?",
-          answer: "We accept M-Pesa, bank transfers, credit/debit cards (Visa, Mastercard), and mobile money transfers. Payment plans are available for corporate registrations. All payments are processed securely through our payment partners."
-        },
-        {
-          question: "Can I get a refund if I can't attend?",
-          answer: "Full refunds are available up to 30 days before the event. Between 15-30 days, we offer 50% refunds. Within 15 days of the event, registration fees can be transferred to our next event or to another person from your organization."
-        },
-        {
-          question: "Do you offer group discounts?",
-          answer: "Yes! We offer 15% discount for 5-9 registrations, 20% for 10-19 registrations, and 25% for 20+ registrations from the same organization. Contact our team at info@jagedo.com for group booking assistance."
-        }
+        
       ]
     },
     {
@@ -70,27 +59,27 @@ const FAQPage = () => {
         }
       ]
     },
-    {
-      category: 'Logistics & Accommodation',
-      questions: [
-        {
-          question: "Do you provide accommodation assistance?",
-          answer: "Yes! We have partnerships with nearby hotels offering special rates for summit attendees. Accommodation packages range from KES 3,500-8,000 per night. Contact our logistics team for booking assistance and shuttle service information."
-        },
-        {
-          question: "Is food provided during the event?",
-          answer: "Yes, registration includes breakfast on day one, lunch on both days, and networking refreshments during breaks. We cater to various dietary requirements including vegetarian, vegan, halal, and gluten-free options. Please indicate dietary requirements during registration."
-        },
-        {
-          question: "What should I bring to the event?",
-          answer: "Bring your photo ID, business cards for networking, notebook and pen (though materials are provided), comfortable shoes for site visits, and your smartphone for our event app. Laptops are recommended for workshop sessions."
-        },
-        {
-          question: "Is parking available at the venue?",
-          answer: "Yes, the Nairobi Convention Center offers ample parking space. Parking is free for event attendees - just show your registration confirmation at the gate. We also provide shuttle services from major hotels and transport hubs."
-        }
-      ]
-    },
+    // {
+    //   category: 'Logistics & Accommodation',
+    //   questions: [
+    //     {
+    //       question: "Do you provide accommodation assistance?",
+    //       answer: "Yes! We have partnerships with nearby hotels offering special rates for summit attendees. Accommodation packages range from KES 3,500-8,000 per night. Contact our logistics team for booking assistance and shuttle service information."
+    //     },
+    //     {
+    //       question: "Is food provided during the event?",
+    //       answer: "Yes, registration includes breakfast on day one, lunch on both days, and networking refreshments during breaks. We cater to various dietary requirements including vegetarian, vegan, halal, and gluten-free options. Please indicate dietary requirements during registration."
+    //     },
+    //     {
+    //       question: "What should I bring to the event?",
+    //       answer: "Bring your photo ID, business cards for networking, notebook and pen (though materials are provided), comfortable shoes for site visits, and your smartphone for our event app. Laptops are recommended for workshop sessions."
+    //     },
+    //     {
+    //       question: "Is parking available at the venue?",
+    //       answer: "Yes, the Nairobi Convention Center offers ample parking space. Parking is free for event attendees - just show your registration confirmation at the gate. We also provide shuttle services from major hotels and transport hubs."
+    //     }
+    //   ]
+    // },
     {
       category: 'Networking & Exhibitions',
       questions: [

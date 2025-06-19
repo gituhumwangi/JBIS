@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Calendar, MapPin, Users, Trophy, Star, ArrowRight, Check, Quote } from 'lucide-react';
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
+import Event1 from "../assets/Event1.jpeg"
+import Event2 from "../assets/Event2.jpeg"
+import Event3 from "../assets/Event3.jpeg"
 
 export default function PastEvents() {
   const [visibleCards, setVisibleCards] = useState(new Set());
@@ -43,7 +46,7 @@ export default function PastEvents() {
       projects: 75,
       prizePool: "100K",
       type: "Hackathon",
-      image: "bg-gradient-to-br from-purple-600 to-blue-600"
+      image: {Event1}
     },
     {
       id: 2,
@@ -55,7 +58,7 @@ export default function PastEvents() {
       sessions: 12,
       completion: "95%",
       type: "Workshop",
-      image: "bg-gradient-to-br from-emerald-600 to-teal-600"
+      image: {Event2}
     },
     {
       id: 3,
@@ -67,7 +70,7 @@ export default function PastEvents() {
       investors: 50,
       deals: "5M+",
       type: "Summit",
-      image: "bg-gradient-to-br from-orange-600 to-red-600"
+      image: {Event3}
     },
     {
       id: 4,
@@ -79,7 +82,7 @@ export default function PastEvents() {
       speakers: 25,
       satisfaction: "97%",
       type: "Conference",
-      image: "bg-gradient-to-br from-indigo-600 to-purple-600"
+      image: {Event3}
     }
   ];
 
@@ -168,11 +171,10 @@ export default function PastEvents() {
             <NavBar/>
         </div>
       {/* Hero Section */}
-      <section className="relative bg-[rgb(0,0,122)] text-white overflow-hidden">
+      {/* <section className="relative bg-[rgb(0,0,122)] text-white overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10"></div>
         
-        {/* Animated background shapes */}
         <div className="absolute top-20 left-10 w-32 h-32 bg-[rgb(0,0,122)] rounded-full blur-xl animate-pulse"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-500/20 rounded-full blur-xl animate-pulse delay-1000"></div>
         
@@ -184,10 +186,10 @@ export default function PastEvents() {
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Leading the industry with world-class hackathons, workshops, and networking events that drive innovation and build communities
             </p>
-          </div>
+          </div> */}
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          {/* <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-center hover:bg-white/15 transition-all duration-300 hover:scale-105">
               <div className="text-3xl lg:text-4xl font-bold text-white mb-2">
                 {counters.events}+
@@ -214,10 +216,10 @@ export default function PastEvents() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Achievements */}
-      <section className="py-16 bg-white">
+      {/* <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {achievements.map((achievement, index) => (
@@ -228,7 +230,7 @@ export default function PastEvents() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Events Showcase */}
       <section className="py-20 bg-gray-50">
@@ -461,7 +463,7 @@ export default function PastEvents() {
         </div>
       </section>
 
-      {/* Partners */}
+      {/* Partners
       <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -485,7 +487,7 @@ export default function PastEvents() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       {/* <section className="py-20 bg-white">
