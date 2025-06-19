@@ -14,7 +14,7 @@ const Footer = () => {
         {/* About Us Section */}
         <div className="space-y-2">
           <h3 className="font-bold text-lg mb-2">About Us</h3>
-          <Link to="/">
+          <Link to="/sublanding">
           <p className="hover:text-[#FFD700] cursor-pointer transition duration-300">JaGedo</p>
           </Link>
           <p className="hover:text-[#FFD700] cursor-pointer transition duration-300">Helpdesk</p>
