@@ -342,7 +342,7 @@ const Home = () => {
           </div>
 
          <div className="text-center mt-8">
-              <Button className="px-1 md:w-48 h-auto text-white sm:w-auto"><Link to="/sponsors">Become a Sponser</Link></Button>
+              <Button className="px-1 md:w-48 h-auto text-white sm:w-auto"><Link to="/sponsors"><span className='px-2 py-2'>Become a Sponser</span></Link></Button>
           </div>
         </div>
       </section> 
