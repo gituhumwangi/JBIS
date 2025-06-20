@@ -310,7 +310,7 @@ const Home = () => {
       </section>
 
 
-<section className="py-5 px-4 sm:px-4 lg:px-5 bg-white my-2">
+<section className="py-2 px-4 sm:px-4 lg:px-5 bg-white my-2">
         <div className="max-w-6xl mx-auto py-10">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">
@@ -342,7 +342,7 @@ const Home = () => {
           </div>
 
          <div className="text-center mt-8">
-              <Button className="px-1 w-30 md:w-45 h-auto text-white sm:w-68"><Link to="/sponsors">Become a Sponser</Link></Button>
+              <Button className="px-1 md:w-48 h-auto text-white sm:w-auto"><Link to="/sponsors">Become a Sponser</Link></Button>
           </div>
         </div>
       </section> 
