@@ -179,38 +179,34 @@ const Home = () => {
     </h1>
 
     <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-semibold font-manrope">
-      Theme: Future-Proofing Construction Through Innovation
+      Future-Proofing Construction Through Innovation
     </h2>
 
-    <p className="text-gray-100 text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed">
-      <span className="inline-block text-blue-400 mr-2 align-middle">
-        <MapPin />
-      </span>
-      <strong>Venue:</strong> WestPark Towers 12th Floor, Westlands <br />
+   <div className="text-gray-100 text-base sm:text-lg md:text-xl max-w-2xl space-y-2">
+      <div className="flex items-center justify-center gap-2">
+        <MapPin className="text-blue-400" size={20} />
+        <span>WestPark Towers, Westlands</span>
+      </div>
+      
+      <div className="flex items-center justify-center gap-2">
+        <Calendar className="text-green-400" size={20} />
+        <span>October 17, 2025</span>
+      </div>
+      
+      <div className="flex items-center justify-center gap-2">
+        <Clock className="text-yellow-400" size={20} />
+        <span>9:00 AM – 5:00 PM</span>
+      </div>
+    </div>
 
-      <span className="inline-block text-green-400 mr-2 align-middle">
-        <Calendar />
-      </span>
-      <strong>Date:</strong> October 17, 2025 <br />
-
-      <span className="inline-block text-yellow-400 mr-2 align-middle">
-        <Clock />
-      </span>
-      <strong>Time:</strong> 9:00 AM – 5:00 PM <br />
-
-      <span className="block mt-4">
-        Join us as we bring together industry leaders, innovators, and visionaries to redefine the future of construction.
-      </span>
+    <p className="text-gray-100 text-sm sm:text-base max-w-xl">
+      Join industry leaders and innovators reshaping construction's future.
     </p>
-    <div className="">
-    <Button className="w-full sm:w-30 md:w-35 lg:w-38 text-white font-bold px-6 py-3 mt-4 shadow-lg transition">
+
+    
+    <Button className="w-full sm:w-auto text-white font-bold px-8 py-3 shadow-lg transition">
       <Link to="/registration">Register Now</Link>
     </Button>
-
-    {/* <Button className="w-full sm:w-30 md:w-38 lg:w-45 text-white font-bold px-6 py-3 mt-4 shadow-lg transition ">
-      <Link to="/sponsersregistration">Partner with us</Link>
-    </Button> */}
-    </div>
   </div>
 </div>
 
@@ -346,17 +342,10 @@ const Home = () => {
           </div>
 
          <div className="text-center mt-8">
-            <Link 
-              to="/sponsors" 
-            >
-              <Button className="px-1 w-30 md:w-45 h-auto text-white">Become a Sponser</Button>
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
+              <Button className="px-1 w-30 md:w-45 h-auto text-white sm:w-68"><Link to="/sponsors">Become a Sponser</Link></Button>
           </div>
         </div>
-      </section>
+      </section> 
 
 
 
@@ -444,15 +433,15 @@ const Home = () => {
             </p>
             <div className="flex items-center justify-center mt-4 space-x-6 text-sm text-gray-600">
               <div className="flex items-center">
-                <Calendar className="w-4 h-4 mr-2" />
+                <Calendar className="w-4 h-4 mr-1" />
                 March 15, 2025
               </div>
               <div className="flex items-center">
-                <MapPin className="w-4 h-4 mr-2" />
+                <MapPin className="w-4 h-4 mr-1" />
                 Nairobi, Kenya
               </div>
               <div className="flex items-center">
-                <Clock className="w-4 h-4 mr-2" />
+                <Clock className="w-4 h-4 mr-1" />
                 8:00 AM - 5:00 PM
               </div>
             </div>

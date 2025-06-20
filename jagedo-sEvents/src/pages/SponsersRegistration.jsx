@@ -112,12 +112,12 @@ const SponsersRegistration = () => {
                   I agree to receive communications about this project and future events
                 </label>
               </div>
-              <div className='px-70 py-10'>
+              <div className='px-29 py-10'>
               <Button 
                 type="submit"
-                className="w-30 md:w-40 lg:w-48"
+                className="flex items-center justify-center text-white hover:text-gray-900 sm:w-70"
               >
-                Send Project Inquiry
+                <span className="px-2 py-2">Submit</span>
               </Button>
               </div>
             </form>

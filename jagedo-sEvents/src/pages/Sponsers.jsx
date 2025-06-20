@@ -210,7 +210,7 @@ const SponsorsPage = () => {
               // onClick={() => setSelectedPackage(tier)}
               className={`items-center flex justify-center`}
             >
-              <Button className="w-30 md:w-30 lg:w-38 items-center  h-auto text-white"> Select Package </Button>
+              <Button className="md:w-20 lg:w-38 items-center  h-auto text-white sm:w-56"> Select Package </Button>
             </Link>
           </div>
         </div>
