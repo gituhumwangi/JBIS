@@ -303,52 +303,25 @@ const Home = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mt-4"></div>
           </div>
 
-/* Mobile: Grid layout, Desktop: Horizontal scroll */
-<div className="px-4 sm:px-6 lg:px-10 py-8">
-  {/* Mobile and Tablet: Grid Layout */}
-  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:hidden gap-4 sm:gap-6">
+<div className="overflow-x-auto px-4 py-4">
+  <div className="flex space-x-4 w-max px-40 sm:pr-60 items-center justify-center sm:items-center sm:justify-center sm:py-3 lg:w-130">
     {partners.map((partner, index) => (
       <div
         key={index}
-        className="bg-white hover:bg-purple-50 border-2 border-gray-100 hover:border-purple-200 rounded-xl p-4 sm:p-6 flex flex-col items-center justify-center shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105"
+        className="bg-white pb-3 flex flex-col items-center justify-center transition-all duration-300 hover:scale-105"
       >
-        <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gray-50 border-2 border-gray-200 flex items-center justify-center overflow-hidden mb-3 sm:mb-4 hover:border-purple-300 transition-colors duration-300">
+        <div className="w-20 h-20 rounded-full bg-gray-50 border-2 border-gray-200 flex items-center justify-center overflow-hidden mb-2 hover:border-purple-300 transition-colors duration-300">
           <img
             src={JaGedoLogo}
             alt="Partner Logo"
-            className="w-12 h-12 sm:w-16 sm:h-16 object-contain"
+            className="w-16 h-16 object-contain"
           />
-        </div>
-        <div className="text-gray-700 font-medium text-xs sm:text-sm text-center">
-          Partner {index + 1}
         </div>
       </div>
     ))}
   </div>
-
-  {/* Desktop: Horizontal Scroll Layout */}
-  <div className="hidden lg:block overflow-x-auto">
-    <div className="flex space-x-6 w-max">
-      {partners.map((partner, index) => (
-        <div
-          key={index}
-          className="bg-white hover:bg-purple-50 border-2 border-gray-100 hover:border-purple-200 rounded-xl p-6 min-w-[180px] flex flex-col items-center justify-center shadow-sm hover:shadow-lg transition-all duration-300 hover:scale-105"
-        >
-          <div className="w-20 h-20 rounded-full bg-gray-50 border-2 border-gray-200 flex items-center justify-center overflow-hidden mb-4 hover:border-purple-300 transition-colors duration-300">
-            <img
-              src={JaGedoLogo}
-              alt="Partner Logo"
-              className="w-16 h-16 object-contain"
-            />
-          </div>
-          <div className="text-gray-700 font-medium text-sm text-center">
-            Partner {index + 1}
-          </div>
-        </div>
-      ))}
-    </div>
-  </div>
 </div>
+
 </div>
       </section>
 
