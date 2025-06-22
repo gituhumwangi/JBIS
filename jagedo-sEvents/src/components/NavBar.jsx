@@ -111,7 +111,7 @@ const NavBar = () => {
               </li>
               <li className="pt-2">
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white font-bold w-full py-3 rounded-lg transition-colors">
-                  <a href="tel:+4733378901" className="flex items-center justify-center">
+                  <a href="tel:+254768647160" className="flex items-center justify-center">
                     <Phone className="mr-2" size={16} />
                     Contact Us
                   </a>
