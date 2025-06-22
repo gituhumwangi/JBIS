@@ -58,7 +58,7 @@ const NavBar = () => {
 
         {/* Right-side contact button (Desktop only) */}
         <div className="hidden md:flex items-center">
-          <Button className="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-lg transition-colors">
+          <Button className="text-white font-bold px-4 py-2 rounded-lg transition-colors md:w-45">
             <a href="tel:+4733378901" className="flex items-center">
               <Phone className="mr-2" size={16} />
               <span className="hidden lg:inline">+47 333 78 901</span>

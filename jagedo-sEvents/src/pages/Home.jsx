@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp, Clock, MapPin, Calendar } from 'lucide-react';
 import AboutImage1 from '../assets/AboutImage1.jpg';
 import AboutImage2 from '../assets/AboutImage2.jpg';
+import JaGedoLogo from '../assets/Japageologo.webp';
+import { image } from 'framer-motion/client';
 
 const sponsorshipBenefits = [
     {
@@ -44,9 +46,9 @@ const sponsorshipBenefits = [
     }
 ];
 
-const partners = [
-    "TechCorp", "InnovateLab", "CloudVentures", "StartupHub", "DevTools Pro", "FutureVC", "BlockchainPro", "AIFoundry"
-  ];
+ const partners = [
+  "JaGedo"
+   ];
 
 const whoShouldAttend = [
   {
@@ -175,7 +177,7 @@ const Home = () => {
     }}
   >
     <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-manrope leading-tight">
-      JBIS: JaGedo Builder Innovation Summit
+      JBIS: JaGedo Builders Innovation Summit
     </h1>
 
     <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-semibold font-manrope">
@@ -185,12 +187,12 @@ const Home = () => {
    <div className="text-gray-100 text-base sm:text-lg md:text-xl max-w-2xl space-y-2">
       <div className="flex items-center justify-center gap-2">
         <MapPin className="text-blue-400" size={20} />
-        <span>WestPark Towers, Westlands</span>
+        <span>TBD</span>
       </div>
       
       <div className="flex items-center justify-center gap-2">
         <Calendar className="text-green-400" size={20} />
-        <span>October 17, 2025</span>
+        <span>September 20, 2025</span>
       </div>
       
       <div className="flex items-center justify-center gap-2">
@@ -203,10 +205,15 @@ const Home = () => {
       Join industry leaders and innovators reshaping construction's future.
     </p>
 
-    
-    <Button className="w-full sm:w-auto text-white font-bold px-8 py-3 shadow-lg transition">
+    <div className="flex gap-4">
+    <Button className="w-full sm:w-auto  md:w-40 lg:w-45 text-white font-bold px-5 py-3 shadow-lg transition">
       <Link to="/registration">Register Now</Link>
     </Button>
+
+    <Button className="w-full sm:w-auto  md:w-40 lg:w-45 text-white font-bold px-5 py-3 shadow-lg transition ">
+      <Link to="/sponsors">Sponser</Link>
+    </Button>
+    </div>
   </div>
 </div>
 
@@ -215,7 +222,7 @@ const Home = () => {
    {/* About Us Section */}
 <section className="px-6 md:px-20 lg:px-36 py-10 bg-white">
   <h1 className="text-center text-2xl md:text-4xl font-extrabold text-gray-900 font-manrope mb-12">
-    What is JaGedo Builder Innovation Summit?
+    What is JaGedo Builders Innovation Summit?
   </h1>
 
   <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
@@ -244,10 +251,10 @@ const Home = () => {
         What is <span className="text-indigo-600">JBIS?</span>
       </h2>
       <p className="text-gray-600 text-base leading-relaxed max-w-xl">
-        The <span className="font-semibold text-gray-800">JaGedo Builder Innovation Summit (JBIS)</span> is our annual flagship event that unites construction professionals, tech innovators, and industry leaders. It's more than a summit—it's a platform where innovation meets execution.
+        The <span className="font-semibold text-gray-800">JaGedo Builders Innovation Summit; (JBIS)</span> is our annual flagship event that unites construction professionals, tech innovators, and industry leaders. It's more than a summit it's a platform where innovation meets execution.
       </p>
       <p className="text-gray-600 text-base leading-relaxed mt-4 max-w-xl">
-        Attendees collaborate, learn, and showcase groundbreaking ideas that redefine infrastructure and smart construction—empowering builders to shape the future of the built world.
+        Attendees collaborate, learn, and showcase groundbreaking ideas that redefine infrastructure and smart construction;empowering builders to shape the future of the built world.
       </p>
     </div>
   </div>
@@ -296,17 +303,29 @@ const Home = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mt-4"></div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6">
-            {partners.map((partner, index) => (
-              <div 
-                key={index}
-                className="bg-white hover:bg-purple-50 border-2 border-gray-200 hover:border-purple-200 rounded-xl p-6 text-center transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md"
-              >
-                <div className="text-gray-700 font-bold text-sm">{partner}</div>
-              </div>
-            ))}
-          </div>
+<div className="flex space-x-6 w-max">
+    {partners.map((partner, index) => (
+      <div
+        key={index}
+        className="bg-white px-140 pb-1 flex flex-col items-center justify-center transition-all duration-300 hover:scale-105"
+      >
+        {/* Single logo container with circular styling */}
+        <div className="w-20 h-20 rounded-full bg-gray-50 border-2  border-gray-200 flex items-center justify-center overflow-hidden mb-2 hover:border-purple-300 transition-colors duration-300">
+          <img
+            src={JaGedoLogo}
+            alt="Partner Logo"
+            className="w-16 h-16 object-contain"
+          />
         </div>
+        
+         {/* Optional: Partner name */}
+        {/* <div className="text-gray-700 font-medium text-sm text-center">
+          Partner {index + 1}
+        </div> */}
+      </div>
+    ))}
+  </div>
+</div>
       </section>
 
 
@@ -434,7 +453,7 @@ const Home = () => {
             <div className="flex items-center justify-center mt-4 space-x-6 text-sm text-gray-600">
               <div className="flex items-center">
                 <Calendar className="w-4 h-4 mr-1" />
-                March 15, 2025
+                September 20 - 21, 2025
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-1" />

@@ -114,7 +114,7 @@ const RegistrationPage = () => {
               </span>
               <span className="flex items-center">
                 <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
-                50+ Speakers
+                10 Speakers
               </span>
               <span className="flex items-center">
                 <span className="w-2 h-2 bg-yellow-500 rounded-full mr-2"></span>
