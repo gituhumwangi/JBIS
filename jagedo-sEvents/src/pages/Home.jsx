@@ -304,7 +304,7 @@ const Home = () => {
           </div>
 
 <div className="overflow-x-auto px-4 py-4">
-  <div className="flex space-x-4 w-max px-55 sm:pr-40 items-center justify-center sm:items-center sm:justify-center sm:py-3 lg:w-130">
+  <div className="flex space-x-4 w-max px-50 sm:pr-40 items-center justify-center sm:items-center sm:justify-center sm:py-3 lg:w-130">
     {partners.map((partner, index) => (
       <div
         key={index}
