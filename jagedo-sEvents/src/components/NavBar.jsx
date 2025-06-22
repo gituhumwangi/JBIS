@@ -61,7 +61,7 @@ const NavBar = () => {
           <Button className="text-white font-bold px-4 py-2 rounded-lg transition-colors md:w-45">
             <a href="tel:+4733378901" className="flex items-center">
               <Phone className="mr-2" size={16} />
-              <span className="hidden lg:inline">+47 333 78 901</span>
+              <span className="hidden lg:inline">+254768647160</span>
               <span className="lg:hidden">Call</span>
             </a>
           </Button>
