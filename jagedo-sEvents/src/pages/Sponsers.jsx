@@ -11,41 +11,40 @@ const SponsorsPage = () => {
     
     {
       title: "Platinum Sponsor",
-      price: "KES 300,000",
+      price: "KES 250,000",
       color: "from-gray-400 to-gray-600",
       textColor: "text-gray-900",
       bgColor: "bg-gray-50",
       borderColor: "border-gray-200",
       features: [
-        "Logo prominently displayed on all materials",
-        "Panel discussion speaking opportunity",
-        "Large exhibition booth (4x4 meters)",
-        "6 complimentary registrations",
-        "Workshop or breakout session hosting",
-        "Welcome reception co-hosting rights",
-        "Mobile app banner advertisement",
-        "Stage backdrop logo placement",
-        "Branded signage throughout venue",
-        "Networking lunch table hosting"
+        "Top-tier brand exposure: Prime logo placement on all event materials, banners, stage backdrops, and digital campaigns.",
+        "Speaking opportunity: Keynote or panel speaking slot for a company executive.",
+        "Exhibition space: Premium booth location with double-size space.",
+        "Lead generation: Full access to attendee list with contact info (opt-in)",
+        "Media visibility: Featured in all press releases, interviews, and media coverage.",
+        "Social media spotlight: Dedicated posts before, during, and after the event.",
+        "VIP passes: 10 passes, including access to exclusive networking lounges",
+        "Launch privileges: Priority slot for any product/service launch at the summit.",
+        "Branded content: Option to insert flyers, brochures, or gifts into summit bags.",
       ]
     },
     {
       title: "Gold Sponsor",
-      price: "KES 150,000",
+      price: "KES 125,000",
       color: "from-yellow-500 to-yellow-800",
       textColor: "text-yellow-900",
       bgColor: "bg-yellow-50",
       borderColor: "border-yellow-300",
       features: [
-        "Logo on website and select materials",
-        "Exhibition booth (3x3 meters)",
-        "4 complimentary registrations",
-        "Coffee break sponsorship opportunity",
-        "Mobile app listing with company profile",
-        "Speaking opportunity in panel discussion",
-        "Welcome bag insert inclusion",
-        "Social media recognition",
-        "Networking session table reservation"
+        "High-Impact Visibility:",
+        "Logo placement: On event backdrops, digital banners, and select print materials.",
+        "Panel participation: Invitation for one company rep to join a discussion panel.",
+        "Exhibition booth: Standard booth in high-traffic area.",
+        "Lead generation: Access to post-event attendee summary (opt-in).",
+        "Media inclusion: Mention in press releases and post-event wrap-ups.",
+        "Social media shoutouts: Featured in sponsor carousel and thank-you posts.",
+        "VIP passes: 35 passes with access to select networking sessions.",
+        "Product display: Option to showcase materials or demos at booth."
       ]
     },
     {
@@ -56,33 +55,28 @@ const SponsorsPage = () => {
       bgColor: "bg-blue-50",
       borderColor: "border-blue-200",
       features: [
-        "Logo on website sponsor page",
-        "Standard exhibition booth (2x2 meters)",
-        "2 complimentary registrations",
-        "Welcome bag insert",
-        "Mobile app company listing",
-        "Social media mentions",
-        "Certificate of sponsorship recognition"
+        "Brand Presence with Value:",
+        "Logo display: On select banners and digital platforms.",
+        "Exhibition space: Standard booth.",
+        "Lead support: Opportunity to collect leads via booth engagement.",
+        "Mention in programs: Listed in digital program and website.",
+        "Social media: Group mention with fellow silver sponsors.",
+        "Event access: 20 VIP passes and general networking access"
       ]
     },
     {
       title: "Bronze Sponsor",
-      price: "KES 50,000",
+      price: "KES 25,000",
       color: "from-yellow-300 to-yellow-600",
       textColor: "text-yellow-900",
       bgColor: "bg-yellow-50",
       borderColor: "border-yellow-200",
       features: [
-        "Event naming rights (JaGedo Summit powered by [Your Company])",
-        "Logo on all marketing materials and communications",
-        "Opening keynote speaking opportunity (20 minutes)",
-        "Premium exhibition booth (6x6 meters)",
-        "10 complimentary registrations",
-        "VIP networking dinner hosting rights",
-        "Post-event attendee contact list",
-        "Year-round partnership recognition",
-        "Custom branded registration area",
-        "Exclusive mobile app splash screen"
+        "Entry-Level Exposure:",
+        "Name listing: On website and event program",
+        "Exhibition space: Shared exhibition table or basic booth",
+        "Networking: 10 event pass with general access.",
+        "Social media: Group mention pre- and post-event.",
       ]
     },
   ];
