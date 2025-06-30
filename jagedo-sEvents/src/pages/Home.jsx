@@ -320,7 +320,7 @@ const Home = () => {
           <img
             src={JaGedoLogo}
             alt="Partner Logo"
-            className="w-70 h-70 object-contain"
+            className="w-70 h-70 sm:w-35 sm:h-35 object-contain"
           />
         </div>
       </div>
