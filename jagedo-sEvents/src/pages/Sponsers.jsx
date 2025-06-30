@@ -175,24 +175,23 @@ const SponsorsPage = () => {
                     <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mt-4"></div>
                   </div>
         
-        <div className="overflow-x px-4 sm:px-9 py-4">
-          <div className="flex space-x-4 w-max px-20 sm:pr-4 items-center justify-center sm:items-center sm:justify-center sm:py-3 lg:px-110 content-center lg:pb-2">
-            {partners.map((partner, index) => (
-              <div
-                key={index}
-                className="bg-white pb-1.5 flex items-center justify-center transition-all duration-300 hover:scale-105 content-center"
-              >
-                <div className="w-70 h-70 rounded-full bg-gray-50 border-2 border-gray-200 flex items-center justify-center overflow-hidden mb-2 hover:border-purple-300 transition-colors duration-300">
-                  <img
-                    src={Jagedologo}
-                    alt="Partner Logo"
-                    className="w-70 h-70 object-contain"
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+       <div className="flex justify-center items-center">
+             <div className="flex flex-col items-center justify-center p-8 bg-white rounded-3xl  transition-all duration-300 hover:scale-105 border border-gray-100 max-w-md">
+               <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full bg-gray-50 border-4 border-gray-200 flex items-center justify-center overflow-hidden hover:border-purple-300 transition-colors duration-300 mb-6">
+                 <img
+                   src={Jagedologo}
+                   alt="JaGedo Logo"
+                   className="w-full h-full object-contain p-6"
+                 />
+               </div>
+               {/* <h3 className="text-2xl font-bold text-gray-800 text-center">
+                 JaGedo
+               </h3> */}
+               {/* <p className="text-gray-600 text-center mt-2">
+                 Our Founding Partner
+               </p> */}
+             </div>
+           </div>
         
         </div>
               </section>
