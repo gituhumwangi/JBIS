@@ -41,7 +41,7 @@ const NavBar = () => {
           </li>
           <li>
             <Link to="/sponsors" className="hover:text-blue-500 transition-colors">
-              Sponsors
+              Sponsor
             </Link>
           </li>
           <li>
@@ -59,9 +59,9 @@ const NavBar = () => {
         {/* Right-side contact button (Desktop only) */}
         <div className="hidden md:flex items-center">
           <Button className="text-white font-bold px-4 py-2 rounded-lg transition-colors md:w-45">
-            <a href="tel:+4733378901" className="flex items-center">
+            <a href="tel:+254113273333" className="flex items-center">
               <Phone className="mr-2" size={16} />
-              <span className="hidden lg:inline">+254768647160</span>
+              <span className="hidden lg:inline">+254113273333</span>
               <span className="lg:hidden">Call</span>
             </a>
           </Button>
@@ -88,7 +88,7 @@ const NavBar = () => {
                   className="block py-2 text-gray-700 hover:text-blue-500 text-lg font-medium transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
-                  Sponsors
+                  Sponsor
                 </Link>
               </li>
               <li>
@@ -111,7 +111,7 @@ const NavBar = () => {
               </li>
               <li className="pt-2">
                 <Button className="bg-blue-600 hover:bg-blue-700 text-white font-bold w-full py-3 rounded-lg transition-colors">
-                  <a href="tel:+254768647160" className="flex items-center justify-center">
+                  <a href="tel:+254113273333" className="flex items-center justify-center">
                     <Phone className="mr-2" size={16} />
                     Contact Us
                   </a>

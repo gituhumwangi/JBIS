@@ -12,6 +12,7 @@ import AboutImage1 from '../assets/AboutImage1.jpg';
 import AboutImage2 from '../assets/AboutImage2.jpg';
 import JaGedoLogo from '../assets/Japageologo.webp';
 import { image } from 'framer-motion/client';
+import { ImInsertTemplate } from 'react-icons/im';
 
 const sponsorshipBenefits = [
     {
@@ -53,8 +54,8 @@ const sponsorshipBenefits = [
 const whoShouldAttend = [
   {
     icon: "🏗️",
-    title: "Builders & Contractors",
-    description: "Construction professionals, contractors, architects, and project managers looking to stay ahead of industry trends and connect with peers.",
+    title: "Builders",
+    description: "Construction, fundis, professionals and Hardware Owners looking to stay ahead of industry trends and connect with peers.",
     highlights: ["Latest construction techniques", "Industry best practices", "Networking opportunities"]
   },
   {
@@ -65,14 +66,14 @@ const whoShouldAttend = [
   },
   {
     icon: "👥",
-    title: "Customers & Clients",
+    title: "Clients",
     description: "Property developers, homeowners, and businesses seeking construction services and innovative building solutions.",
     highlights: ["Service provider discovery", "Cost-effective solutions", "Quality assurance insights"]
   },
   {
     icon: "💰",
     title: "Investors & Stakeholders",
-    description: "Angel investors, VCs, and financial institutions looking for investment opportunities in the construction and proptech sectors.",
+    description: "Angel investors, VCs, and financial institutions looking for investment opportunities in the construction and contech sectors.",
     highlights: ["Investment opportunities", "Market insights", "ROI analysis sessions"]
   }
 ];
@@ -148,6 +149,11 @@ const programSchedule = [
 
 const Home = () => {
   const [isSponsorshipExpanded, setIsSponsorshipExpanded] = useState(false);
+  const [activeDay, setActiveDay] = useState("day1");
+
+  // const renderSchedule = (schedule) => {
+  //   schedule.map(items, index => ())
+  // }
 
   const getScheduleTypeColor = (type) => {
     const colors = {
@@ -192,7 +198,7 @@ const Home = () => {
       
       <div className="flex items-center justify-center gap-2">
         <Calendar className="text-green-400" size={20} />
-        <span>September 20, 2025</span>
+        <span>October 17 - 18, 2025</span>
       </div>
       
       <div className="flex items-center justify-center gap-2">
@@ -211,7 +217,7 @@ const Home = () => {
     </Button>
 
     <Button className="w-full sm:w-auto  md:w-40 lg:w-45 text-white font-bold px-5 py-3 shadow-lg transition ">
-      <Link to="/sponsors">Sponser</Link>
+      <Link to="/sponsors">Sponsor</Link>
     </Button>
     </div>
   </div>
@@ -251,7 +257,7 @@ const Home = () => {
         What is <span className="text-indigo-600">JBIS?</span>
       </h2>
       <p className="text-gray-600 text-base leading-relaxed max-w-xl">
-        The <span className="font-semibold text-gray-800">JaGedo Builders Innovation Summit; (JBIS)</span> is our annual flagship event that unites construction professionals, tech innovators, and industry leaders. It's more than a summit it's a platform where innovation meets execution.
+        The <span className="font-semibold text-gray-800">JaGedo Builders Innovation Summit; (JBIS)</span> is our innovatively flagship event that unites builders, fundis, professionals, tech innovators, and industry leaders. It's more than a summit it's a platform where innovation meets execution.
       </p>
       <p className="text-gray-600 text-base leading-relaxed mt-4 max-w-xl">
         Attendees collaborate, learn, and showcase groundbreaking ideas that redefine infrastructure and smart construction;empowering builders to shape the future of the built world.
@@ -303,18 +309,18 @@ const Home = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mt-4"></div>
           </div>
 
-<div className="overflow-x-auto px-4 py-4">
-  <div className="flex space-x-4 w-max px-30 sm:pr-30 items-center justify-center sm:items-center sm:justify-center sm:py-3 lg:px-137 lg:pb-2">
+<div className="overflow-x px-4 py-4">
+  <div className="flex space-x-4 w-max px-30 sm:pr-30 items-center justify-center sm:items-center sm:justify-center sm:py-3 lg:px-115 content-center lg:pb-2">
     {partners.map((partner, index) => (
       <div
         key={index}
-        className="bg-white pb-3 flex flex-col items-center justify-center transition-all duration-300 hover:scale-105"
+        className="bg-white pb-1.5 flex items-center justify-center transition-all duration-300 hover:scale-105 content-center"
       >
-        <div className="w-20 h-20 rounded-full bg-gray-50 border-2 border-gray-200 flex items-center justify-center overflow-hidden mb-2 hover:border-purple-300 transition-colors duration-300">
+        <div className="w-70 h-70 rounded-full bg-gray-50 border-2 border-gray-200 flex items-center justify-center overflow-hidden mb-2 hover:border-purple-300 transition-colors duration-300">
           <img
             src={JaGedoLogo}
             alt="Partner Logo"
-            className="w-16 h-16 object-contain"
+            className="w-70 h-70 object-contain"
           />
         </div>
       </div>
@@ -358,48 +364,14 @@ const Home = () => {
           </div>
 
          <div className="text-center mt-8">
-              <Button className="px-1 md:w-48 h-auto text-white sm:w-auto"><Link to="/sponsors"><span className='px-2 py-2'>Become a Sponser</span></Link></Button>
+              <Button className="px-1 md:w-48 h-auto text-white sm:w-auto"><Link to="/sponsors"><span className='px-2 py-2'>Become a Sponsor</span></Link></Button>
           </div>
         </div>
       </section> 
 
 
 
-      {/* Who Should Attend Section */}
-      {/* <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Who Should Attend?
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              JBIS brings together diverse professionals from across the construction and technology ecosystem.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-            {whoShouldAttend.map((attendee, index) => (
-              <div key={index} className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow">
-                <div className="flex items-start space-x-4">
-                  <div className="text-4xl flex-shrink-0">{attendee.icon}</div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-gray-900 mb-3">{attendee.title}</h3>
-                    <p className="text-gray-600 mb-4">{attendee.description}</p>
-                    <div className="space-y-2">
-                      {attendee.highlights.map((highlight, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-gray-700">
-                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                          {highlight}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
+     
 
       <section className="py-6 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
@@ -450,7 +422,7 @@ const Home = () => {
             <div className="flex items-center justify-center mt-4 space-x-6 text-sm text-gray-600">
               <div className="flex items-center">
                 <Calendar className="w-4 h-4 mr-1" />
-                September 20 - 21, 2025
+                October 17 - 18, 2025
               </div>
               <div className="flex items-center">
                 <MapPin className="w-4 h-4 mr-1" />
@@ -464,6 +436,29 @@ const Home = () => {
           </div>
 
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden text-center">
+            <div className='flex items-center justify-center gap-3 p-4'>
+              <Button
+                 onClick={() => setActiveDay("day1")}
+                 aria-pressed={activeDay === "day1"}
+                 className={`px-4 py-2 rounded transition 
+                  ${activeDay === "day1" ? "bg-[rbg(0,0,122)] text-white" : "bg-yellow-400 text-white hover:bg-yellow-400 hover:text-black"} 
+                      focus:outline-2 focus:outline-offset-2 focus:outline-[#FFD700] active:bg-[#FFD700]`}
+              >
+                    17 Oct
+               </Button>
+
+               <Button
+                 onClick={() => setActiveDay("day2")}
+                 aria-pressed={activeDay === "day2"}
+                 className={`px-4 py-2 rounded transition 
+                        ${activeDay === "day2" ? "bg-yellow-400 text-black" : "bg-[rgb(0,0,122)] text-white hover:bg-yellow-400 hover:text-black"} 
+                        focus:outline-2 focus:outline-offset-2 focus:outline-[#FFD700] active:bg-[#FFD700]`}
+                >
+                18 Oct
+               </Button>
+
+
+            </div>
             {programSchedule.map((session, index) => (
               <div key={index} className={`p-6 ${index !== programSchedule.length - 1 ? 'border-b border-gray-200' : ''}`}>
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between">
@@ -485,6 +480,38 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* <section className="py-20 bg-gradient-to-br from-gray-900 via-[rgb(0,0,122)] to-gray-900 text-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Our Growth Journey
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              From humble beginnings to industry leadership
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-400 to-blue-400 mx-auto rounded-full mt-4"></div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-purple-500 to-blue-500 rounded-full"></div>
+            
+            {timeline.map((item, index) => (
+              <div key={index} className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}>
+                <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
+                  <div className="bg-white/10 backdrop-blur-md rounded-xl p-6 hover:bg-white/15 transition-colors">
+                    <div className="text-2xl font-bold text-purple-300 mb-2">{item.year}</div>
+                    <div className="text-lg font-semibold mb-2">{item.event}</div>
+                    <div className="text-gray-300">{item.participants} participants</div>
+                  </div>
+                </div>
+                
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rounded-full border-4 border-purple-500"></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section> */}
 
       {/* <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
