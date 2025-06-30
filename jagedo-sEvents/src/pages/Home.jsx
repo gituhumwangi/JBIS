@@ -309,14 +309,14 @@ const Home = () => {
             <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mt-4"></div>
           </div>
 
-<div className="overflow-x px-4 py-4 sm:px-1">
-  <div className="flex space-x-4 w-max px-20 sm:pl-1.5 items-center justify-center sm:items-center sm:justify-center sm:py-3 lg:px-115 content-center lg:pb-2">
+<div className="overflow-x px-4 py-4 sm:px-2 sm:py-3 lg:px-4 lg:py-6 ">
+  <div className="flex space-x-4 w-max px-20 sm:pl-1.5 items-center justify-center sm:items-center sm:justify-center sm:px-5 sm:py-3 lg:px-115 content-center lg:pb-2">
     {partners.map((partner, index) => (
       <div
         key={index}
         className="bg-white pb-1.5 flex items-center justify-center transition-all duration-300 hover:scale-105 content-center"
       >
-        <div className="w-70 h-70 rounded-full bg-gray-50 border-2 border-gray-200 flex items-center justify-center overflow-hidden mb-2 hover:border-purple-300 transition-colors duration-300">
+        <div className="w-70 h-70 sm:w-35 sm:h-35 md:w-45 md:h-45 rounded-full bg-gray-50 border-2 border-gray-200 flex items-center justify-center overflow-hidden mb-2 hover:border-purple-300 transition-colors duration-300">
           <img
             src={JaGedoLogo}
             alt="Partner Logo"
