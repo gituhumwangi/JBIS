@@ -298,37 +298,38 @@ const Home = () => {
 
 {/* Partners */}
       <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50">
-  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div className="text-center mb-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-        Trusted Partners
-      </h2>
-      <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-        We collaborate with industry leaders to deliver exceptional experiences
-      </p>
-      <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mt-4"></div>
-    </div>
-
-    <div className="overflow-x-auto py-4">
-      <div className="flex space-x-6 sm:space-x-8 md:space-x-10 lg:space-x-12 px-4 sm:px-0 items-center">
-        {partners.map((partner, index) => (
-          <div
-            key={index}
-            className="flex items-center justify-center transition-all duration-300 hover:scale-105"
-          >
-            <div className="w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full bg-gray-50 border-2 border-gray-200 flex items-center justify-center overflow-hidden hover:border-purple-300 transition-colors duration-300">
-              <img
-                src={JaGedoLogo}
-                alt="Partner Logo"
-                className="w-full h-full object-contain"
-              />
-            </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Trusted Partners
+            </h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              We collaborate with industry leaders to deliver exceptional experiences
+            </p>
+            <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mt-4"></div>
           </div>
-        ))}
+
+<div className="overflow-x px-4 py-4 sm:px-1">
+  <div className="flex space-x-4 w-max px-20 sm:pl-1.5 items-center justify-center sm:items-center sm:justify-center sm:py-3 lg:px-115 content-center lg:pb-2">
+    {partners.map((partner, index) => (
+      <div
+        key={index}
+        className="bg-white pb-1.5 flex items-center justify-center transition-all duration-300 hover:scale-105 content-center"
+      >
+        <div className="w-70 h-70 rounded-full bg-gray-50 border-2 border-gray-200 flex items-center justify-center overflow-hidden mb-2 hover:border-purple-300 transition-colors duration-300">
+          <img
+            src={JaGedoLogo}
+            alt="Partner Logo"
+            className="w-70 h-70 object-contain"
+          />
+        </div>
       </div>
-    </div>
+    ))}
   </div>
-</section>
+</div>
+
+</div>
+      </section>
 
 
 <section className="py-2 px-4 sm:px-4 lg:px-5 bg-white my-2">

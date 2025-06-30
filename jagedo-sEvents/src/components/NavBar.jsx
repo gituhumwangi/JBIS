@@ -35,24 +35,32 @@ const NavBar = () => {
         {/* Center nav links (Desktop only) */}
         <ul className="hidden md:flex space-x-6 lg:space-x-8 text-gray-700 font-medium">
           <li>
-            <Link to="/registration" className="hover:text-blue-500 transition-colors">
-              Register
+            <Button>
+            <Link to="/registration">
+              <span className='text-white hover:text-black'>Register</span>
             </Link>
+            </Button>
           </li>
           <li>
-            <Link to="/sponsors" className="hover:text-blue-500 transition-colors">
-              Sponsor
+            <Button>
+            <Link to="/sponsors">
+              <span className='text-white hover:text-black'>Sponser</span>
             </Link>
+            </Button>
           </li>
           <li>
-            <Link to="/pastevents" className="hover:text-blue-500 transition-colors">
-              Past Events
+            <Button>
+            <Link to="/pastevents" >
+              <span className='text-white hover:text-black'>Past Events</span>
             </Link>
+            </Button>
           </li>
           <li>
-            <Link to="/faqs" className="hover:text-blue-500 transition-colors">
-              FAQs
+            <Button>
+            <Link to="/faqs">
+              <span className='text-white hover:text-black'>FAQs</span>
             </Link>
+            </Button>
           </li>
         </ul>
 
