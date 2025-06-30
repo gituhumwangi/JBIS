@@ -286,7 +286,7 @@ const Home = () => {
     {/* Centered and larger logo container */}
     <div className="flex justify-center items-center">
       <div className="flex flex-col items-center justify-center p-8 bg-white rounded-3xl  transition-all duration-300 hover:scale-105 border border-gray-100 max-w-md">
-        <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full bg-gray-50 border-4 border-gray-200 flex items-center justify-center overflow-hidden hover:border-purple-300 transition-colors duration-300 mb-6">
+        <div className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full bg-gray-50 border-4 flex items-center justify-center overflow-hidden hover:border-purple-300 transition-colors duration-300 mb-6">
           <img
             src={JaGedoLogo}
             alt="JaGedo Logo"
