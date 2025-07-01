@@ -44,7 +44,7 @@ const NavBar = () => {
           <li>
             <Button>
             <Link to="/sponsors">
-              <span className='text-white hover:text-black'>Sponser</span>
+              <span className='text-white hover:text-black'>Sponsor</span>
             </Link>
             </Button>
           </li>
