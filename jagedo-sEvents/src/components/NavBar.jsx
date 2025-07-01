@@ -1,14 +1,20 @@
 import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { Menu, X, Phone } from 'lucide-react';
 import Japageologo from "../assets/Japageologo.webp";
 import Button from './Button';
-import { Link } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  // Function to check if current route matches the nav item
+  const isActive = (path) => {
+    return location.pathname === path;
   };
 
   return (
@@ -35,32 +41,80 @@ const NavBar = () => {
         {/* Center nav links (Desktop only) */}
         <ul className="hidden md:flex space-x-6 lg:space-x-8 text-gray-700 font-medium">
           <li>
-            <Button>
             <Link to="/registration">
-              <span className='text-white hover:text-black'>Register</span>
+              <Button
+                className={`transition-all ${
+                  isActive('/registration')
+                    ? 'border-2 border-yellow-400 bg-yellow-50'
+                    : 'border border-transparent hover:border-gray-300'
+                }`}
+              >
+                <span className={`${
+                  isActive('/registration') 
+                    ? 'text-yellow-700' 
+                    : 'text-white hover:text-black'
+                }`}>
+                  Register
+                </span>
+              </Button>
             </Link>
-            </Button>
           </li>
           <li>
-            <Button>
             <Link to="/sponsors">
-              <span className='text-white hover:text-black'>Sponsor</span>
+              <Button
+                className={`transition-all ${
+                  isActive('/sponsors')
+                    ? 'border-2 border-yellow-400 bg-yellow-50'
+                    : 'border border-transparent hover:border-gray-300'
+                }`}
+              >
+                <span className={`${
+                  isActive('/sponsors') 
+                    ? 'text-yellow-700' 
+                    : 'text-white hover:text-black'
+                }`}>
+                  Sponsor
+                </span>
+              </Button>
             </Link>
-            </Button>
           </li>
           <li>
-            <Button>
-            <Link to="/pastevents" >
-              <span className='text-white hover:text-black'>Past Events</span>
+            <Link to="/pastevents">
+              <Button
+                className={`transition-all ${
+                  isActive('/pastevents')
+                    ? 'border-2 border-yellow-400 bg-yellow-50'
+                    : 'border border-transparent hover:border-gray-300'
+                }`}
+              >
+                <span className={`${
+                  isActive('/pastevents') 
+                    ? 'text-yellow-700' 
+                    : 'text-white hover:text-black'
+                }`}>
+                  Past Events
+                </span>
+              </Button>
             </Link>
-            </Button>
           </li>
           <li>
-            <Button>
             <Link to="/faqs">
-              <span className='text-white hover:text-black'>FAQs</span>
+              <Button
+                className={`transition-all ${
+                  isActive('/faqs')
+                    ? 'border-2 border-yellow-400 bg-yellow-50'
+                    : 'border border-transparent hover:border-gray-300'
+                }`}
+              >
+                <span className={`${
+                  isActive('/faqs') 
+                    ? 'text-yellow-700' 
+                    : 'text-white hover:text-black'
+                }`}>
+                  FAQs
+                </span>
+              </Button>
             </Link>
-            </Button>
           </li>
         </ul>
 
@@ -84,7 +138,11 @@ const NavBar = () => {
               <li>
                 <Link 
                   to="/registration" 
-                  className="block py-2 text-gray-700 hover:text-blue-500 text-lg font-medium transition-colors"
+                  className={`block py-2 text-lg font-medium transition-colors ${
+                    isActive('/registration')
+                      ? 'text-yellow-600 font-semibold'
+                      : 'text-gray-700 hover:text-blue-500'
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   Register
@@ -93,7 +151,11 @@ const NavBar = () => {
               <li>
                 <Link 
                   to="/sponsors" 
-                  className="block py-2 text-gray-700 hover:text-blue-500 text-lg font-medium transition-colors"
+                  className={`block py-2 text-lg font-medium transition-colors ${
+                    isActive('/sponsors')
+                      ? 'text-yellow-600 font-semibold'
+                      : 'text-gray-700 hover:text-blue-500'
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   Sponsor
@@ -102,7 +164,11 @@ const NavBar = () => {
               <li>
                 <Link 
                   to="/pastevents" 
-                  className="block py-2 text-gray-700 hover:text-blue-500 text-lg font-medium transition-colors"
+                  className={`block py-2 text-lg font-medium transition-colors ${
+                    isActive('/pastevents')
+                      ? 'text-yellow-600 font-semibold'
+                      : 'text-gray-700 hover:text-blue-500'
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   Past Events
@@ -111,7 +177,11 @@ const NavBar = () => {
               <li>
                 <Link 
                   to="/faqs" 
-                  className="block py-2 text-gray-700 hover:text-blue-500 text-lg font-medium transition-colors"
+                  className={`block py-2 text-lg font-medium transition-colors ${
+                    isActive('/faqs')
+                      ? 'text-yellow-600 font-semibold'
+                      : 'text-gray-700 hover:text-blue-500'
+                  }`}
                   onClick={() => setIsOpen(false)}
                 >
                   FAQs
