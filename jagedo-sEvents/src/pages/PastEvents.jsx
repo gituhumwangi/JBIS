@@ -3,7 +3,7 @@ import { Calendar, MapPin, Users, Trophy, Star, ArrowRight, Check, Quote } from 
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
 import Event1 from "../assets/Event1.jpeg"
-import Event2 from "../assets/Event2.jpeg"
+import Event2 from "../assets/Event001.jpg"
 import Event3 from "../assets/Event3.jpeg"
 
 export default function PastEvents() {
@@ -38,52 +38,52 @@ export default function PastEvents() {
   const events = [
     {
       id: 1,
-      title: "Global Innovation Hackathon 2024",
-      date: "March 15-17, 2024",
-      location: "Tech Hub Center",
-      description: "48-hour intensive hackathon featuring cutting-edge technology challenges and industry mentorship.",
-      participants: 500,
-      projects: 75,
-      prizePool: "100K",
+      title: "Construct The Future",
+      date: "May 19-23, 2025",
+      location: "WestLands West Park Towers",
+      description: "Where Codes Meets Concrete.",
+      // participants: 500,
+      // projects: 75,
+      // prizePool: "100K",
       type: "Hackathon",
-      image: Event1
-    },
-    {
-      id: 2,
-      title: "AI Builders Workshop Series",
-      date: "Ongoing 2024",
-      location: "Multiple Locations",
-      description: "Monthly hands-on workshops teaching practical AI implementation and machine learning techniques.",
-      participants: 2500,
-      sessions: 12,
-      completion: "95%",
-      type: "Workshop",
       image: Event2
     },
     {
-      id: 3,
-      title: "Investor Connect Summit",
-      date: "June 8-9, 2024",
-      location: "Innovation District",
-      description: "Premium networking event connecting startups with VCs and angel investors.",
-      participants: 200,
-      investors: 50,
-      deals: "5M+",
-      type: "Summit",
-      image: Event3
+      id: 2,
+      title: "Platform Review Workshop",
+      date: "17 August 2024",
+      location: "WestLands West Park Towers ",
+      description: "It brings together key stakeholders—including  service providers , product managers, and other  users—to assess what’s working, identify pain points, and prioritize improvements",
+      // participants: 2500,
+      // sessions: 12,
+      // completion: "95%",
+      type: "Workshop",
+      image: Event1
     },
-    {
-      id: 4,
-      title: "Blockchain Developer Conference",
-      date: "September 22-23, 2024",
-      location: "Convention Center",
-      description: "Two-day conference with industry leaders and technical workshops for blockchain developers.",
-      participants: 800,
-      speakers: 25,
-      satisfaction: "97%",
-      type: "Conference",
-      image: Event3
-    }
+    // {
+    //   id: 3,
+    //   title: "Investor Connect Summit",
+    //   date: "June 8-9, 2024",
+    //   location: "Innovation District",
+    //   description: "Premium networking event connecting startups with VCs and angel investors.",
+    //   participants: 200,
+    //   investors: 50,
+    //   deals: "5M+",
+    //   type: "Summit",
+    //   image: Event3
+    // },
+    // {
+    //   id: 4,
+    //   title: "Blockchain Developer Conference",
+    //   date: "September 22-23, 2024",
+    //   location: "Convention Center",
+    //   description: "Two-day conference with industry leaders and technical workshops for blockchain developers.",
+    //   participants: 800,
+    //   speakers: 25,
+    //   satisfaction: "97%",
+    //   type: "Conference",
+    //   image: Event3
+    // }
   ];
 
   const testimonials = [
@@ -278,30 +278,30 @@ export default function PastEvents() {
                   </p>
 
                   <div className="grid grid-cols-3 gap-4">
-                    <div className="text-center p-4 bg-gray-50 rounded-xl">
+                    {/* <div className="text-center p-4 bg-gray-50 rounded-xl">
                       <div className="text-2xl font-bold text-purple-600 mb-1">
                         {event.participants?.toLocaleString() || event.sessions || event.speakers}
                       </div>
                       <div className="text-xs text-gray-500 font-medium">
                         {event.participants ? 'Participants' : event.sessions ? 'Sessions' : 'Speakers'}
                       </div>
-                    </div>
-                    <div className="text-center p-4 bg-gray-50 rounded-xl">
+                    </div> */}
+                    {/* <div className="text-center p-4 bg-gray-50 rounded-xl">
                       <div className="text-2xl font-bold text-purple-600 mb-1">
                         {event.projects || event.investors || event.completion || event.satisfaction}
                       </div>
                       <div className="text-xs text-gray-500 font-medium">
                         {event.projects ? 'Projects' : event.investors ? 'Investors' : event.completion ? 'Completion' : 'Satisfaction'}
                       </div>
-                    </div>
-                    <div className="text-center p-4 bg-gray-50 rounded-xl">
+                    </div> */}
+                    {/* <div className="text-center p-4 bg-gray-50 rounded-xl">
                       <div className="text-2xl font-bold text-purple-600 mb-1">
                         {event.prizePool ? `$${event.prizePool}` : event.deals ? `$${event.deals}` : '97%'}
                       </div>
                       <div className="text-xs text-gray-500 font-medium">
                         {event.prizePool ? 'Prize Pool' : event.deals ? 'Deals' : 'Rating'}
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
@@ -311,7 +311,7 @@ export default function PastEvents() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50">
+      {/* <section className="py-20 bg-gradient-to-br from-purple-50 via-white to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -342,7 +342,7 @@ export default function PastEvents() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Services */}
       {/* <section className="py-20 bg-white">
