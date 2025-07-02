@@ -4,8 +4,8 @@ import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
 import Event1 from "../assets/Event1.jpeg"
 import Event2 from "../assets/Event001.jpg"
-import Event3 from "../assets/Event3.jpeg"
 import Event4 from "../assets/Event4.jpg"
+import Event5 from "../assets/Event5.jpg"
 
 export default function PastEvents() {
   const [visibleCards, setVisibleCards] = useState(new Set());
@@ -83,7 +83,7 @@ export default function PastEvents() {
       // speakers: 25,
       // satisfaction: "97%",
       type: "Launch Event ",
-      image: Event3
+      image: Event5
     }
   ];
 
