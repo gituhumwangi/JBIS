@@ -5,6 +5,7 @@ import Footer from "../components/Footer"
 import Event1 from "../assets/Event1.jpeg"
 import Event2 from "../assets/Event001.jpg"
 import Event3 from "../assets/Event3.jpeg"
+import Event4 from "../assets/Event4.jpg"
 
 export default function PastEvents() {
   const [visibleCards, setVisibleCards] = useState(new Set());
@@ -42,8 +43,8 @@ export default function PastEvents() {
       date: "May 19-23, 2025",
       location: "WestLands West Park Towers",
       description: "Where Codes Meets Concrete.",
-      // participants: 500,
-      // projects: 75,
+      participants: 40,
+      // attendences: 75,
       // prizePool: "100K",
       type: "Hackathon",
       image: Event2
@@ -54,36 +55,36 @@ export default function PastEvents() {
       date: "17 August 2024",
       location: "WestLands West Park Towers ",
       description: "It brings together key stakeholders—including  service providers , product managers, and other  users—to assess what’s working, identify pain points, and prioritize improvements",
-      // participants: 2500,
+      participants:50 ,
       // sessions: 12,
       // completion: "95%",
       type: "Workshop",
       image: Event1
     },
-    // {
-    //   id: 3,
-    //   title: "Investor Connect Summit",
-    //   date: "June 8-9, 2024",
-    //   location: "Innovation District",
-    //   description: "Premium networking event connecting startups with VCs and angel investors.",
-    //   participants: 200,
-    //   investors: 50,
-    //   deals: "5M+",
-    //   type: "Summit",
-    //   image: Event3
-    // },
-    // {
-    //   id: 4,
-    //   title: "Blockchain Developer Conference",
-    //   date: "September 22-23, 2024",
-    //   location: "Convention Center",
-    //   description: "Two-day conference with industry leaders and technical workshops for blockchain developers.",
-    //   participants: 800,
-    //   speakers: 25,
-    //   satisfaction: "97%",
-    //   type: "Conference",
-    //   image: Event3
-    // }
+    {
+      id: 3,
+      title: " Builder's workshop ",
+      date: "October 25, 2024",
+      location: "WestLands ,West Park Towers",
+      description: " Bringing together industry professionals to collaborate and share ideas",
+      participants: 60,
+      // investors: 50,
+      // deals: "5M+",
+      type: "Workshop",
+      image: Event4
+    },
+    {
+      id: 4,
+      title: "Lauching JaGedo Version Two ",
+      date: "December 6 , 2024",
+      location: "Westlands, West Park Towers ",
+      description: " launched JaGedo 2.0, revolutionizing how clients connect with verified fundis, professionals, contractors, and hardware suppliers",
+      participants: 40 ,
+      // speakers: 25,
+      // satisfaction: "97%",
+      type: "Launch Event ",
+      image: Event3
+    }
   ];
 
   const testimonials = [
@@ -278,14 +279,14 @@ export default function PastEvents() {
                   </p>
 
                   <div className="grid grid-cols-3 gap-4">
-                    {/* <div className="text-center p-4 bg-gray-50 rounded-xl">
-                      <div className="text-2xl font-bold text-purple-600 mb-1">
+                    <div className="text-center p-4 bg-gray-50 rounded-xl">
+                      <div className="text-2xl font-bold text-[#000072] mb-1">
                         {event.participants?.toLocaleString() || event.sessions || event.speakers}
                       </div>
                       <div className="text-xs text-gray-500 font-medium">
                         {event.participants ? 'Participants' : event.sessions ? 'Sessions' : 'Speakers'}
                       </div>
-                    </div> */}
+                    </div>
                     {/* <div className="text-center p-4 bg-gray-50 rounded-xl">
                       <div className="text-2xl font-bold text-purple-600 mb-1">
                         {event.projects || event.investors || event.completion || event.satisfaction}
