@@ -49,17 +49,18 @@ export default function PastEvents() {
       type: "Hackathon",
       image: Event2
     },
+    
     {
       id: 2,
-      title: "Platform Review Workshop",
-      date: "17 August 2024",
-      location: "WestLands West Park Towers ",
-      description: "It brings together key stakeholders—including  service providers , product managers, and other  users—to assess what’s working, identify pain points, and prioritize improvements",
-      participants:50 ,
-      // sessions: 12,
-      // completion: "95%",
-      type: "Workshop",
-      image: Event1
+      title: "Lauching JaGedo Version Two ",
+      date: "December 6 , 2024",
+      location: "Westlands, West Park Towers ",
+      description: " launched JaGedo 2.0, revolutionizing how clients connect with verified fundis, professionals, contractors, and hardware suppliers",
+      participants: 40 ,
+      // speakers: 25,
+      // satisfaction: "97%",
+      type: "Launch Event ",
+      image: Event5
     },
     {
       id: 3,
@@ -75,16 +76,17 @@ export default function PastEvents() {
     },
     {
       id: 4,
-      title: "Lauching JaGedo Version Two ",
-      date: "December 6 , 2024",
-      location: "Westlands, West Park Towers ",
-      description: " launched JaGedo 2.0, revolutionizing how clients connect with verified fundis, professionals, contractors, and hardware suppliers",
-      participants: 40 ,
-      // speakers: 25,
-      // satisfaction: "97%",
-      type: "Launch Event ",
-      image: Event5
-    }
+      title: "Platform Review Workshop",
+      date: "17 August 2024",
+      location: "WestLands West Park Towers ",
+      description: "It brings together key stakeholders—including  service providers , product managers, and other  users—to assess what’s working, identify pain points, and prioritize improvements",
+      participants:50 ,
+      // sessions: 12,
+      // completion: "95%",
+      type: "Workshop",
+      image: Event1
+    },
+
   ];
 
   const testimonials = [
@@ -234,7 +236,7 @@ export default function PastEvents() {
       </section> */}
 
       {/* Events Showcase */}
-      <section className="py-20 bg-gray-50">
+<section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -249,61 +251,44 @@ export default function PastEvents() {
                 key={event.id}
                 className="bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden group hover:-translate-y-2"
               >
-                <div className={'h-48 bg-cover bg-center relative overflow-hidden'} style={{ backgroundImage: `url(${event.image})`}}>
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                <div className="relative h-48 bg-cover bg-center overflow-hidden" style={{ backgroundImage: `url(${event.image})`}}>
+                  <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
+                  
+                  {/* Event Type Badge */}
                   <div className="absolute top-4 left-4">
-                    <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-white/90 backdrop-blur-sm text-gray-800 px-3 py-1 rounded-full text-sm font-medium shadow-sm">
                       {event.type}
                     </span>
                   </div>
-                  <div className="absolute bottom-4 left-4 text-white">
-                    <div className="flex items-center space-x-4 text-sm">
-                      <div className="flex items-center space-x-1">
-                        <Calendar className="h-4 w-4" />
-                        <span>{event.date}</span>
+                </div>
+
+                {/* Date, Location, and Participants - All on same level */}
+                <div className="px-8 pt-6 pb-4">
+                  <div className="bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-4 border border-purple-100">
+                    <div className="flex flex-col space-y-2">
+                      <div className="flex items-center space-x-2 text-gray-700">
+                        <Calendar className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                        <span className="text-sm font-medium">{event.date}</span>
                       </div>
-                      <div className="flex items-center space-x-1">
-                        <MapPin className="h-4 w-4" />
-                        <span>{event.location}</span>
+                      <div className="flex items-center space-x-2 text-gray-700">
+                        <MapPin className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                        <span className="text-sm font-medium">{event.location}</span>
+                      </div>
+                      <div className="flex items-center space-x-2 text-gray-700">
+                        <Users className="h-4 w-4 text-purple-600 flex-shrink-0" />
+                        <span className="text-sm font-medium">{event.participants?.toLocaleString()} Participants</span>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-8">
+                <div className="px-8 pb-8">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {event.title}
                   </h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">
                     {event.description}
                   </p>
-
-                  <div className="grid grid-cols-3 gap-4">
-                    <div className="text-center p-4 bg-gray-50 rounded-xl">
-                      <div className="text-2xl font-bold text-[#000072] mb-1">
-                        {event.participants?.toLocaleString() || event.sessions || event.speakers}
-                      </div>
-                      <div className="text-xs text-gray-500 font-medium">
-                        {event.participants ? 'Participants' : event.sessions ? 'Sessions' : 'Speakers'}
-                      </div>
-                    </div>
-                    {/* <div className="text-center p-4 bg-gray-50 rounded-xl">
-                      <div className="text-2xl font-bold text-purple-600 mb-1">
-                        {event.projects || event.investors || event.completion || event.satisfaction}
-                      </div>
-                      <div className="text-xs text-gray-500 font-medium">
-                        {event.projects ? 'Projects' : event.investors ? 'Investors' : event.completion ? 'Completion' : 'Satisfaction'}
-                      </div>
-                    </div> */}
-                    {/* <div className="text-center p-4 bg-gray-50 rounded-xl">
-                      <div className="text-2xl font-bold text-purple-600 mb-1">
-                        {event.prizePool ? `$${event.prizePool}` : event.deals ? `$${event.deals}` : '97%'}
-                      </div>
-                      <div className="text-xs text-gray-500 font-medium">
-                        {event.prizePool ? 'Prize Pool' : event.deals ? 'Deals' : 'Rating'}
-                      </div>
-                    </div> */}
-                  </div>
                 </div>
               </div>
             ))}

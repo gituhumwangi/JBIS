@@ -10,6 +10,7 @@ const RegistrationPage = () => {
     <div className="h-screen bg-gradient-to-br from-blue-50 to-gray-100 overflow-hidden">
       {/* NavBar - Fixed at top */}
       <div className="bg-white shadow-md sticky top-0 z-50">
+        <NavBar2 />
         <NavBar />
       </div>
       

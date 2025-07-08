@@ -3,10 +3,46 @@ import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import Button from '../components/Button'
+import NavBar2 from "../components/NavBar2"
 import Jagedologo from "../assets/Japageologo.webp";
+import { ChevronDown, ChevronUp, Clock, MapPin, Calendar } from 'lucide-react';
+
 
 const SponsorsPage = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
+
+  const sponsorshipBenefits = [
+    {
+      icon: "🎯",
+      title: "Targeted Audience",
+      description: "Reach 500+ construction professionals, decision-makers, and industry leaders"
+    },
+    {
+      icon: "🤝",
+      title: "Quality Networking",
+      description: "Connect with potential clients, partners, and suppliers in structured environments"
+    },
+    {
+      icon: "📈",
+      title: "Brand Visibility",
+      description: "Showcase your brand across multiple touchpoints before, during, and after the event"
+    },
+    {
+      icon: "🏆",
+      title: "Industry Leadership",
+      description: "Position your company as a thought leader and industry innovator"
+    },
+    {
+      icon: "📊",
+      title: "Lead Generation",
+      description: "Generate high-quality leads through exhibition booths and speaking opportunities"
+    },
+    {
+      icon: "🌍",
+      title: "Market Expansion",
+      description: "Access new markets and expand your presence in East Africa's construction sector"
+    }
+];
 
   const sponsorshipTiers = [
     
@@ -125,12 +161,16 @@ const SponsorsPage = () => {
   "JaGedo"
    ];
 
+  const [isSponsorshipExpanded, setIsSponsorshipExpanded] = useState(false);
+   
+
   
 
   return (
     <div className="flex flex-col min-h-screen bg-white">
       {/* NavBar */}
       <div className="sticky top-0 z-50 bg-white shadow-md">
+        <NavBar2 />
         <NavBar />
       </div>
 
@@ -163,7 +203,7 @@ const SponsorsPage = () => {
           </div>
         </section> */}
 
-        <section className="py-10 bg-gradient-to-br from-purple-50 via-white to-blue-50">
+        {/* <section className="py-10 bg-gradient-to-br from-purple-50 via-white to-blue-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                   <div className="text-center mb-16">
                     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -183,18 +223,55 @@ const SponsorsPage = () => {
                    alt="JaGedo Logo"
                    className="w-full h-full object-contain p-6"
                  />
-               </div>
+               </div> */}
                {/* <h3 className="text-2xl font-bold text-gray-800 text-center">
                  JaGedo
                </h3> */}
                {/* <p className="text-gray-600 text-center mt-2">
                  Our Founding Partner
                </p> */}
-             </div>
+             {/* </div>
            </div>
         
         </div>
-              </section>
+              </section> */}
+
+        <section className="py-2 px-4 sm:px-4 lg:px-5 bg-white my-2">
+                <div className="max-w-6xl mx-auto py-10">
+                  <div className="text-center mb-8">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                      Why Sponsor the JaGedo Summit?
+                    </h2>
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+                      Connect with Kenya's construction industry leaders and position your brand at the forefront of innovation.
+                    </p>
+        
+                     <button
+                      onClick={() => setIsSponsorshipExpanded(!isSponsorshipExpanded)}
+                      className="inline-flex items-center space-x-2 text-blue-600 hover:text-blue-800 font-medium transition-colors"
+                    >
+                      <span>{isSponsorshipExpanded ? 'Show Less' : 'View Benefits'}</span>
+                      {isSponsorshipExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                    </button>
+                  </div>
+        
+                  <div className={`transition-all duration-300 overflow-hidden ${isSponsorshipExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'}`}>
+                    <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-4 mb-8">
+                      {sponsorshipBenefits.map((benefit, index) => (
+                        <div key={index} className="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition">
+                          <div className="text-4xl mb-4">{benefit.icon}</div>
+                          <h3 className="text-xl font-semibold text-gray-900 mb-3">{benefit.title}</h3>
+                          <p className="text-gray-600">{benefit.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+        
+                 {/* <div className="text-center mt-8">
+                      <Button className="px-1 md:w-48 h-auto text-white sm:w-auto"><Link to="/sponsors"><span className='px-2 py-2'>Become a Sponsor</span></Link></Button>
+                  </div> */}
+                </div>
+              </section> 
         
 
 

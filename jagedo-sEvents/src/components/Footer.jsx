@@ -10,18 +10,18 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center sm:text-left text-sm">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-center sm:text-left text-sm">
         {/* About Us Section */}
         <div className="space-y-2">
           <h3 className="font-bold text-lg mb-2">About Us</h3>
-          <Link to="/">
+          <Link to="https://jagedov3-designs.vercel.app/#/" target="_blank" rel="noopener noreferrer">
           <p className="hover:text-[#FFD700] cursor-pointer transition duration-300">JaGedo</p>
           </Link>
           <p className="hover:text-[#FFD700] cursor-pointer transition duration-300">Helpdesk</p>
         </div>
 
         {/* Quick Links Section */}
-        <div className="space-y-2">
+        <div className="space-y-2 mr-6">
           <h3 className="font-bold text-lg mb-2">Quick Links</h3>
           <p className="hover:text-[#FFD700] cursor-pointer transition duration-300">Terms Of Service</p>
           <p className="hover:text-[#FFD700] cursor-pointer transition duration-300">
@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
 
         {/* Contacts Section */}
-        <div className="space-y-2">
+        <div className="space-y-2 ml-4">
           <h3 className="font-bold text-lg mb-2">Contacts</h3>
           <p className="text-gray-300 text-sm">+254 113 273 333</p>
           <p>
@@ -43,7 +43,7 @@ const Footer = () => {
         {/* Social Media Links */}
         <div className="space-y-2">
           <h3 className="font-bold text-lg mb-2">Follow Us</h3>
-          <div className="flex justify-center sm:justify-start space-x-3 mt-2">
+          <div className="flex justify-center sm:justify-start space-x-2 mt-2">
             {[
               { icon: FaFacebookF, color: "blue-900" },
               { icon: FaTwitter, color: "blue-900" },
@@ -60,6 +60,10 @@ const Footer = () => {
               </a>
             ))}
           </div>
+        </div>
+
+        <div className='space-y-2'>
+          <h3 className="font-bold text-6xl ml-21">JBIS</h3>
         </div>
       </div>
 
