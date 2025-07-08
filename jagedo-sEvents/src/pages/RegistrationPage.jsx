@@ -4,6 +4,8 @@ import Button from '../components/Button';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import NavBar2 from '../components/NavBar2';
+// import NavBar from '../components/NavBar';
 
 const RegistrationPage = () => {
   return (
