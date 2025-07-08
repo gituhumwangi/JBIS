@@ -10,7 +10,7 @@ const Footer = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 1 }}
     >
-      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-center sm:text-left text-sm">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 text-center sm:text-left text-sm">
         {/* About Us Section */}
         <div className="space-y-2">
           <h3 className="font-bold text-lg mb-2">About Us</h3>
@@ -21,7 +21,7 @@ const Footer = () => {
         </div>
 
         {/* Quick Links Section */}
-        <div className="space-y-2 mr-6">
+        <div className="space-y-2">
           <h3 className="font-bold text-lg mb-2">Quick Links</h3>
           <p className="hover:text-[#FFD700] cursor-pointer transition duration-300">Terms Of Service</p>
           <p className="hover:text-[#FFD700] cursor-pointer transition duration-300">
@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
 
         {/* Contacts Section */}
-        <div className="space-y-2 ml-4">
+        <div className="space-y-2">
           <h3 className="font-bold text-lg mb-2">Contacts</h3>
           <p className="text-gray-300 text-sm">+254 113 273 333</p>
           <p>
@@ -62,9 +62,6 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className='space-y-2'>
-          <h3 className="font-bold text-6xl ml-21">JBIS</h3>
-        </div>
       </div>
 
       {/* Copyright */}
