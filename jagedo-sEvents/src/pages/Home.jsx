@@ -179,9 +179,9 @@ const Home = () => {
         </div>
 
 {/* Hero Section */}
-      <div className="px-4 md:px-20 lg:px-40 py-8 text-white">
+<div className="w-full h-screen text-white">
   <div
-    className="h-125 disabled:opacity-50 rounded-3xl bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-center p-8 md:p-16 gap-6 shadow-xl"
+    className="w-full h-full bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-center p-8 md:p-16 gap-6"
     style={{
       backgroundImage: `linear-gradient(rgba(0, 0.9, 0.9, 0.9), rgba(0, 0, 0, 0.6)), url(${Card1})`,
     }}
@@ -189,12 +189,12 @@ const Home = () => {
     <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-manrope leading-tight">
       JBIS: JaGedo Builders Innovation Summit
     </h1>
-
+    
     <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-semibold font-manrope pt-2 sm:pt-2">
       Future-Proofing Construction Through Innovation
     </h2>
-
-   <div className="text-gray-100 text-base sm:text-lg md:text-xl max-w-2xl space-y-2">
+    
+    <div className="text-gray-100 text-base sm:text-lg md:text-xl max-w-2xl space-y-2">
       {/* <div className="flex items-center justify-center gap-2">
         <MapPin className="text-blue-400" size={20} />
         <span>TBD</span>
@@ -210,20 +210,20 @@ const Home = () => {
         <span>9:00 AM – 5:00 PM</span>
       </div> */}
     </div>
-
+    
     <p className="text-gray-100 text-sm sm:text-base max-w-xl">
       Join industry leaders and innovators reshaping construction's future.
     </p>
-
-    <div className="flex gap-4">
-    <Button className="w-full sm:w-auto  md:w-40 lg:w-45 text-white font-bold px-5 py-3 shadow-lg transition">
-      <Link to="/registration">Register Now</Link>
-    </Button>
-
-    <Button className="w-full sm:w-auto  md:w-40 lg:w-45 text-white font-bold px-5 py-3 shadow-lg transition ">
-      <Link to="/sponsors">Sponsor</Link>
-    </Button>
-    </div>
+    
+    {/* <div className="flex gap-4">
+      <Button className="w-full sm:w-auto md:w-40 lg:w-45 text-white font-bold px-5 py-3 shadow-lg transition">
+        <Link to="/registration">Register Now</Link>
+      </Button>
+      
+      <Button className="w-full sm:w-auto md:w-40 lg:w-45 text-white font-bold px-5 py-3 shadow-lg transition">
+        <Link to="/sponsors">Sponsor</Link>
+      </Button>
+    </div> */}
   </div>
 </div>
 

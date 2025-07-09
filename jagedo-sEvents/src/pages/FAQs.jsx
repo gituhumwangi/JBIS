@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
+import NavBar2 from '../components/NavBar2';
 
 const FAQPage = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
@@ -125,6 +126,7 @@ const FAQPage = () => {
     <div className="flex flex-col min-h-screen bg-white">
       {/* NavBar */}
       <div className="sticky top-0 z-50 bg-white shadow-md">
+        <NavBar2 />
         <NavBar />
       </div>
 
