@@ -1,41 +1,29 @@
-import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, Phone } from 'lucide-react';
-import Japageologo from "../assets/Japageologo.webp";
-import Button from './Button';
+"use client"
+
+import { useState } from "react"
+import { Link, useLocation } from "react-router-dom"
+import { Menu, X, Phone } from "lucide-react"
+import Button from "./Button"
 
 const NavBar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+  const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+    setIsOpen(!isOpen)
+  }
 
   // Function to check if current route matches the nav item
   const isActive = (path) => {
-    return location.pathname === path;
-  };
+    return location.pathname === path
+  }
 
   return (
-    <nav className="bg-white drop-shadow-sm pt-1 relative z-50">
-      <div className="flex justify-between items-center px-4 py-3 md:px-8 lg:px-12">
-        {/* Left: Logo */}
-        <Link 
-        to="https://jagedov3-designs.vercel.app/#/" 
-        className="flex-shrink-0"
-        target = "_blank"
-        rel = "noopener noreferrer" >
-          <img 
-            src={Japageologo} 
-            alt="Japageo Logo" 
-            className="w-32 sm:w-40 md:w-48 lg:w-60 xl:w-72 rounded-lg object-contain h-auto" 
-          />
-        </Link>
-
+    <nav className="bg-white shadow-sm border-t border-gray-200 relative z-40">
+      <div className="flex justify-between items-center px-4 py-3 md:px-8 lg:px-12 space-x-4">
         {/* Hamburger menu button (Mobile only) */}
-        <button 
-          onClick={toggleMenu} 
+        <button
+          onClick={toggleMenu}
           className="md:hidden p-2 rounded-md hover:bg-gray-100 transition-colors"
           aria-label="Toggle Menu"
         >
@@ -43,87 +31,63 @@ const NavBar = () => {
         </button>
 
         {/* Center nav links (Desktop only) */}
-        <ul className="hidden md:flex space-x-6 lg:space-x-8 text-gray-700 font-medium">
+        <ul className="hidden md:flex space-x-4 lg:space-x-6 text-gray-700 font-medium flex-1 justify-center">
           <li>
             <Link to="/registration">
-              <Button
-                className={`transition-all ${
-                  isActive('/registration')
-                    ? 'border-2 border-yellow-400 bg-yellow-50'
-                    : 'border border-transparent hover:border-gray-300'
+              <button
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md ${
+                  isActive("/registration")
+                    ? "bg-yellow-400 text-black shadow-lg"
+                    : "bg-white text-gray-700 hover:bg-yellow-50 hover:text-yellow-700"
                 }`}
               >
-                <span className={`${
-                  isActive('/registration') 
-                    ? 'text-yellow-700' 
-                    : 'text-white hover:text-black'
-                }`}>
-                  Register
-                </span>
-              </Button>
+                Register
+              </button>
             </Link>
           </li>
           <li>
             <Link to="/sponsors">
-              <Button
-                className={`transition-all ${
-                  isActive('/sponsors')
-                    ? 'border-2 border-yellow-400 bg-yellow-50'
-                    : 'border border-transparent hover:border-gray-300'
+              <button
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md ${
+                  isActive("/sponsors")
+                    ? "bg-yellow-400 text-black shadow-lg"
+                    : "bg-white text-gray-700 hover:bg-blue-50 hover:text-blue-700"
                 }`}
               >
-                <span className={`${
-                  isActive('/sponsors') 
-                    ? 'text-yellow-700' 
-                    : 'text-white hover:text-black'
-                }`}>
-                  Sponsor
-                </span>
-              </Button>
+                Sponsor
+              </button>
             </Link>
           </li>
           <li>
             <Link to="/pastevents">
-              <Button
-                className={`transition-all ${
-                  isActive('/pastevents')
-                    ? 'border-2 border-yellow-400 bg-yellow-50'
-                    : 'border border-transparent hover:border-gray-300'
+              <button
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md ${
+                  isActive("/pastevents")
+                    ? "bg-yellow-400 text-black shadow-lg"
+                    : "bg-white text-gray-700 hover:bg-green-50 hover:text-green-700"
                 }`}
               >
-                <span className={`${
-                  isActive('/pastevents') 
-                    ? 'text-yellow-700' 
-                    : 'text-white hover:text-black'
-                }`}>
-                  Past Events
-                </span>
-              </Button>
+                Past Events
+              </button>
             </Link>
           </li>
           <li>
             <Link to="/faqs">
-              <Button
-                className={`transition-all ${
-                  isActive('/faqs')
-                    ? 'border-2 border-yellow-400 bg-yellow-50'
-                    : 'border border-transparent hover:border-gray-300'
+              <button
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-md ${
+                  isActive("/faqs")
+                    ? "bg-yellow-400 text-black shadow-lg"
+                    : "bg-white text-gray-700 hover:bg-purple-50 hover:text-purple-700"
                 }`}
               >
-                <span className={`${
-                  isActive('/faqs') 
-                    ? 'text-yellow-700' 
-                    : 'text-white hover:text-black'
-                }`}>
-                  FAQs
-                </span>
-              </Button>
+                FAQs
+              </button>
             </Link>
           </li>
         </ul>
 
         {/* Right-side contact button (Desktop only) */}
-        <div className="hidden md:flex items-center">
+        {/* <div className="hidden md:flex items-center">
           <Button className="text-white font-bold px-4 py-2 rounded-lg transition-colors md:w-45">
             <a href="tel:+254113273333" className="flex items-center">
               <Phone className="mr-2" size={16} />
@@ -131,80 +95,79 @@ const NavBar = () => {
               <span className="lg:hidden">Call</span>
             </a>
           </Button>
-        </div>
+        </div> */}
       </div>
 
       {/* Mobile Menu Overlay */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-40">
           <div className="px-4 py-4">
-            <ul className="flex flex-col space-y-4">
+            <ul className="flex flex-col space-y-3">
               <li>
-                <Link 
-                  to="/registration" 
-                  className={`block py-2 text-lg font-medium transition-colors ${
-                    isActive('/registration')
-                      ? 'text-yellow-600 font-semibold'
-                      : 'text-gray-700 hover:text-blue-500'
+                <Link
+                  to="/registration"
+                  className={`block py-3 px-4 text-lg font-semibold rounded-lg transition-all duration-300 ${
+                    isActive("/registration")
+                      ? "bg-yellow-400 text-black shadow-md"
+                      : "text-gray-700 hover:bg-yellow-50 hover:text-yellow-700"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
-                  Register
+                  📝 Register
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/sponsors" 
-                  className={`block py-2 text-lg font-medium transition-colors ${
-                    isActive('/sponsors')
-                      ? 'text-yellow-600 font-semibold'
-                      : 'text-gray-700 hover:text-blue-500'
+                <Link
+                  to="/sponsors"
+                  className={`block py-3 px-4 text-lg font-semibold rounded-lg transition-all duration-300 ${
+                    isActive("/sponsors")
+                      ? "bg-yellow-400 text-black shadow-md"
+                      : "text-gray-700 hover:bg-blue-50 hover:text-blue-700"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
-                  Sponsor
+                  🤝 Sponsor
                 </Link>
               </li>
               <li>
-                <Link 
-                  to="/pastevents" 
-                  className={`block py-2 text-lg font-medium transition-colors ${
-                    isActive('/pastevents')
-                      ? 'text-yellow-600 font-semibold'
-                      : 'text-gray-700 hover:text-blue-500'
+                <Link
+                  to="/pastevents"
+                  className={`block py-3 px-4 text-lg font-semibold rounded-lg transition-all duration-300 ${
+                    isActive("/pastevents")
+                      ? "bg-yellow-400 text-black shadow-md"
+                      : "text-gray-700 hover:bg-green-50 hover:text-green-700"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
-                  Past Events
+                  📅 Past Events
                 </Link>
               </li>
-              <li>
-                <Link 
-                  to="/faqs" 
-                  className={`block py-2 text-lg font-medium transition-colors ${
-                    isActive('/faqs')
-                      ? 'text-yellow-600 font-semibold'
-                      : 'text-gray-700 hover:text-blue-500'
+              {/* <li>
+                <Link
+                  to="/faqs"
+                  className={`block py-3 px-4 text-lg font-semibold rounded-lg transition-all duration-300 ${
+                    isActive("/faqs")
+                      ? "bg-yellow-400 text-black shadow-md"
+                      : "text-gray-700 hover:bg-purple-50 hover:text-purple-700"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
-                  FAQs
+                  ❓ FAQs
                 </Link>
               </li>
               <li className="pt-2">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white font-bold w-full py-3 rounded-lg transition-colors">
+                <button className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold w-full py-3 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-md hover:shadow-lg">
                   <a href="tel:+254113273333" className="flex items-center justify-center">
-                    <Phone className="mr-2" size={16} />
-                    Contact Us
+                    <Phone className="mr-2" size={16} />📞 Contact Us
                   </a>
-                </Button>
-              </li>
+                </button>
+              </li> */}
             </ul>
           </div>
         </div>
       )}
     </nav>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar

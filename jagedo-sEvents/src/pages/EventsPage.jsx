@@ -4,12 +4,14 @@ import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Button from '../components/Button';
+import NavBar2 from '../components/NavBar2'; 
 
 const EventsPage = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white font-sans">
       {/* NavBar */}
       <div className="sticky top-0 z-50 bg-white shadow-md">
+        <NavBar2 />
         <NavBar />
       </div>
 

@@ -6,6 +6,7 @@ import Event1 from "../assets/Event1.jpeg"
 import Event2 from "../assets/Event001.jpg"
 import Event4 from "../assets/Event4.jpg"
 import Event5 from "../assets/Event5.jpg"
+import NavBar2 from '../components/NavBar2'; 
 
 export default function PastEvents() {
   const [visibleCards, setVisibleCards] = useState(new Set());
@@ -171,6 +172,7 @@ export default function PastEvents() {
     <div className="min-h-screen bg-gray-50">
         {/* NavBar */}
         <div>
+          <NavBar2 />
             <NavBar/>
         </div>
       {/* Hero Section */}
