@@ -21,7 +21,11 @@ const NavBar = () => {
     <nav className="bg-white drop-shadow-sm pt-1 relative z-50">
       <div className="flex justify-between items-center px-4 py-3 md:px-8 lg:px-12">
         {/* Left: Logo */}
-        <Link to="/" className="flex-shrink-0">
+        <Link 
+        to="https://jagedov3-designs.vercel.app/#/" 
+        className="flex-shrink-0"
+        target = "_blank"
+        rel = "noopener noreferrer" >
           <img 
             src={Japageologo} 
             alt="Japageo Logo" 

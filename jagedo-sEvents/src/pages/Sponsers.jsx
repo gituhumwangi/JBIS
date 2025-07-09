@@ -236,13 +236,13 @@ const SponsorsPage = () => {
         </div>
               </section> */}
 
-        <section className="py-2 px-4 sm:px-4 lg:px-5 bg-white my-2">
-                <div className="max-w-6xl mx-auto py-10">
-                  <div className="text-center mb-8">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+        <section className="py-2 px-4 sm:px-4 lg:px-5 sm:py-2 lg:py-2 bg-white my-2">
+                <div className="max-w-6xl mx-auto py-1">
+                  <div className="text-center mb-2">
+                    <h2 className="text-3xl font-bold text-gray-900 mb-2">
                       Why Sponsor the JaGedo Summit?
                     </h2>
-                    <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
+                    <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-2">
                       Connect with Kenya's construction industry leaders and position your brand at the forefront of innovation.
                     </p>
         
@@ -276,7 +276,7 @@ const SponsorsPage = () => {
 
 
         {/* Sponsorship Packages */}
-<section id="packages" className="py-16 px-4 sm:px-6 lg:px-8">
+<section id="packages" className="py-1 px-4 sm:px-6 lg:px-8">
   <div className="max-w-7xl mx-auto">
     <div className="text-center mb-12">
       <h2 className="text-3xl font-bold text-gray-900 mb-4">
