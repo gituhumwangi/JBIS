@@ -9,6 +9,35 @@ import { Link } from "react-router-dom"
 import { Clock, MapPin, Calendar } from "lucide-react"
 import JaGedoLogo from "../assets/Japageologo.webp"
 import NavBar2 from "../components/NavBar2"
+import HeroSlideshow from "../components/hero-slideshow"
+
+// Slideshow data - you can replace these with your actual images
+const heroSlides = [
+  {
+    image: Card1,
+    title: "JBIS: JaGedo Builders Innovation Summit",
+    subtitle: "Future-Proofing Construction Through Innovation",
+    description: "Join industry leaders and innovators reshaping construction's future.",
+  },
+  {
+    image: "/placeholder.svg?height=800&width=1200",
+    title: "Building Tomorrow's Infrastructure",
+    subtitle: "Where Innovation Meets Construction Excellence",
+    description: "Discover cutting-edge technologies transforming the construction industry.",
+  },
+  {
+    image: "/placeholder.svg?height=800&width=1200",
+    title: "Connect. Learn. Innovate.",
+    subtitle: "East Africa's Premier Construction Summit",
+    description: "Network with 500+ professionals and explore groundbreaking solutions.",
+  },
+  {
+    image: "/placeholder.svg?height=800&width=1200",
+    title: "Shaping Kenya's Construction Future",
+    subtitle: "Two Days of Transformative Learning",
+    description: "Experience workshops, exhibitions, and networking opportunities.",
+  },
+]
 
 const sponsorshipBenefits = [
   {
@@ -174,56 +203,37 @@ const Home = () => {
       {/* Spacer to prevent content from hiding behind fixed navbars */}
       <div className="h-32 md:h-24"></div>
 
-      {/* Hero Section */}
+      {/* Hero Section with Slideshow */}
       <div className="w-full h-screen text-white relative">
-        <div
-          className="w-full h-full bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center text-center p-8 md:p-16 gap-6"
-          style={{
-            backgroundImage: `linear-gradient(rgba(0, 0.9, 0.9, 0.9), rgba(0, 0, 0, 0.6)), url(${Card1})`,
-          }}
-        >
-          <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold font-manrope leading-tight">
-            JBIS: JaGedo Builders Innovation Summit
-          </h1>
-
-          <h2 className="text-white text-xl sm:text-2xl md:text-3xl font-semibold font-manrope pt-2 sm:pt-2">
-            Future-Proofing Construction Through Innovation
-          </h2>
-
-          <div className="text-gray-100 text-base sm:text-lg md:text-xl max-w-2xl space-y-2"></div>
-
-          <p className="text-gray-100 text-sm sm:text-base max-w-xl">
-            Join industry leaders and innovators reshaping construction's future.
-          </p>
-        </div>
+        <HeroSlideshow slides={heroSlides} autoPlay={true} autoPlayInterval={6000} />
       </div>
 
       {/* Call to Action Section */}
       <section className="py-12 px-4 md:px-8 bg-white border-b border-gray-100">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
+          {/* <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to Join the Innovation?</h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Don't miss this opportunity to be part of Kenya's premier construction innovation summit.
             </p>
-          </div>
+          </div> */}
 
           {/* Enhanced CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center w-full max-w-lg mx-auto">
             <Link to="/registration" className="w-full sm:w-auto">
               <Button>
-                <span className="text-white items-center justify-center flex hover:text-black">
-                  Register Now
-                </span>
+                <p className="text-white hover:text-black">
+                  Register
+                </p>
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
             </Link>
 
             <Link to="/sponsors" className="w-full sm:w-auto">
               <Button>
-                <span className="text-white hover:text-black flex items-center justify-center">
+                <p className="text-white hover:text-black">
                   Sponsor
-                </span>
+                </p>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
             </Link>
