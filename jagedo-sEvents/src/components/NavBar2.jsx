@@ -6,11 +6,11 @@ import { useNavigate, Link, useLocation } from "react-router-dom"
 import JaGedologo from "../assets/Japageologo.webp"
 
 const NAV_ITEMS = [
-  { name: "Home", route: "/", scrollTo: true },
-  { name: "Login", route: "/login", scrollTo: false },
-  { name: "Sign Up", route: "/signup", scrollTo: false },
-  { name: "About Us", scrollTo: true },
-  { name: "Events", route: "/events", scrollTo: false },
+  { name: "Home", route: "https://ja-gedov3-designs-seven.vercel.app/", scrollTo: true },
+  { name: "Login", route: "https://ja-gedov3-designs-seven.vercel.app/#/login", scrollTo: false },
+  { name: "Sign Up", route: "https://jagedov3-designs.vercel.app/#/signup", scrollTo: false },
+  { name: "About Us", route: "https://ja-gedov3-designs-seven.vercel.app/#/landing-page-s", scrollTo: true },
+  { name: "Events", route: "/", scrollTo: false },
 ]
 
 const Navbar2 = () => {
@@ -56,7 +56,14 @@ const Navbar2 = () => {
   }
 
   const handleClick = (item) => {
-    navigate(item.path)
+    // Check if it's an external URL
+    if (item.route.startsWith("http")) {
+      // Open in new tab
+      window.open(item.route, "_blank", "noopener,noreferrer")
+    } else {
+      // Internal navigation
+      navigate(item.route)
+    }
     setShowMobileMenu(false)
   }
 
@@ -82,13 +89,31 @@ const Navbar2 = () => {
               <li key={item.name} className="relative group">
                 <button
                   onClick={() => handleClick(item)}
-                  className={`min-h-[40px] py-2 px-4 rounded-full shadow-md hover:scale-105 transition duration-300 ease-in-out flex items-center justify-center sm:w-28 md:w-24 text-sm ${
-                    isActive(item.path)
+                  className={`min-h-[40px] py-2 px-4 rounded-full shadow-md hover:scale-105 transition duration-300 ease-in-out flex items-center justify-center sm:w-32 md:w-32 text-sm whitespace-nowrap ${
+                    isActive(item.route)
                       ? "bg-[#FFD700] text-black"
                       : "bg-[rgb(0,0,122)] text-white hover:bg-[#FFD700] hover:text-black"
                   }`}
                 >
-                  {item.name}
+                  <span className="flex items-center">
+                    {item.name}
+                    {/* Add external link indicator */}
+                    {item.route.startsWith("http") && (
+                      <svg
+                        className="w-3 h-3 ml-1 opacity-70 flex-shrink-0"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    )}
+                  </span>
                 </button>
               </li>
             ))}
@@ -138,13 +163,24 @@ const Navbar2 = () => {
                 <li key={item.name}>
                   <button
                     onClick={() => handleClick(item)}
-                    className={`w-full block text-center py-3 px-6 rounded-full shadow-md hover:scale-105 transition duration-300 ease-in-out ${
-                      isActive(item.path)
+                    className={`w-full flex items-center justify-center text-center py-3 px-6 rounded-full shadow-md hover:scale-105 transition duration-300 ease-in-out ${
+                      isActive(item.route)
                         ? "bg-[#FFD700] text-black"
                         : "bg-[rgb(0,0,122)] text-white hover:bg-[#FFD700] hover:text-black"
                     }`}
                   >
                     {item.name}
+                    {/* Add external link indicator for mobile */}
+                    {item.route.startsWith("http") && (
+                      <svg className="w-4 h-4 ml-2 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    )}
                   </button>
                 </li>
               ))}
