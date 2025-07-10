@@ -6,11 +6,11 @@ import { useNavigate, Link, useLocation } from "react-router-dom"
 import JaGedologo from "../assets/Japageologo.webp"
 
 const NAV_ITEMS = [
-  { name: "Home", route: "https://ja-gedov3-designs-seven.vercel.app/", scrollTo: true },
+  // { name: "Home", route: "https://ja-gedov3-designs-seven.vercel.app/", scrollTo: true },
   { name: "Login", route: "https://ja-gedov3-designs-seven.vercel.app/#/login", scrollTo: false },
   { name: "Sign Up", route: "https://jagedov3-designs.vercel.app/#/signup", scrollTo: false },
   { name: "About Us", route: "https://ja-gedov3-designs-seven.vercel.app/#/landing-page-s", scrollTo: true },
-  { name: "Events", route: "/", scrollTo: false },
+  { name: "Events", route: "/events", scrollTo: false },
 ]
 
 const Navbar2 = () => {
@@ -72,7 +72,10 @@ const Navbar2 = () => {
       <div className="container mx-auto flex justify-between items-center py-3 px-6 md:px-12 lg:px-16">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <Link to="https://ja-gedov3-designs-seven.vercel.app/">
+          <Link 
+            to="https://ja-gedov3-designs-seven.vercel.app/"
+            target="_blank"
+            rel ="noopener noreferrer">
             <img
               src={JaGedologo || "/placeholder.svg"}
               alt="JaGedo Logo"

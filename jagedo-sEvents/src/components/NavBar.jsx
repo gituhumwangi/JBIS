@@ -33,6 +33,18 @@ const NavBar = () => {
         <ul className="hidden md:flex space-x-8 lg:space-x-12 text-gray-700 font-medium flex-1 justify-center">
           <li>
             <Link
+              to="/"
+              className={`relative pb-2 transition-all duration-300 ease-in-out hover:text-gray-900 ${
+                isActive("/")
+                  ? "text-gray-900 border-b-2 border-blue-600"
+                  : "text-gray-600 hover:border-b-2 hover:border-gray-300"
+              }`}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
               to="/registration"
               className={`relative pb-2 transition-all duration-300 ease-in-out hover:text-gray-900 ${
                 isActive("/registration")
@@ -87,6 +99,19 @@ const NavBar = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t z-40">
           <div className="px-4 py-4">
             <ul className="flex flex-col space-y-4">
+              <li>
+                <Link
+                  to="/"
+                  className={`block py-2 px-4 text-lg font-medium transition-all duration-300 ${
+                    isActive("/")
+                      ? "text-blue-600 border-l-4 border-blue-600 bg-blue-50"
+                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  🏠 Home
+                </Link>
+              </li>
               <li>
                 <Link
                   to="/registration"
