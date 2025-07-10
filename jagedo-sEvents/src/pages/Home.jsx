@@ -211,29 +211,29 @@ const Home = () => {
       {/* Call to Action Section */}
       <section className="py-12 px-4 md:px-8 bg-white border-b border-gray-100">
         <div className="max-w-4xl mx-auto">
-          {/* <div className="text-center mb-8">
+          <div className="text-center mb-8">
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to Join the Innovation?</h3>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Don't miss this opportunity to be part of Kenya's premier construction innovation summit.
             </p>
-          </div> */}
+          </div>
 
           {/* Enhanced CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center w-full max-w-lg mx-auto">
-            <Link to="/registration" className="w-full sm:w-auto">
+          <div className="flex flex-row gap-4 sm:gap-6 justify-center items-center w-full max-w-lg mx-auto text-center">
+            <Link to="/registration" >
               <Button>
-                <p className="text-white hover:text-black">
-                  Register
-                </p>
+                <span className="relative z-10 flex items-center justify-center text-white hover:text-black">
+                  Register 
+                </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
             </Link>
 
-            <Link to="/sponsors" className="w-full sm:w-auto">
-              <Button>
-                <p className="text-white hover:text-black">
+            <Link to="/sponsors" className="w-1/2 sm:w-auto flex justify-center">
+              <Button >
+                <span className="relative z-10 flex items-center justify-center text-white hover:text-black">
                   Sponsor
-                </p>
+                </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
             </Link>
@@ -242,30 +242,30 @@ const Home = () => {
       </section>
 
       {/* Event Date and Location Section */}
-      <section className="px-4 md:px-20 lg:px-40 py-8 bg-gradient-to-r from-blue-50 to-indigo-50">
+      <section className="px-4 md:px-20 lg:px-40 py-6 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-6">Mark Your Calendar</h3>
+          <div className="bg-white rounded-2xl shadow-lg p-4 md:p-6">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">Mark Your Calendar</h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {/* Date Section */}
-              <div className="flex flex-col items-center text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
-                <div className="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center mb-4">
-                  <Calendar className="text-white" size={32} />
+              <div className="flex flex-col items-center text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl border border-blue-200">
+                <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mb-3">
+                  <Calendar className="text-white" size={24} />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Event Date</h4>
-                <p className="text-2xl font-bold text-blue-600 mb-1">October 17 - 18, 2025</p>
-                <p className="text-gray-600">Two Days of Innovation</p>
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">Event Date</h4>
+                <p className="text-xl font-bold text-blue-600 mb-1">October 17 - 18, 2025</p>
+                <p className="text-gray-600 text-sm">Two Days of Innovation</p>
               </div>
 
               {/* Location Section */}
-              <div className="flex flex-col items-center text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
-                <div className="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-4">
-                  <MapPin className="text-white" size={32} />
+              <div className="flex flex-col items-center text-center p-4 bg-gradient-to-br from-green-50 to-green-100 rounded-xl border border-green-200">
+                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-3">
+                  <MapPin className="text-white" size={24} />
                 </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">Location</h4>
-                <p className="text-2xl font-bold text-green-600 mb-1">Nairobi, Kenya</p>
-                <p className="text-gray-600">Venue TBD</p>
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">Location</h4>
+                <p className="text-xl font-bold text-green-600 mb-1">Nairobi, Kenya</p>
+                <p className="text-gray-600 text-sm">Venue TBD</p>
               </div>
             </div>
           </div>
