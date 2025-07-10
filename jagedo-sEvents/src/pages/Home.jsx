@@ -209,61 +209,33 @@ const Home = () => {
       </div>
 
       {/* Call to Action Section */}
-      <section className="py-8 sm:py-10 md:py-12 px-4 md:px-8 bg-white border-b border-gray-100">
+      <section className="py-12 px-4 md:px-8 bg-white border-b border-gray-100">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-6 sm:mb-8">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">
-              Ready to Join the Innovation?
-            </h3>
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-2">
+          <div className="text-center mb-8">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to Join the Innovation?</h3>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Don't miss this opportunity to be part of Kenya's premier construction innovation summit.
             </p>
           </div>
 
-          {/* Enhanced CTA Buttons - Mobile Optimized */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center w-full max-w-md sm:max-w-lg mx-auto">
-            <Link to="/registration" className="w-full sm:w-auto flex justify-center">
-              <button className="group relative w-full sm:w-48 md:w-56 bg-gradient-to-r from-yellow-400 to-yellow-500 hover:from-yellow-500 hover:to-yellow-600 text-black font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out border-2 border-yellow-300 hover:border-yellow-400 touch-manipulation">
-                <span className="relative z-10 flex items-center justify-center text-sm sm:text-base">
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                    />
-                  </svg>
-                  <span className="whitespace-nowrap">Register Now</span>
+          {/* Enhanced CTA Buttons */}
+          <div className="flex flex-row gap-4 sm:gap-6 justify-center items-center w-full max-w-lg mx-auto text-center">
+            <Link to="/registration" >
+              <Button>
+                <span className="relative z-10 flex items-center justify-center text-white hover:text-black">
+                  Register 
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
+              </Button>
             </Link>
 
-            <Link to="/sponsors" className="w-full sm:w-auto flex justify-center">
-              <button className="group relative w-full sm:w-48 md:w-56 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 sm:py-4 px-6 sm:px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out border-2 border-blue-500 hover:border-blue-600 touch-manipulation">
-                <span className="relative z-10 flex items-center justify-center text-sm sm:text-base">
-                  <svg
-                    className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
-                    />
-                  </svg>
-                  <span className="whitespace-nowrap">Become Sponsor</span>
+            <Link to="/sponsors" className="w-1/2 sm:w-auto flex justify-center">
+              <Button >
+                <span className="relative z-10 flex items-center justify-center text-white hover:text-black">
+                  Sponsor
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </button>
+              </Button>
             </Link>
           </div>
         </div>
