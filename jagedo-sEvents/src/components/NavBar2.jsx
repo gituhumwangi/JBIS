@@ -72,11 +72,11 @@ const Navbar2 = () => {
       <div className="container mx-auto flex justify-between items-center py-3 px-6 md:px-12 lg:px-16">
         {/* Logo */}
         <div className="flex items-center gap-2">
-          <Link to="/">
+          <Link to="https://ja-gedov3-designs-seven.vercel.app/">
             <img
               src={JaGedologo || "/placeholder.svg"}
               alt="JaGedo Logo"
-              className="h-12 w-auto rounded-full"
+              className="h-18 w-auto rounded-full"
               aria-hidden="true"
             />
           </Link>
