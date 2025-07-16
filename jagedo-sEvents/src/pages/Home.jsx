@@ -2,7 +2,6 @@
 
 import { useState } from "react"
 import NavBar from "../components/NavBar"
-import Button from "../components/Button"
 import Card1 from "../assets/Event1.jpeg"
 import Footer from "../components/Footer"
 import { Link } from "react-router-dom"
@@ -11,36 +10,42 @@ import JaGedoLogo from "../assets/Japageologo.webp"
 import NavBar2 from "../components/NavBar2"
 import HeroSlideshow from "../components/hero-slideshow"
 import Moringa from "../assets/Moringa.png"
+import Button from "../components/Button"
+import SEOHead from "../components/seo-head"
+import Construction1 from "../assets/Construction-Theme.jpg"
 import Construction2 from "../assets/Construction2.jpg"
 import Construction3 from "../assets/Construction3.jpg"
 import Construction4 from "../assets/Construction4.jpg"
-import Construction1 from "../assets/Construction-Theme.jpg"
+import { ButtonGroupButtonContext } from "@mui/material"
 
-// Slideshow data - you can replace these with your actual images
+// Updated slideshow data with construction technology themes
 const heroSlides = [
   {
     image: Construction1,
     title: "JBIS: JaGedo Builders Innovation Summit",
-    subtitle: "Future-Proofing Construction Through Innovation",
-    description: "Join industry leaders and innovators reshaping construction's future.",
+    subtitle: "Shaping the Future of African Construction Through Technology & Innovation",
+    description:
+      "Join 500+ industry leaders and innovators reshaping construction's future through cutting-edge technology.",
   },
   {
     image: Construction2,
-    title: "Building Tomorrow's Infrastructure",
-    subtitle: "Where Innovation Meets Construction Excellence",
-    description: "Discover cutting-edge technologies transforming the construction industry.",
+    title: "Smart Construction Technology",
+    subtitle: "Drones, BIM & Digital Innovation",
+    description:
+      "Discover how drones, Building Information Modeling, and AI are revolutionizing construction workflows.",
   },
   {
     image: Construction3,
-    title: "Connect. Learn. Innovate.",
-    subtitle: "East Africa's Premier Construction Summit",
-    description: "Network with 500+ professionals and explore groundbreaking solutions.",
+    title: "Digital Construction Management",
+    subtitle: "Safety Meets Technology",
+    description:
+      "Experience the future of construction with smart helmets, IoT sensors, and real-time project management.",
   },
   {
     image: Construction4,
-    title: "Shaping Kenya's Construction Future",
-    subtitle: "Two Days of Transformative Learning",
-    description: "Experience workshops, exhibitions, and networking opportunities.",
+    title: "Building Tomorrow's Infrastructure",
+    subtitle: "Where Innovation Meets Construction Excellence",
+    description: "Explore advanced construction techniques, sustainable materials, and smart building technologies.",
   },
 ]
 
@@ -110,6 +115,7 @@ const whoShouldAttend = [
   },
 ]
 
+// Updated program schedule based on the detailed agenda provided
 const programScheduleDay1 = [
   {
     time: "08:00–09:00",
@@ -254,11 +260,41 @@ const programScheduleDay2 = [
   },
 ]
 
+// Speakers section data
+const featuredSpeakers = [
+  {
+    name: "Dr. Sarah Mwangi",
+    title: "Director of Infrastructure Development",
+    company: "Ministry of Transport & Infrastructure",
+    image: "/placeholder.svg?height=300&width=300",
+    topic: "The Future of Construction in Africa",
+  },
+  {
+    name: "James Kiprotich",
+    title: "CEO & Founder",
+    company: "BuildTech Kenya",
+    image: "/placeholder.svg?height=300&width=300",
+    topic: "Disruptive Technologies in Construction",
+  },
+  {
+    name: "Grace Wanjiku",
+    title: "Senior Partner",
+    company: "Africa Infrastructure Fund",
+    image: "/placeholder.svg?height=300&width=300",
+    topic: "Investor Outlook on African PropTech",
+  },
+  {
+    name: "Eng. David Mutua",
+    title: "Chief Technology Officer",
+    company: "Smart Construction Solutions",
+    image: "/placeholder.svg?height=300&width=300",
+    topic: "Digital Tools for Contractors",
+  },
+]
 
 const Home = () => {
   const [isSponsorshipExpanded, setIsSponsorshipExpanded] = useState(false)
   const [activeDay, setActiveDay] = useState("day1")
-  const currentSchedule = activeDay === "day1" ? programScheduleDay1 : programScheduleDay2
 
   const getScheduleTypeColor = (type) => {
     const colors = {
@@ -274,8 +310,13 @@ const Home = () => {
     return colors[type] || "bg-gray-100 text-gray-800"
   }
 
+  const currentSchedule = activeDay === "day1" ? programScheduleDay1 : programScheduleDay2
+
   return (
     <div>
+      {/* SEO Head Component */}
+      <SEOHead />
+
       {/* Fixed Navigation Container - Prevents Overlap */}
       <div className="fixed top-0 left-0 right-0 z-50">
         <NavBar2 />
@@ -286,37 +327,63 @@ const Home = () => {
       <div className="h-32 md:h-24"></div>
 
       {/* Hero Section with Slideshow */}
-      <div className="w-full h-screen text-white relative">
+      <section className="w-full h-screen text-white relative">
         <HeroSlideshow slides={heroSlides} autoPlay={true} autoPlayInterval={6000} />
-      </div>
+      </section>
 
       {/* Call to Action Section */}
-      <section className="py-12 px-4 md:px-8 bg-white border-b border-gray-100">
+      <section className="py-8 sm:py-10 md:py-12 px-4 md:px-8 bg-white border-b border-gray-100">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to Join the Innovation?</h3>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <header className="text-center mb-6 sm:mb-8">
+            <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-3 sm:mb-4 px-2">
+              Ready to Join the Innovation?
+            </h1>
+            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-2">
               Don't miss this opportunity to be part of Kenya's premier construction innovation summit.
             </p>
-          </div>
+          </header>
 
-          {/* Enhanced CTA Buttons */}
-          <div className="flex flex-row gap-4 sm:gap-6 justify-center items-center w-full max-w-lg mx-auto text-center">
-            <Link to="/registration" >
-              <Button>
-                <span className="relative z-10 flex items-center justify-center text-white hover:text-black">
-                  Register Now 
+          {/* Enhanced CTA Buttons - Using Button Component */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center w-full max-w-md sm:max-w-lg mx-auto">
+            <Link to="/registration" className="w-full sm:w-auto flex justify-center">
+              <Button className="w-full sm:w-48 md:w-56 text-white">
+                <span className="flex items-center justify-center text-sm sm:text-base">
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                    />
+                  </svg>
+                  <span className="whitespace-nowrap">Register Now</span>
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
             </Link>
 
-            <Link to="/sponsors" className="w-1/2 sm:w-auto flex justify-center">
-              <Button className="sm:w-35 md:w-40 lg:w-42 w-full">
-                <span className="relative z-10 flex items-center justify-center text-white hover:text-black ">
-                  Become a Sponsor
+            <Link to="/sponsors" className="w-full sm:w-auto flex justify-center">
+              <Button className="w-full sm:w-48 md:w-56 text-white">
+                <span className="flex items-center justify-center text-sm sm:text-base">
+                  <svg
+                    className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"
+                    />
+                  </svg>
+                  <span className="whitespace-nowrap">Become a Sponsor</span>
                 </span>
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
             </Link>
           </div>
@@ -326,8 +393,8 @@ const Home = () => {
       {/* Event Date and Location Section */}
       <section className="px-4 md:px-20 lg:px-40 py-6 bg-gradient-to-r from-blue-50 to-indigo-50">
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-lg p-4 md:p-6">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">Mark Your Calendar</h3>
+          <article className="bg-white rounded-2xl shadow-lg p-4 md:p-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 text-center mb-4">Mark Your Calendar</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {/* Date Section */}
@@ -335,7 +402,7 @@ const Home = () => {
                 <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mb-3">
                   <Calendar className="text-white" size={24} />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Event Date</h4>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Event Date</h3>
                 <p className="text-xl font-bold text-blue-600 mb-1">October 17 - 18, 2025</p>
                 <p className="text-gray-600 text-sm">Two Days of Innovation</p>
               </div>
@@ -345,11 +412,44 @@ const Home = () => {
                 <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mb-3">
                   <MapPin className="text-white" size={24} />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Location</h4>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Location</h3>
                 <p className="text-xl font-bold text-green-600 mb-1">Nairobi, Kenya</p>
                 <p className="text-gray-600 text-sm">Venue TBD</p>
               </div>
             </div>
+          </article>
+        </div>
+      </section>
+
+      {/* Featured Speakers Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <header className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Speakers</h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Learn from industry leaders, innovators, and experts shaping the future of African construction.
+            </p>
+          </header>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {featuredSpeakers.map((speaker, index) => (
+              <article
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 text-center hover:shadow-md transition-shadow"
+              >
+                <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gray-200 overflow-hidden">
+                  <img
+                    src={speaker.image || "/placeholder.svg"}
+                    alt={`${speaker.name} - ${speaker.title}`}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-lg font-semibold text-gray-900 mb-1">{speaker.name}</h3>
+                <p className="text-sm text-blue-600 font-medium mb-1">{speaker.title}</p>
+                <p className="text-sm text-gray-600 mb-3">{speaker.company}</p>
+                <p className="text-xs text-gray-500 italic">"{speaker.topic}"</p>
+              </article>
+            ))}
           </div>
         </div>
       </section>
@@ -358,30 +458,32 @@ const Home = () => {
       <section className="px-6 md:px-20 lg:px-36 py-10 bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
           {/* About JBIS Text Section */}
-          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+          <article className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               What is <span className="text-indigo-600">JBIS?</span>
             </h2>
             <p className="text-gray-600 text-base leading-relaxed max-w-xl">
-              The <span className="font-semibold text-gray-800">JaGedo Builders Innovation Summit; (JBIS)</span> is our
-              innovatively flagship event that unites builders, fundis, professionals, tech innovators, and industry
-              leaders. It's more than a summit it's a platform where innovation meets execution.
+              The <span className="font-semibold text-gray-800">JaGedo Builders Innovation Summit (JBIS)</span> is East
+              Africa's premier construction technology event that unites builders, fundis, professionals, tech
+              innovators, and industry leaders. It's more than a summit—it's a platform where innovation meets
+              execution.
             </p>
             <p className="text-gray-600 text-base leading-relaxed mt-4 max-w-xl">
               Attendees collaborate, learn, and showcase groundbreaking ideas that redefine infrastructure and smart
-              construction;empowering builders to shape the future of the built world.
+              construction, empowering builders to shape the future of the built world through technology and
+              innovation.
             </p>
-          </div>
+          </article>
 
           {/* Trusted Partners Section */}
-          <div className="flex flex-col items-center w-full">
-            <div className="text-center mb-8">
+          <aside className="flex flex-col items-center w-full">
+            <header className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Trusted Partners</h2>
               <p className="text-lg text-gray-600 max-w-md mx-auto">
                 We collaborate with industry leaders to deliver exceptional experiences
               </p>
               <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mt-4"></div>
-            </div>
+            </header>
 
             {/* Partner logos grid container */}
             <div className="w-full max-w-2xl">
@@ -398,13 +500,14 @@ const Home = () => {
                   <h4 className="text-sm font-semibold text-gray-800 text-center">JaGedo</h4>
                 </div>
 
-                {/* Partner 2 - Placeholder */}
+                {/* Partner 2 - Moringa */}
                 <div className="flex flex-col items-center justify-center p-4 bg-white rounded-2xl transition-all duration-300 hover:scale-105 border border-gray-100 hover:border-purple-300 hover:shadow-lg w-full max-w-xs">
                   <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-gray-50 border-2 flex items-center justify-center overflow-hidden hover:border-purple-300 transition-colors duration-300 mb-3">
-                    <img 
-                    src={Moringa}
-                    alt="Moringa Logo"
-                    className="w-full h-full object-contain p-2"/>
+                    <img
+                      src={Moringa || "/placeholder.svg"}
+                      alt="Moringa Logo"
+                      className="w-full h-full object-contain p-2"
+                    />
                   </div>
                   <h4 className="text-sm font-semibold text-gray-800 text-center">Moringa</h4>
                 </div>
@@ -416,26 +519,26 @@ const Home = () => {
                       Partner Logo
                     </div>
                   </div>
-                  <h4 className="text-sm font-semibold text-gray-800 text-center">Partner 3</h4>
+                  <h4 className="text-sm font-semibold text-gray-800 text-center">Fisibo</h4>
                 </div>
               </div>
             </div>
-          </div>
+          </aside>
         </div>
       </section>
 
       <section className="py-6 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
+          <header className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Who Should Attend?</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               JBIS brings together diverse professionals from across the construction and technology ecosystem.
             </p>
-          </div>
+          </header>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
             {whoShouldAttend.map((attendee, index) => (
-              <div
+              <article
                 key={index}
                 className="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition-shadow"
               >
@@ -444,26 +547,26 @@ const Home = () => {
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-gray-900 mb-3">{attendee.title}</h3>
                     <p className="text-gray-600 mb-4">{attendee.description}</p>
-                    <div className="space-y-2">
+                    <ul className="space-y-2">
                       {attendee.highlights.map((highlight, idx) => (
-                        <div key={idx} className="flex items-center text-sm text-gray-700">
+                        <li key={idx} className="flex items-center text-sm text-gray-700">
                           <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
                           {highlight}
-                        </div>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
                   </div>
                 </div>
-              </div>
+              </article>
             ))}
           </div>
         </div>
       </section>
 
       {/* Program Schedule Section */}
-       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
+          <header className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Summit Program</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Two full days of learning, networking, and innovation in the construction industry.
@@ -482,38 +585,39 @@ const Home = () => {
                 8:00 AM - 6:00 PM
               </div>
             </div>
-          </div>
+          </header>
 
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
-            <div className="flex items-center justify-center gap-3 p-4 border-b border-gray-200">
+          <article className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <nav className="flex items-center justify-center gap-3 p-4 border-b border-gray-200">
               <button
                 onClick={() => setActiveDay("day1")}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ease-in-out ${
                   activeDay === "day1"
-                    ? "bg-blue-600 text-white shadow-md"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    ? "bg-blue-600 text-white shadow-lg transform scale-105"
+                    : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-md border border-gray-200"
                 }`}
               >
                 Day 1 - Oct 17
               </button>
+
               <button
                 onClick={() => setActiveDay("day2")}
-                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ease-in-out ${
                   activeDay === "day2"
-                    ? "bg-blue-600 text-white shadow-md"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    ? "bg-blue-600 text-white shadow-lg transform scale-105"
+                    : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-md border border-gray-200"
                 }`}
               >
                 Day 2 - Oct 18
               </button>
-            </div>
+            </nav>
 
             <div className="divide-y divide-gray-200">
               {currentSchedule.map((session, index) => (
-                <div key={index} className="p-6">
+                <article key={index} className="p-6">
                   <div className="flex flex-col sm:flex-row sm:items-start justify-between">
-                    <div className="flex-1">
-                      <div className="flex items-center space-x-3 mb-2">
+                    <div className="flex-1 text-center">
+                      <div className="flex items-center justify-center space-x-3 mb-2">
                         <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
                           {session.time}
                         </span>
@@ -527,10 +631,10 @@ const Home = () => {
                       <p className="text-gray-600 text-sm">{session.description}</p>
                     </div>
                   </div>
-                </div>
+                </article>
               ))}
             </div>
-          </div>
+          </article>
         </div>
       </section>
 
