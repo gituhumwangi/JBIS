@@ -10,29 +10,34 @@ import { Clock, MapPin, Calendar } from "lucide-react"
 import JaGedoLogo from "../assets/Japageologo.webp"
 import NavBar2 from "../components/NavBar2"
 import HeroSlideshow from "../components/hero-slideshow"
+import Moringa from "../assets/Moringa.png"
+import Construction2 from "../assets/Construction2.jpg"
+import Construction3 from "../assets/Construction3.jpg"
+import Construction4 from "../assets/Construction4.jpg"
+import Construction1 from "../assets/Construction-Theme.jpg"
 
 // Slideshow data - you can replace these with your actual images
 const heroSlides = [
   {
-    image: Card1,
+    image: Construction1,
     title: "JBIS: JaGedo Builders Innovation Summit",
     subtitle: "Future-Proofing Construction Through Innovation",
     description: "Join industry leaders and innovators reshaping construction's future.",
   },
   {
-    image: "/placeholder.svg?height=800&width=1200",
+    image: Construction2,
     title: "Building Tomorrow's Infrastructure",
     subtitle: "Where Innovation Meets Construction Excellence",
     description: "Discover cutting-edge technologies transforming the construction industry.",
   },
   {
-    image: "/placeholder.svg?height=800&width=1200",
+    image: Construction3,
     title: "Connect. Learn. Innovate.",
     subtitle: "East Africa's Premier Construction Summit",
     description: "Network with 500+ professionals and explore groundbreaking solutions.",
   },
   {
-    image: "/placeholder.svg?height=800&width=1200",
+    image: Construction4,
     title: "Shaping Kenya's Construction Future",
     subtitle: "Two Days of Transformative Learning",
     description: "Experience workshops, exhibitions, and networking opportunities.",
@@ -105,78 +110,155 @@ const whoShouldAttend = [
   },
 ]
 
-const programSchedule = [
+const programScheduleDay1 = [
   {
-    time: "8:00 AM - 9:00 AM",
+    time: "08:00–09:00",
     title: "Registration & Welcome Coffee",
-    description: "Network with fellow attendees while enjoying breakfast",
+    description: "Delegate check-in, networking, exhibition hall opens",
     type: "networking",
   },
   {
-    time: "9:00 AM - 9:30 AM",
+    time: "09:00–09:30",
     title: "Opening Ceremony",
-    description: "Welcome address and summit overview",
+    description: "National Anthem, keynote welcome from JaGedo Executive & Government Official",
     type: "ceremony",
   },
   {
-    time: "9:30 AM - 10:30 AM",
-    title: "Keynote: Future of Construction in Kenya",
-    description: "Industry trends and opportunities ahead",
+    time: "09:30–10:15",
+    title: "Keynote: The Future of Construction in Africa",
+    description: "Visionary talk by a government or industry leader",
     type: "keynote",
   },
   {
-    time: "10:30 AM - 11:00 AM",
-    title: "Coffee Break & Networking",
+    time: "10:15–11:00",
+    title: "Panel: Public-Private Partnerships in Infrastructure",
+    description: "How collaboration fuels housing, roads, and smart cities",
+    type: "panel",
+  },
+  {
+    time: "11:00–11:30",
+    title: "Tea Break & Networking in Expo Hall",
+    description: "Connect with exhibitors and fellow attendees",
+    type: "break",
+  },
+  {
+    time: "11:30–12:30",
+    title: "Tech Showcase 1: Smart Building Materials",
+    description: "Short demos by top material innovators and manufacturers",
+    type: "exhibition",
+  },
+  {
+    time: "12:30–13:30",
+    title: "Networking Lunch",
+    description: "Buffet + sponsored product showcase tables",
+    type: "networking",
+  },
+  {
+    time: "13:30–14:15",
+    title: "Fireside Chat: Investor Outlook on African PropTech",
+    description: "What VCs and angel investors are looking for in construction innovation",
+    type: "pitch",
+  },
+  {
+    time: "14:15–15:00",
+    title: "Workshop: Digital Tools for Contractors",
+    description: "Intro to project management apps, drones, AR tools, and more",
+    type: "workshop",
+  },
+  {
+    time: "15:00–16:00",
+    title: "Roundtable: Policy, Regulation & Compliance in Kenya",
+    description: "Insights from NCA, NEMA, and county-level regulators",
+    type: "panel",
+  },
+  {
+    time: "16:00–17:00",
+    title: "Exhibition Walk & Product Demos",
+    description: "Booth visits + live demos by exhibitors",
+    type: "exhibition",
+  },
+  {
+    time: "17:00–18:00",
+    title: "Evening Cocktail & Builders Mixer",
+    description: "Chill networking with drinks, music, and partner showcases",
+    type: "networking",
+  },
+]
+
+const programScheduleDay2 = [
+  {
+    time: "08:30–09:30",
+    title: "Coffee & Morning Networking",
+    description: "Early connections + giveaways from sponsors",
+    type: "networking",
+  },
+  {
+    time: "09:30–10:15",
+    title: "Keynote: Disruptive Technologies in Construction",
+    description: "How AI, robotics, BIM, and 3D printing are redefining projects",
+    type: "keynote",
+  },
+  {
+    time: "10:15–11:00",
+    title: "Panel: The Rise of PropTech in Africa",
+    description: "Leaders discuss rental apps, construction marketplaces, and smart systems",
+    type: "panel",
+  },
+  {
+    time: "11:00–11:30",
+    title: "Tea Break in Exhibition Zone",
     description: "Connect with speakers and attendees",
     type: "break",
   },
   {
-    time: "11:00 AM - 12:00 PM",
-    title: "Panel: Digital Transformation in Construction",
-    description: "How technology is reshaping the industry",
-    type: "panel",
-  },
-  {
-    time: "12:00 PM - 1:00 PM",
-    title: "Exhibition & Demo Sessions",
-    description: "Explore latest tools and innovations",
-    type: "exhibition",
-  },
-  {
-    time: "1:00 PM - 2:00 PM",
-    title: "Networking Lunch",
-    description: "Connect over delicious local cuisine",
-    type: "networking",
-  },
-  {
-    time: "2:00 PM - 3:00 PM",
-    title: "Workshop: Sustainable Building Practices",
-    description: "Hands-on session on green construction",
-    type: "workshop",
-  },
-  {
-    time: "3:00 PM - 4:00 PM",
-    title: "Investor Pitch Session",
-    description: "Startups present to potential investors",
+    time: "11:30–12:15",
+    title: "Startup Pitch Session – BuildTech Startup Arena",
+    description: "5–7 startups pitch to investors + audience for feedback and funding",
     type: "pitch",
   },
   {
-    time: "4:00 PM - 4:30 PM",
-    title: "Awards & Recognition",
-    description: "Celebrating industry excellence",
-    type: "ceremony",
+    time: "12:15–13:00",
+    title: "Talk: The Skills Gap – Building Talent for the Future",
+    description: "Training, TVETs, and capacity building for youth in construction",
+    type: "keynote",
   },
   {
-    time: "4:30 PM - 5:00 PM",
-    title: "Closing Remarks & Next Steps",
-    description: "Summit wrap-up and future initiatives",
-    type: "ceremony",
+    time: "13:00–14:00",
+    title: "Networking Lunch",
+    description: "Regional dishes + investor-founder lunches",
+    type: "networking",
+  },
+  {
+    time: "14:00–15:00",
+    title: "Masterclass: Green Building Certifications & Design",
+    description: "LEED, EDGE, and sustainable design in the African context",
+    type: "workshop",
+  },
+  {
+    time: "15:00–15:45",
+    title: "Panel: Women in Construction & Tech",
+    description: "Gender inclusion in building, tech, and leadership roles",
+    type: "panel",
+  },
+  {
+    time: "15:45–16:30",
+    title: "Product Launches & Innovation Announcements",
+    description: "New tools, materials, platforms — real-time demos",
+    type: "exhibition",
+  },
+  {
+    time: "16:30–17:30",
+    title: "Builders Connect: Speed Networking Session",
+    description: "Facilitated connections by role: builder ↔ supplier ↔ investor",
+    type: "networking",
   },
 ]
+
 
 const Home = () => {
   const [isSponsorshipExpanded, setIsSponsorshipExpanded] = useState(false)
   const [activeDay, setActiveDay] = useState("day1")
+  const currentSchedule = activeDay === "day1" ? programScheduleDay1 : programScheduleDay2
 
   const getScheduleTypeColor = (type) => {
     const colors = {
@@ -223,16 +305,16 @@ const Home = () => {
             <Link to="/registration" >
               <Button>
                 <span className="relative z-10 flex items-center justify-center text-white hover:text-black">
-                  Register 
+                  Register Now 
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-yellow-400 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
             </Link>
 
             <Link to="/sponsors" className="w-1/2 sm:w-auto flex justify-center">
-              <Button >
-                <span className="relative z-10 flex items-center justify-center text-white hover:text-black">
-                  Sponsor
+              <Button className="sm:w-35 md:w-40 lg:w-42 w-full">
+                <span className="relative z-10 flex items-center justify-center text-white hover:text-black ">
+                  Become a Sponsor
                 </span>
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </Button>
@@ -319,11 +401,12 @@ const Home = () => {
                 {/* Partner 2 - Placeholder */}
                 <div className="flex flex-col items-center justify-center p-4 bg-white rounded-2xl transition-all duration-300 hover:scale-105 border border-gray-100 hover:border-purple-300 hover:shadow-lg w-full max-w-xs">
                   <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-gray-50 border-2 flex items-center justify-center overflow-hidden hover:border-purple-300 transition-colors duration-300 mb-3">
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-100 text-gray-400 text-xs font-medium">
-                      Partner Logo
-                    </div>
+                    <img 
+                    src={Moringa}
+                    alt="Moringa Logo"
+                    className="w-full h-full object-contain p-2"/>
                   </div>
-                  <h4 className="text-sm font-semibold text-gray-800 text-center">Partner 2</h4>
+                  <h4 className="text-sm font-semibold text-gray-800 text-center">Moringa</h4>
                 </div>
 
                 {/* Partner 3 - Placeholder */}
@@ -378,12 +461,12 @@ const Home = () => {
       </section>
 
       {/* Program Schedule Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Summit Program</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              A full day of learning, networking, and innovation in the construction industry.
+              Two full days of learning, networking, and innovation in the construction industry.
             </p>
             <div className="flex items-center justify-center mt-4 space-x-6 text-sm text-gray-600">
               <div className="flex items-center">
@@ -396,56 +479,57 @@ const Home = () => {
               </div>
               <div className="flex items-center">
                 <Clock className="w-4 h-4 mr-1" />
-                8:00 AM - 5:00 PM
+                8:00 AM - 6:00 PM
               </div>
             </div>
           </div>
 
-          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden text-center">
-            <div className="flex items-center justify-center gap-3 p-4">
-              <Button
+          <div className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+            <div className="flex items-center justify-center gap-3 p-4 border-b border-gray-200">
+              <button
                 onClick={() => setActiveDay("day1")}
-                aria-pressed={activeDay === "day1"}
-                className={`px-4 py-2 rounded transition 
-                  ${activeDay === "day1" ? "bg-[rbg(0,0,122)] text-white" : "bg-yellow-400 text-white hover:bg-yellow-400 hover:text-black"} 
-                      focus:outline-2 focus:outline-offset-2 focus:outline-[#FFD700] active:bg-[#FFD700]`}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeDay === "day1"
+                    ? "bg-blue-600 text-white shadow-md"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
               >
-                17 Oct
-              </Button>
-
-              <Button
+                Day 1 - Oct 17
+              </button>
+              <button
                 onClick={() => setActiveDay("day2")}
-                aria-pressed={activeDay === "day2"}
-                className={`px-4 py-2 rounded transition 
-                        ${activeDay === "day2" ? "bg-yellow-400 text-black" : "bg-[rgb(0,0,122)] text-white hover:bg-yellow-400 hover:text-black"} 
-                        focus:outline-2 focus:outline-offset-2 focus:outline-[#FFD700] active:bg-[#FFD700]`}
+                className={`px-6 py-3 rounded-lg font-semibold transition-all duration-300 ${
+                  activeDay === "day2"
+                    ? "bg-blue-600 text-white shadow-md"
+                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                }`}
               >
-                18 Oct
-              </Button>
+                Day 2 - Oct 18
+              </button>
             </div>
-            {programSchedule.map((session, index) => (
-              <div
-                key={index}
-                className={`p-6 ${index !== programSchedule.length - 1 ? "border-b border-gray-200" : ""}`}
-              >
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between">
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-3 mb-2">
-                      <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                        {session.time}
-                      </span>
-                      <span
-                        className={`text-xs px-2 py-1 rounded-full font-medium ${getScheduleTypeColor(session.type)}`}
-                      >
-                        {session.type.charAt(0).toUpperCase() + session.type.slice(1)}
-                      </span>
+
+            <div className="divide-y divide-gray-200">
+              {currentSchedule.map((session, index) => (
+                <div key={index} className="p-6">
+                  <div className="flex flex-col sm:flex-row sm:items-start justify-between">
+                    <div className="flex-1">
+                      <div className="flex items-center space-x-3 mb-2">
+                        <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
+                          {session.time}
+                        </span>
+                        <span
+                          className={`text-xs px-2 py-1 rounded-full font-medium ${getScheduleTypeColor(session.type)}`}
+                        >
+                          {session.type.charAt(0).toUpperCase() + session.type.slice(1)}
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-semibold text-gray-900 mb-1">{session.title}</h3>
+                      <p className="text-gray-600 text-sm">{session.description}</p>
                     </div>
-                    <h3 className="text-lg font-semibold text-gray-900 mb-1">{session.title}</h3>
-                    <p className="text-gray-600 text-sm">{session.description}</p>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
