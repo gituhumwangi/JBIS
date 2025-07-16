@@ -17,6 +17,7 @@ import Construction2 from "../assets/Construction2.jpg"
 import Construction3 from "../assets/Construction3.jpg"
 import Construction4 from "../assets/Construction4.jpg"
 import { ButtonGroupButtonContext } from "@mui/material"
+import Fisibo from "../assets/fisibo.jpeg"
 
 // Updated slideshow data with construction technology themes
 const heroSlides = [
@@ -422,7 +423,7 @@ const Home = () => {
       </section>
 
       {/* Featured Speakers Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      {/* <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
         <div className="max-w-6xl mx-auto">
           <header className="text-center mb-12">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Featured Speakers</h2>
@@ -452,7 +453,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* About Us Section */}
       <section className="px-6 md:px-20 lg:px-36 py-10 bg-white">
@@ -515,9 +516,11 @@ const Home = () => {
                 {/* Partner 3 - Placeholder */}
                 <div className="flex flex-col items-center justify-center p-4 bg-white rounded-2xl transition-all duration-300 hover:scale-105 border border-gray-100 hover:border-purple-300 hover:shadow-lg w-full max-w-xs">
                   <div className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full bg-gray-50 border-2 flex items-center justify-center overflow-hidden hover:border-purple-300 transition-colors duration-300 mb-3">
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-green-100 to-blue-100 text-gray-400 text-xs font-medium">
-                      Partner Logo
-                    </div>
+                    <img
+                      src={Fisibo || "/placeholder.svg"}
+                      alt="Fisibo Logo"
+                      className="w-full h-full object-contain p-2"
+                    />
                   </div>
                   <h4 className="text-sm font-semibold text-gray-800 text-center">Fisibo</h4>
                 </div>
@@ -591,10 +594,10 @@ const Home = () => {
             <nav className="flex items-center justify-center gap-3 p-4 border-b border-gray-200">
               <button
                 onClick={() => setActiveDay("day1")}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ease-in-out ${
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ease-in-out ${
                   activeDay === "day1"
-                    ? "bg-blue-600 text-white shadow-lg transform scale-105"
-                    : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-md border border-gray-200"
+                    ? "bg-yellow-400 text-black shadow-lg transform scale-105"
+                    : "bg-[rgb(0,0,122)] text-gray-100 hover:bg-[rgb(0,0,122)] hover:bg-yellow-400 hover:shadow-md border border-gray-700"
                 }`}
               >
                 Day 1 - Oct 17
@@ -602,10 +605,10 @@ const Home = () => {
 
               <button
                 onClick={() => setActiveDay("day2")}
-                className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ease-in-out ${
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ease-in-out ${
                   activeDay === "day2"
-                    ? "bg-blue-600 text-white shadow-lg transform scale-105"
-                    : "bg-gray-100 text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-md border border-gray-200"
+                    ? "bg-yellow-400 text-black shadow-lg transform scale-105"
+                    : "bg-[rgb(0,0,122)] text-gray-100 hover:bg-[rgb(0,0,122)] hover:bg-yellow-400 hover:shadow-md border border-gray-700"
                 }`}
               >
                 Day 2 - Oct 18
