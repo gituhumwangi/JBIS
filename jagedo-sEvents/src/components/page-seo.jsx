@@ -1,5 +1,3 @@
-"use client"
-
 import { useEffect } from "react"
 
 // Alternative lightweight SEO component for specific pages

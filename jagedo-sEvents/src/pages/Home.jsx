@@ -1,5 +1,3 @@
-"use client"
-
 import { useState } from "react"
 import NavBar from "../components/NavBar"
 import Card1 from "../assets/Event1.jpeg"

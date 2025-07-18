@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { ChevronLeft, ChevronRight, Play, Pause } from "lucide-react"
 
