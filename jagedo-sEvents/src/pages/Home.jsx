@@ -26,26 +26,26 @@ const heroSlides = [
     description:
       "Join 500+ industry leaders and innovators reshaping construction's future through cutting-edge technology.",
   },
-  {
-    image: Construction2,
-    title: "Smart Construction Technology",
-    subtitle: "Drones, BIM & Digital Innovation",
-    description:
-      "Discover how drones, Building Information Modeling, and AI are revolutionizing construction workflows.",
-  },
-  {
-    image: Construction3,
-    title: "Digital Construction Management",
-    subtitle: "Safety Meets Technology",
-    description:
-      "Experience the future of construction with smart helmets, IoT sensors, and real-time project management.",
-  },
-  {
-    image: Construction4,
-    title: "Building Tomorrow's Infrastructure",
-    subtitle: "Where Innovation Meets Construction Excellence",
-    description: "Explore advanced construction techniques, sustainable materials, and smart building technologies.",
-  },
+  // {
+  //   image: Construction2,
+  //   title: "Smart Construction Technology",
+  //   subtitle: "Drones, BIM & Digital Innovation",
+  //   description:
+  //     "Discover how drones, Building Information Modeling, and AI are revolutionizing construction workflows.",
+  // },
+  // {
+  //   image: Construction3,
+  //   title: "Digital Construction Management",
+  //   subtitle: "Safety Meets Technology",
+  //   description:
+  //     "Experience the future of construction with smart helmets, IoT sensors, and real-time project management.",
+  // },
+  // {
+  //   image: Construction4,
+  //   title: "Building Tomorrow's Infrastructure",
+  //   subtitle: "Where Innovation Meets Construction Excellence",
+  //   description: "Explore advanced construction techniques, sustainable materials, and smart building technologies.",
+  // },
 ]
 
 const sponsorshipBenefits = [
