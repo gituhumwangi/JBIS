@@ -12,21 +12,22 @@ const SponsorsPage = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
 
   const sponsorshipBenefits = [
+    // {
+    //   icon: "🎯",
+    //   title: "Targeted Audience",
+    //   description: "Reach 500+ construction professionals, decision-makers, and industry leaders"
+    // },
     {
-      icon: "🎯",
-      title: "Targeted Audience",
-      description: "Reach 500+ construction professionals, decision-makers, and industry leaders"
+      icon: "📈",
+      title: "Brand Visibility",
+      description: "Showcase your brand across multiple touchpoints before, during, and after the event"
     },
     {
       icon: "🤝",
       title: "Quality Networking",
       description: "Connect with potential clients, partners, and suppliers in structured environments"
     },
-    {
-      icon: "📈",
-      title: "Brand Visibility",
-      description: "Showcase your brand across multiple touchpoints before, during, and after the event"
-    },
+    
     {
       icon: "🏆",
       title: "Industry Leadership",
@@ -37,11 +38,11 @@ const SponsorsPage = () => {
       title: "Lead Generation",
       description: "Generate high-quality leads through exhibition booths and speaking opportunities"
     },
-    {
-      icon: "🌍",
-      title: "Market Expansion",
-      description: "Access new markets and expand your presence in East Africa's construction sector"
-    }
+    // {
+    //   icon: "🌍",
+    //   title: "Market Expansion",
+    //   description: "Access new markets and expand your presence in East Africa's construction sector"
+    // }
 ];
 
   const sponsorshipTiers = [
@@ -256,7 +257,7 @@ const SponsorsPage = () => {
                   </div>
         
                   <div className={`transition-all duration-300 overflow-hidden ${isSponsorshipExpanded ? 'max-h-none opacity-100' : 'max-h-0 opacity-0'}`}>
-                    <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-4 mb-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
                       {sponsorshipBenefits.map((benefit, index) => (
                         <div key={index} className="bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-md transition">
                           <div className="text-4xl mb-4">{benefit.icon}</div>
