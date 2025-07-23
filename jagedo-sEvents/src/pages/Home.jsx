@@ -481,7 +481,7 @@ const Home = () => {
               <p className="text-lg text-gray-600 max-w-md mx-auto">
                 We collaborate with industry leaders to deliver exceptional experiences
               </p>
-              <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mt-4"></div>
+              {/* <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto rounded-full mt-4"></div> */}
             </header>
 
             {/* Partner logos grid container */}
@@ -496,7 +496,7 @@ const Home = () => {
                       className="w-full h-full object-contain p-2"
                     />
                   </div>
-                  <h4 className="text-sm font-semibold text-gray-800 text-center">JaGedo</h4>
+                  {/* <h4 className="text-sm font-semibold text-gray-800 text-center">JaGedo</h4> */}
                 </div>
 
                 {/* Partner 2 - Moringa */}
@@ -508,7 +508,7 @@ const Home = () => {
                       className="w-full h-full object-contain p-2"
                     />
                   </div>
-                  <h4 className="text-sm font-semibold text-gray-800 text-center">Moringa</h4>
+                  
                 </div>
 
                 {/* Partner 3 - Placeholder */}
@@ -520,7 +520,7 @@ const Home = () => {
                       className="w-full h-full object-contain p-2"
                     />
                   </div>
-                  <h4 className="text-sm font-semibold text-gray-800 text-center">Fisibo</h4>
+                  {/* <h4 className="text-sm font-semibold text-gray-800 text-center">Fisibo</h4> */}
                 </div>
               </div>
             </div>
