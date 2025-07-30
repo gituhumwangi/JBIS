@@ -16,21 +16,21 @@ const FAQPage = () => {
       category: 'Event Information',
       questions: [
         {
-          question: "What is the JaGedo Construction & Infrastructure Summit?",
-          answer: "The JaGedo Construction & Infrastructure Summit is Kenya's premier construction industry event, bringing together over 500 professionals including contractors, engineers, architects, suppliers, and technology innovators. The summit focuses on sustainable construction practices, digital transformation, and innovative building technologies."
+          question: "What is the JaGedo Builders Innovation Summit?",
+          answer: "The JaGedo Builders Innovation Summit is Kenya's premier construction industry event, bringing together over 500 professionals including contractors, engineers, architects, suppliers, and technology innovators. The summit focuses on sustainable construction practices, digital transformation, and innovative building technologies."
         },
         {
           question: "When and where is the event taking place?",
-          answer: "The summit will be held on September 20-21, 2024, at the Nairobi Convention Center. The venue is easily accessible by public transport and offers ample parking facilities."
+          answer: "The summit will be held on October 17-18, 2025, at the Nairobi Convention Center. The venue is easily accessible by public transport and offers ample parking facilities."
         },
         {
           question: "What is included in my registration?",
           answer: "Your registration includes access to all keynote sessions, panel discussions, workshops, networking breaks, lunch on both days, welcome breakfast, exhibition area access, event materials, and a certificate of attendance. Premium packages also include exclusive networking dinners."
         },
-        {
-          question: "Can I attend virtually?",
-          answer: "Yes! We offer hybrid attendance options. Virtual attendees will have access to live streams of keynote sessions, downloadable resources, and virtual networking opportunities. However, hands-on workshops are only available for in-person attendees."
-        }
+        // {
+        //   question: "Can I attend virtually?",
+        //   answer: "Yes! We offer hybrid attendance options. Virtual attendees will have access to live streams of keynote sessions, downloadable resources, and virtual networking opportunities. However, hands-on workshops are only available for in-person attendees."
+        // }
       ]
     },
     {
