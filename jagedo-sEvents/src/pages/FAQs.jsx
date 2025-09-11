@@ -60,27 +60,7 @@ const FAQPage = () => {
         }
       ]
     },
-    // {
-    //   category: 'Logistics & Accommodation',
-    //   questions: [
-    //     {
-    //       question: "Do you provide accommodation assistance?",
-    //       answer: "Yes! We have partnerships with nearby hotels offering special rates for summit attendees. Accommodation packages range from KES 3,500-8,000 per night. Contact our logistics team for booking assistance and shuttle service information."
-    //     },
-    //     {
-    //       question: "Is food provided during the event?",
-    //       answer: "Yes, registration includes breakfast on day one, lunch on both days, and networking refreshments during breaks. We cater to various dietary requirements including vegetarian, vegan, halal, and gluten-free options. Please indicate dietary requirements during registration."
-    //     },
-    //     {
-    //       question: "What should I bring to the event?",
-    //       answer: "Bring your photo ID, business cards for networking, notebook and pen (though materials are provided), comfortable shoes for site visits, and your smartphone for our event app. Laptops are recommended for workshop sessions."
-    //     },
-    //     {
-    //       question: "Is parking available at the venue?",
-    //       answer: "Yes, the Nairobi Convention Center offers ample parking space. Parking is free for event attendees - just show your registration confirmation at the gate. We also provide shuttle services from major hotels and transport hubs."
-    //     }
-    //   ]
-    // },
+   
     {
       category: 'Networking & Exhibitions',
       questions: [
@@ -98,19 +78,7 @@ const FAQPage = () => {
         }
       ]
     },
-    // {
-    //   category: 'COVID-19 & Safety',
-    //   questions: [
-    //     {
-    //       question: "What safety measures are in place?",
-    //       answer: "We follow all government health guidelines including temperature checks, hand sanitizing stations throughout the venue, enhanced cleaning protocols, and adequate ventilation systems. Masks are recommended in crowded areas."
-    //     },
-    //     {
-    //       question: "What if someone tests positive before the event?",
-    //       answer: "If you test positive for COVID-19 within 5 days of the event, we'll transfer your registration to our next event at no additional cost, or provide full access to virtual sessions and recordings."
-    //     }
-    //   ]
-    // }
+    
   ];
 
   const filteredFAQs = faqData.map(category => ({
@@ -231,33 +199,7 @@ const FAQPage = () => {
             </div>
           )}
 
-          {/* Contact Section */}
-          {/* <div className="mt-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-center text-white">
-            <h3 className="text-2xl font-bold mb-4">Still have questions?</h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Our support team is here to help! Get in touch and we'll respond within 24 hours.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <a
-                href="mailto:info@jagedo.com"
-                className="inline-flex items-center px-6 py-3 bg-white text-blue-600 font-medium rounded-full hover:bg-gray-50 transition"
-              >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                </svg>
-                Email Support
-              </a>
-              <a
-                href="tel:+254700000000"
-                className="inline-flex items-center px-6 py-3 bg-transparent border-2 border-white text-white font-medium rounded-full hover:bg-white hover:text-blue-600 transition"
-              >
-                <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
-                </svg>
-                Call Us
-              </a>
-            </div>
-          </div> */}
+          
         </div>
       </main>
 
