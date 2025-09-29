@@ -189,7 +189,7 @@ const Navbar2 = () => {
           </nav>
         </div>
       </div>
-    </header>
+    </header> 
   )
 }
 

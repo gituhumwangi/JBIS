@@ -86,28 +86,56 @@ const partners = ["JaGedo"]
 const whoShouldAttend = [
   {
     icon: "🏗️",
-    title: "Builders",
+    title: "Builders & Contracts",
     description:
       "Construction, fundis, professionals and Hardware Owners looking to stay ahead of industry trends and connect with peers.",
     highlights: ["Latest construction techniques", "Industry best practices", "Networking opportunities"],
   },
   {
     icon: "💻",
-    title: "Technology Enthusiasts",
+    title: "•	Technology and software providers in construction",
     description:
       "Tech innovators, software developers, and digital solution providers interested in construction technology and digital transformation.",
     highlights: ["Construction tech innovations", "Digital solutions showcase", "Tech networking sessions"],
   },
   {
-    icon: "👥",
-    title: "Clients",
+    icon: "💰",
+    title: "•	Real estate developers & investors",
     description:
-      "Property developers, homeowners, and businesses seeking construction services and innovative building solutions.",
-    highlights: ["Service provider discovery", "Cost-effective solutions", "Quality assurance insights"],
+      "Angel investors, VCs, and financial institutions looking for investment opportunities in the construction and contech sectors.",
+    highlights: ["Investment opportunities", "Market insights", "ROI analysis sessions"],
   },
   {
     icon: "💰",
-    title: "Investors & Stakeholders",
+    title: "Civil Engineers & Structral Engineers",
+    description:
+      "Angel investors, VCs, and financial institutions looking for investment opportunities in the construction and contech sectors.",
+    highlights: ["Investment opportunities", "Market insights", "ROI analysis sessions"],
+  },
+  {
+    icon: "💰",
+    title: "Construction material suppliers",
+    description:
+      "Angel investors, VCs, and financial institutions looking for investment opportunities in the construction and contech sectors.",
+    highlights: ["Investment opportunities", "Market insights", "ROI analysis sessions"],
+  },
+  {
+    icon: "💰",
+    title: "Land agents & property marketers",
+    description:
+      "Angel investors, VCs, and financial institutions looking for investment opportunities in the construction and contech sectors.",
+    highlights: ["Investment opportunities", "Market insights", "ROI analysis sessions"],
+  },
+  {
+    icon: "💰",
+    title: "Diaspora project managers",
+    description:
+      "Angel investors, VCs, and financial institutions looking for investment opportunities in the construction and contech sectors.",
+    highlights: ["Investment opportunities", "Market insights", "ROI analysis sessions"],
+  },
+  {
+    icon: "💰",
+    title: "Government & policy stakeholders",
     description:
       "Angel investors, VCs, and financial institutions looking for investment opportunities in the construction and contech sectors.",
     highlights: ["Investment opportunities", "Market insights", "ROI analysis sessions"],

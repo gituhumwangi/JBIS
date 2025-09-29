@@ -17,49 +17,93 @@ const FAQPage = () => {
       questions: [
         {
           question: "What is the JaGedo Builders Innovation Summit?",
-          answer: "The JaGedo Builders Innovation Summit is Kenya's premier construction industry event, bringing together over 500 professionals including contractors, engineers, architects, suppliers, and technology innovators. The summit focuses on sustainable construction practices, digital transformation, and innovative building technologies."
+          answer: "The JaGedo Builders Summit is a flagship annual event hosted by JaGedo Global Ltd, bringing together builders, construction technology innovators, key industry stakeholders, and investors in Kenyas construction ecosystem, Its a space to connect, showcase, learn, and collaborate on how to build the future of construction—from sustainable construction to high-tech project execution"
+
+
         },
         {
           question: "When and where is the event taking place?",
-          answer: "The summit will be held on October 17-18, 2025, at the Nairobi Convention Center. The venue is easily accessible by public transport and offers ample parking facilities."
+          answer: "The summit will be held on October 17-18, 2025. To be announced, Nairobi, Kenya. Full-day event from 8:00 AM to 6:00 PM"
         },
         {
-          question: "What is included in my registration?",
-          answer: "Your registration includes access to all keynote sessions, panel discussions, workshops, networking breaks, lunch on both days, welcome breakfast, exhibition area access, event materials, and a certificate of attendance. Premium packages also include exclusive networking dinners."
+          question: "Who should attend the JaGedo Builders Summit?",
+          answer: `The summit is open to all professionals and players in the built environment. This includes:
+                    •	Contractors & builders
+                    •	Civil and structural engineers
+                    •	Construction material suppliers
+                    •	Technology and software providers in construction
+                    •	Real estate developers & investors
+                    •	Land agents and property marketers
+                    •	Diaspora project managers
+                    •	Government & policy stakeholders
+                    •	University students in construction-related fields`
         },
-        // {
-        //   question: "Can I attend virtually?",
-        //   answer: "Yes! We offer hybrid attendance options. Virtual attendees will have access to live streams of keynote sessions, downloadable resources, and virtual networking opportunities. However, hands-on workshops are only available for in-person attendees."
-        // }
+        {
+          question: "What can I expect at the summit?",
+          answer: ` ✅ Keynote addresses from industry leaders
+                    ✅ Panel discussions on innovation, policy, and investment
+                    ✅ Live tech demos from construction tech startups
+                    ✅ Exhibitions & booths from top service providers
+                    ✅ Workshops on project management, digital platforms, and diaspora engagement
+                    ✅ Networking opportunities with clients, service providers, and investors
+                    ✅ Investment pitches & partnership sessions
+                    `
+        },
+
+        {
+          question: "Is there a virtual attendance option?",
+          answer: `Yes, we’ll provide a livestream of select sessions and offer interactive online networking for diaspora participants and those unable to attend physically.
+                    You’ll receive login credentials after registering under the Virtual Access category.`
+        },
+
+        {
+          question: "Will certificates be issued?",
+          answer: `Yes. All full-day attendees will receive digital participation certificates, and special certificates will be issued for those attending technical workshops.`
+        },
+
+        {
+          question: "What makes this summit different from other construction expos?",
+          answer: `Unlike typical expos, JaGedo Builders Summit focuses on:
+                  •	Real connections between tech and practical building
+                  •	Solutions for diaspora clients and project risk
+                  •	Building end-to-end trust in real estate delivery
+                  •	Empowering local and emerging builders with tools, education, and partnership`
+
+       },
+
       ]
     },
     {
-      category: 'Registration & Pricing',
+      category: 'Registration',
       questions: [
         {
-          question: "How much does it cost to attend?",
-          answer: "Registration is free"
+          question: "How do I register to attend the event?",
+          answer: `You can register directly on this microsite using the [Register Now] button. Limited slots are available for physical attendance. 
+          Virtual access details will be provided closer to the date.
+          🎟️ General Admission – FREE (limited access)
+          🎟️ Full Access Pass – KES [insert fee] (Includes workshops, lunch, materials)
+`
         },
         
       ]
     },
-    {
-      category: 'Speakers & Content',
-      questions: [
-        {
-          question: "Who are the keynote speakers?",
-          answer: "Our speakers include industry leaders like James Mwangi (Senior Civil Engineer with 20+ years experience), Sarah Njeri (Sustainable Construction Expert), David Kimani (Construction Tech Innovator), and many more. View the complete speaker lineup on our Events page."
-        },
-        {
-          question: "Will session recordings be available?",
-          answer: "Yes, all registered attendees will receive access to session recordings within 48 hours after the event. Recordings will be available for 6 months through our online portal. Workshop recordings are only available to attendees who participated in the sessions."
-        },
-        {
-          question: "Can I request specific topics to be covered?",
-          answer: "We welcome topic suggestions! While we can't guarantee inclusion in this year's program, we consider all feedback for future events. Submit your suggestions to content@jagedo.com or during the registration process."
-        }
-      ]
-    },
+    // {
+    //   category: 'Speakers & Content',
+    //   questions: [
+    //     {
+    //       question: "Who are the keynote speakers?",
+    //       answer: "Our speakers include industry leaders like James Mwangi (Senior Civil Engineer with 20+ years experience), Sarah Njeri (Sustainable Construction Expert), David Kimani (Construction Tech Innovator), and many more. View the complete speaker lineup on our Events page."
+    //     },
+    //     {
+    //       question: "Will session recordings be available?",
+    //       answer: "Yes, all registered attendees will receive access to session recordings within 48 hours after the event. Recordings will be available for 6 months through our online portal. Workshop recordings are only available to attendees who participated in the sessions."
+    //     },
+    //     {
+    //       question: "Can I request specific topics to be covered?",
+    //       answer: "We welcome topic suggestions! While we can't guarantee inclusion in this year's program, we consider all feedback for future events. Submit your suggestions to content@jagedo.com or during the registration process."
+    //     }
+    //   ]
+    // },
     // {
     //   category: 'Logistics & Accommodation',
     //   questions: [
@@ -86,31 +130,40 @@ const FAQPage = () => {
       questions: [
         {
           question: "How can I maximize networking opportunities?",
-          answer: "Download our event app to connect with other attendees, join our LinkedIn group, attend networking breaks and lunches, visit the exhibition area, and participate in our structured networking sessions. Speed networking sessions are scheduled during lunch breaks."
+          answer: `Download our event app to connect with other attendees, join our LinkedIn group, attend networking breaks and lunches, visit the exhibition area, and participate in our structured networking sessions. 
+                   Speed networking sessions are scheduled during lunch breaks.`
+        },
+
+        {
+          question: "How can I exhibit at the event?",
+          answer: `We are currently accepting applications from:
+                  •	Construction tech startups
+                  •	Building materials manufacturers
+                  •	Professional service providers (architects, QSs, contractors)
+                  •	Property platforms and developers
+                  To book an exhibition booth, please email info@jagedo.com or use the [Book an Exhibitor Booth] button on this sit
+                  `
         },
         {
-          question: "Can I exhibit my products/services?",
-          answer: "Yes! Exhibition spaces are available for vendors and service providers. Packages start at KES 15,000 and include booth space, basic furniture, power supply, and promotional opportunities. Premium packages include speaking slots and additional marketing benefits."
+          question: "Is JaGedo offering sponsorship opportunities?",
+          answer: `Yes. The summit welcomes corporate, media, and institutional sponsors. Sponsorship packages include branding, speaking slots, exhibitor space, and exclusive networking privileges.
+                    📩To request a sponsorship deck, email us at info@jagedo.com.`
+
         },
+
         {
-          question: "Are there sponsorship opportunities?",
-          answer: "Absolutely! We offer various sponsorship packages from title sponsorship to session sponsorships. Benefits include brand visibility, speaking opportunities, exhibition space, and access to attendee information. Contact sponsors@jagedo.com for the sponsorship brochure."
-        }
+            question: "How can I stay updated about the event?",
+            answer: `Follow us on our official channels:
+                      📱 Facebook | Instagram | LinkedIn | X (Twitter): @JaGedo
+                      🌐 Website: www.jagedo.co.ke
+                      📲 WhatsApp Updates Group: Link will be shared after registration
+                      `
+
+        },
+
       ]
     },
-    // {
-    //   category: 'COVID-19 & Safety',
-    //   questions: [
-    //     {
-    //       question: "What safety measures are in place?",
-    //       answer: "We follow all government health guidelines including temperature checks, hand sanitizing stations throughout the venue, enhanced cleaning protocols, and adequate ventilation systems. Masks are recommended in crowded areas."
-    //     },
-    //     {
-    //       question: "What if someone tests positive before the event?",
-    //       answer: "If you test positive for COVID-19 within 5 days of the event, we'll transfer your registration to our next event at no additional cost, or provide full access to virtual sessions and recordings."
-    //     }
-    //   ]
-    // }
+
   ];
 
   const filteredFAQs = faqData.map(category => ({
