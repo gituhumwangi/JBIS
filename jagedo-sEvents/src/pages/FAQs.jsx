@@ -128,11 +128,11 @@ const FAQPage = () => {
     {
       category: 'Networking & Exhibitions',
       questions: [
-        {
-          question: "How can I maximize networking opportunities?",
-          answer: `Download our event app to connect with other attendees, join our LinkedIn group, attend networking breaks and lunches, visit the exhibition area, and participate in our structured networking sessions. 
-                   Speed networking sessions are scheduled during lunch breaks.`
-        },
+        // {
+        //   question: "How can I maximize networking opportunities?",
+        //   answer: `Download our event app to connect with other attendees, join our LinkedIn group, attend networking breaks and lunches, visit the exhibition area, and participate in our structured networking sessions. 
+        //            Speed networking sessions are scheduled during lunch breaks.`
+        // },
 
         {
           question: "How can I exhibit at the event?",
